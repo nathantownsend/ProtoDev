@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "PlansForDisposalOfExcessSpoil";
+}
+
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="13">Plans for Disposal of Excess Spoil</h2>
+    <fieldset class="setapart">
+        <legend>Excess Spoil Disposal Site Design Plan</legend>
+        <p>Will the proposed mining operation require disposal of excess spoil?</p>
+        <p>
+            <input id="yes" type="radio" name="radios" value="yes" />Yes
+     <input id="no" type="radio" name="radios" value="no" />No
+        </p>
+        <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    <fieldset class="setapart">
+        <legend>Excess Spoil Disposal Site Map</legend>
+        <h4>Required Map Layers: </h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="ExcessSpoil" value="x" checked="checked" />
+            Excess Spoil Disposal Sites (17.24.320(1)) &nbsp &nbsp <a href="#">MAP</a>
+               <br />
+        </div>
+               <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">RottenEggs.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Excess Spoil Disposal Sites (17.24.320(1))</option>
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <div>
+        <button class="primary">Save</button>
+        <button class="secondary">Reset</button>
+    </div>
+</article>
+

@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "ClimatologicalData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="5">Climatological Data</h2>
+
+    <fieldset class="setapart" style="padding-top: 0em;">
+        <legend></legend>
+        <label>Average Wind Direction </label>
+        <select class="dropdownList">
+            <option value="0">--- Choose One ---</option>
+            <option value="N">N - north</option>
+            <option value="N">NNE - north-northeast</option>
+            <option value="N">NE - northeast</option>
+            <option value="N">ENE - east-northeast</option>
+            <option value="N">E- east</option>
+            <option value="N">ESE - east-southeast</option>
+            <option value="N">SE - southeast</option>
+            <option value="N">SSE - south-southeast</option>
+            <option value="N">S - south</option>
+            <option value="N">SSW - south-southwest</option>
+            <option value="N">SW - southwest</option>
+            <option value="N">WSW - west-southwest</option>
+            <option value="N">W - west</option>
+            <option value="N">WNW - west-northwest</option>
+            <option value="N">NW - northwest</option>
+            <option value="N">NNW - north-northwest</option>
+        </select>
+
+        <label for="AvgWindVel">Average Wind Velocity (MPH)</label><input type="text" title="AvgWindVel" name="AvgWindVel" required="" value="15.5" />
+        <br />
+        <br />
+        <table id="tableproperties">
+            <!-- First row -->
+
+            <tr>
+                <th style="width: 15.5em;">Climate Norms</th>
+                <th>Winter</th>
+                <th>Spring</th>
+                <th>Summer</th>
+                <th>Fall</th>
+            </tr>
+
+            <!-- Second row -->
+
+            <tr>
+                <td class="textalignright">Average Precipitation</td>
+                <td>
+                    <input class="inputstylecd" type="text" name="averageprecip" required="" value='1.73' /></td>
+                <td>
+                    <input class="inputstylecd" type="text" name="averageprecip" required="" value="3.22" /></td>
+                <td>
+                    <input class="inputstylecd" type="text" name="averageprecip" required="" value="2.92" /></td>
+                <td>
+                    <input class="inputstylecd" type="text" name="averageprecip" required="" value="1.02" /></td>
+            </tr>
+            <tr>
+                <td class="textalignright">Seasonal Temperature Range</td>
+                <td>
+                    <input class="inputstylecd" type="text" name="temprange" required="" value='112.33' /></td>
+                <td>
+                    <input class="inputstylecd" type="text" name="temprange" required="" value="123.26" /></td>
+                <td>
+                    <input class="inputstylecd" type="text" name="temprange" required="" value="73.22" /></td>
+                <td>
+                    <input class="inputstylecd" type="text" name="temprange" required="" value="109.71" /></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

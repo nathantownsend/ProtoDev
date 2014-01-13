@@ -1,0 +1,30 @@
+﻿<fieldset class="setapart">
+    <h3>Deficiency </h3>
+    <textarea class="planstextarea" placeholder="New Version of Deficiency"></textarea>
+    <h3>Current Deficiency Version </h3>
+    <textarea disabled class="planstextarea" placeholder="Current Version of Deficiency"></textarea>
+    <h3>Previous Deficiency Versions </h3>
+    <table>
+        <tr style="border: hidden;">
+            <td>
+                <textarea style="width: 61.2em;" disabled placeholder="Previous Version 3 of Deficiency"></textarea></td>
+        </tr>
+        <tr style="border: hidden;">
+            <td>
+                <textarea style="width: 61.2em;" disabled placeholder="Previous Version 2 of Deficiency"></textarea>
+            </td>
+        </tr>
+        <tr style="border: hidden;">
+            <td>
+                <textarea style="width: 61.2em;" disabled placeholder="Previous Version 1 of Deficiency"></textarea></td>
+        </tr>
+    </table>
+</fieldset>
+<div>
+    <button class="primary">Add Version</button>
+    <button value="Resolved" title="Confirmation" class="modal21 secondary">Resolved</button>
+    <div class="dialogbox21" style="display: none;" title="Confirmation">
+        @Html.Partial("Resolved")
+    </div>
+</div>
+

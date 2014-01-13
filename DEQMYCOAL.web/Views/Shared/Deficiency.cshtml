@@ -1,0 +1,130 @@
+﻿@*<div id="Comments" class="Comments" style="display: none;">*@
+    <fieldset class="setapart">
+        <legend>Initial Deficiencies</legend>
+        <table>
+            <!-- First row -->
+            <tr>
+                <th>User</th>
+                <th>Rule</th>
+                <th>Deficiency</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th colspan="2" style="text-align: center; width: 20%;">Edit&nbsp;/&nbsp;View</th>
+            </tr>
+            <!-- next row -->
+            <tr>
+                <td>John</td>
+                <td>###(1)(a)</td>
+                <td>What it is, what it is</td>
+                <td>2013-08-26</td>
+                <td>R</td>
+                <td class="actionrow">
+                    <button value="Edit" title="Edit Deficiency" class="modal8 edit">Edit</button>
+                    <div class="dialogbox8" style="display: none;" title="Deficiency Dialog">
+                        @Html.Partial("DeficiencyDialog")
+                    </div>
+                    <button value="View" title="View Deficiency" class="modal9 view">View</button>
+                    <div class="dialogbox9" style="display: none;" title="Deficiency Dialog View">
+                        @Html.Partial("DeficiencyDialogView")
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>###(3)(b)</td>
+                <td>What it isn't, what it isn't</td>
+                <td>2013-03-26</td>
+                <td>D</td>
+                <td class="actionrow">
+                    <button value="Edit" title="Edit Deficiency" class="modal10 edit">Edit</button>
+                    <div class="dialogbox10" style="display: none;" title="Deficiency Dialog">
+                        @Html.Partial("DeficiencyDialog")
+                    </div>
+                    <button value="View" title="View Deficiency" class="modal11 view">View</button>
+                    <div class="dialogbox11" style="display: none;" title="Deficiency Dialog View">
+                        @Html.Partial("DeficiencyDialogView")
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Chan</td>
+                <td>###(5)</td>
+                <td>No deficiency</td>
+                <td>2013-01-26</td>
+                <td>ND</td>
+                <td class="actionrow">
+                    <button value="Edit" title="Edit Deficiency" class="modal13 edit">Edit</button>
+                    <div class="dialogbox13" style="display: none;" title="Deficiency Dialog">
+                        @Html.Partial("DeficiencyDialog")
+                    </div>
+                    <button value="View" title="View Deficiency" class="modal14 view">View</button>
+                    <div class="dialogbox14" style="display: none;" title="Deficiency Dialog View">
+                        @Html.Partial("DeficiencyDialogView")
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div style="float: right;">
+            <button class="tertiary">No Deficiency</button>
+            <button value="+ Add New" title="New Deficiency Dialog" class="modal15 tertiary">+ Add New</button>
+            <div class="dialogbox15" style="display: none;" title="New Deficiency Dialog">
+                @Html.Partial("DeficiencyNew")
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Final Deficiencies</legend>
+        <table>
+            <!-- First row -->
+            <tr>
+                <th>User</th>
+                <th>Rule</th>
+                <th>Deficiency</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th style="text-align: center; width: 20%;">Edit&nbsp;/&nbsp;View</th>
+            </tr>
+            <!-- next row -->
+            <tr>
+                <td>Mango</td>
+                <td>###(1)(a)</td>
+                <td>What it is, what it is</td>
+                <td>2013-08-11</td>
+                <td>R</td>
+                <td class="actionrow">
+                    <button value="Edit" title="Edit Deficiency" class="modal16 edit">Edit</button>
+                    <div class="dialogbox16" style="display: none;" title="Deficiency Dialog">
+                        @Html.Partial("DeficiencyDialog")
+                    </div>
+                    <button value="View" title="View Deficiency" class="modal17 view">View</button>
+                    <div class="dialogbox17" style="display: none;" title="Deficiency Dialog">
+                        @Html.Partial("DeficiencyDialogView")
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>###(3)(b)</td>
+                <td>What it isn't, what it isn't</td>
+                <td>
+                2013-08-267/td>
+                    <td>D</td>
+                <td class="actionrow">
+                    <button value="Edit" title="Edit Deficiency" class="modal18 edit">Edit</button>
+                    <div class="dialogbox18" style="display: none;" title="Deficiency Dialog">
+                        @Html.Partial("DeficiencyDialog")
+                    </div>
+                    <button value="View" title="View Deficiency" class="modal19 view">View</button>
+                    <div class="dialogbox19" style="display: none;" title="Deficiency Dialog">
+                        @Html.Partial("DeficiencyDialogView")
+                    </div>
+                </td>
+        </table>
+        <div style="float: right;">
+            <button value="+ Add New" title="New Deficiency Dialog" class="modal20 tertiary">+ Add New</button>
+            <div class="dialogbox20" style="display: none;" title="New Deficiency Dialog">
+                @Html.Partial("DeficiencyNew")
+            </div>
+        </div>
+    </fieldset>
+@*</div>*@

@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "PrimeFarmlandInvestigation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="10">Prime Farmland Investigation</h2>
+    <fieldset class="setapart">
+        <legend>Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>10/11/2013</td>
+                    <td>Sow Buttons</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>10/12/2013</td>
+                    <td>Tie Bows</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+
+    <fieldset class="setapart">
+        <legend>Request for Negative Determination</legend>
+    <p>Did the investigation above identify soils that meet the definition of Prime Farmland?</p>
+    <p>
+        <input id="yes" type="radio" name="radios" value="yes" title="Answer 'Yes' if any exemptions are being claimed or if an area is under study." />Yes
+        <input id="no" type="radio" name="radios" value="no" />No
+    </p>
+    <p style="color: #f26522;">
+        If Yes, complete the Prime Farmland Special Application section (17.24.324)
+      <br /><br />
+        If No, attach a Request for a Negative Determination below.
+    </p>
+        <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>10/01/2013</td>
+                    <td>Saca</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>10/12/2013</td>
+                    <td>Jawea</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <div>
+        <button class="primary">Save</button>
+        <button class="secondary">Reset</button>
+    </div>
+</article>
+
+

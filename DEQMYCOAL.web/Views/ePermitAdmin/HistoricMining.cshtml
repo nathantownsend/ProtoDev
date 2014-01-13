@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "HistoricMining";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="19">Historic Mining</h2>
+    <fieldset class="setapart">
+        <legend>Historic Mining Maps</legend>
+        <h4>Required Map Layers:</h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="Mining" value="x" checked="checked" />Mined-out Prior to October 22, 2004 (17.24.303(1)(s))
+               <br />
+            <input type="checkbox" name="Mining" value="x" checked="checked" />Non-mined-out Prior to October 22, 2004 (17.24.303(1)(s)) &nbsp &nbsp <a href="#">MAP</a>
+              @* <br />*@
+        </div>
+               <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">MiningaLongtimeago.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Mined-out Prior to October 22, 2004 (17.24.303(1)(s))</option>
+                            <option>Non-mined-out Prior to October 22, 2004 (17.24.303(1)(s))</option>
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+
+</article>

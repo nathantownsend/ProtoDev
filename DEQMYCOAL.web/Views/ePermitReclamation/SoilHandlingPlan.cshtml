@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "SoilHandlingPlan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+
+<article>
+    <h2 data-submenu="6">Soil Handling Plan</h2>
+
+    <textarea class="planstextarea" id='BlastingPlanDescription' placeholder="Soil Handling Plan Description"></textarea>
+
+    <fieldset class="setapart">
+        <legend>Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @* proposed soil salvage depths table*@
+
+    <fieldset class="setapart">
+        <legend>Proposed Soil Salvage Depths Table </legend>
+        <table id="tableproperties" style="clear: both; width: 100%;">
+            <!-- First row -->
+            <tr>
+                <th class="soiltypeheader">Soil Type</th>
+                <th class="salvagedepthheader">Salvage Depth</th>
+                <th class="acreageheader">Acreage</th>
+                <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+            </tr>
+            <!-- Second row -->
+            <tr>
+                <td>
+                    <input class="soiltyperow" type="text" id="soiltype" name="soiltype" required="" value="Silky" /></td>
+                <td class="salvagedepthrow">
+                    <input type="text" name="salvagedepth" required="" value="55 feet" /></td>
+                <td>
+                    <input class="acreagerow" type="text" id="acreage" name="acreage" required="" value="2,434" /></td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="soiltyperow" type="text" name="soiltype" required="" value="Smooth" /></td>
+                <td class="salvagedepthrow">
+                    <input type="text" name="salvagedepth" required="" value="3 feet" /></td>
+                <td>
+                    <input class="acreagerow" type="text" name="acreage" required="" value="3" /></td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;">
+                    <p style="clear:both; white-space: pre-wrap;font-size: 1.2em; font-weight:bold;">Total:    2,437</p>
+                </td>
+                
+            </tr>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*redistribution thickness table*@
+
+    <fieldset class="setapart">
+        <legend>Redistribution Thickness Table </legend>
+        <table id="tableproperties2" style="clear: both; width: 100%;">
+            <!-- First row -->
+            <tr>
+                <th class="landuseheader">Land Use Type</th>
+                <th class="redistributionheader">Redistribution</th>
+                <th class="acreageheader">Acreage</th>
+                <th class="soilstockpileheader">Soil Stockpile Volume</th>
+                <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+            </tr>
+            <!-- Second row -->
+            <tr>
+                <td>
+                    <input class="landuseow" type="text" name="soiltype" required="" value="Private" /></td>
+                <td class="redistributionrow">
+                    <input type="text" name="redistributionrow" required="" value="2555 feet" /></td>
+                <td>
+                    <input class="acreagerow" type="text" name="acreage" required="" value="100" /></td>
+                <td>
+                    <input class="soilstockpilerow" type="text" name="soilstockpile" required="" value="500" /></td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="landuseow" type="text" name="soiltype" required="" value="Private" /></td>
+                <td class="redistributionrow">
+                    <input type="text" name="redistributionrow" required="" value="2555 feet" /></td>
+                <td>
+                    <input class="acreagerow" type="text" name="acreage" required="" value="999" /></td>
+                <td>
+                    <input class="soilstockpilerow" type="text" name="soilstockpile" required="" value="755" /></td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;">
+                    <p style="clear:both; white-space: pre-wrap;font-size: 1.2em; font-weight:bold;">Total:    1,099 </p>
+                </td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;">
+                    <p style="clear:both; white-space: pre-wrap; font-size: 1.2em; font-weight:700;">Total:    1,255 </p>
+                </td>
+            </tr>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

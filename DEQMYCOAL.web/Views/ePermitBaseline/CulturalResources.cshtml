@@ -1,0 +1,312 @@
+﻿@{
+    ViewBag.Title = "CulturalResources";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="1">Cultural Resources</h2>
+
+    <textarea class="planstextarea" id='CulturalResourcesDescription' placeholder="Cultural Resources Description"></textarea>
+    <br />
+   
+    @*cultural resources report attachment*@
+
+    <fieldset class="setapart">
+        <legend>Cultural Resources Report Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>11/13/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>11/13/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*cultural resources management table*@
+
+    <fieldset class="setapart">
+        <legend>Cultural Resource Management Table</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Site ID</th>
+                    <th>NRHP Eligible?</th>
+                    <th>Additional Investigation Required?</th>
+                    <th>Mitigation Required?</th>
+                    <th>Planned Mitigation Date</th>
+                    <th>Actual Mitigation Date</th>
+                    <th>Planned Disturbance Date</th>
+                    <th>Disturbance Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="white-space: nowrap">
+                    <td rowspan="2">CO3-10</td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr style="text-align: right;">
+                    <td colspan="3" style="font-style: italic;">Brief Description of Mitigation Efforts:</td>
+                    <td colspan="5">
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr style="white-space: nowrap">
+                    <td rowspan="2">CO3-10</td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr style="text-align: right;">
+                    <td colspan="3" style="font-style: italic;">Brief Description of Mitigation Efforts:</td>
+                    <td colspan="5">
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr style="white-space: nowrap">
+                    <td rowspan="2">CO3-10</td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <select class="dropdownList" name="state" required>
+                            <option value="Yes">YES</option>
+                            <option value="No">NO</option>
+                        </select></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr style="text-align: right;">
+                    <td colspan="3" style="font-style: italic;">Brief Description of Mitigation Efforts:</td>
+                    <td colspan="5">
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*reference materials attachments table*@
+
+    <fieldset class="setapart">
+        <legend>Reference Materials Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>11/13/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>11/13/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*shpo determination attachment*@
+
+    <fieldset class="setapart">
+        <legend>SHPO Determination Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>11/13/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>11/13/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                         <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*cultural resources map layers and map attachments*@
+
+    <fieldset class="setapart">
+        <legend>Cultural Resources Map</legend>
+        <h4>Required Map Layers:</h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="Resources" value="x" checked="checked" />Cultural Resource Sites (17.24.304(1)(b)) &nbsp &nbsp <a href="#">MAP</a>
+               <br />
+            <input type="checkbox" name="Resources" value="x" checked="checked" />NRHP Eligible Sites (17.24.304(1)(b))
+               <br />
+           
+            @*<div>
+                <select class="dropdownList">
+                    <option>Reference Another Map</option>
+                    <option>Air-Pollution Control Facilities - APCFMap.pdf</option>
+                    <option>Air-Pollution Control Facilities - APCFMapdetail.pdf</option>
+                    <option>Air-Pollution Control Facilities - APCFMapdetail2.pdf</option>
+                    <option>Permit Boundary - PermitBoundarymap.pdf</option>
+                    <option>Vegetation Survey - VSMap.pdf</option>
+                    <option>Vegetation Survey - VSMapv2.pdf</option>
+                </select>
+            </div>*@
+        </div>
+              <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">CulturalMulch.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Cultural Resource Sites (17.24.304(1)(b))</option>
+                            <option>NRHP Eligible Sites (17.24.304(1)(b))</option>
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*end all tables/attachments*@
+
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+
+</article>

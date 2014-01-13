@@ -1,0 +1,921 @@
+﻿@{
+    ViewBag.Title = "EightHundreds";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+  
+<article>
+    <h2 data-submenu="3">Performance Standards 800's</h2>   
+    <fieldset>
+        <legend></legend>        
+       
+    <div id="accordion">
+        <h3 class="iconswitch"><span class="comply"></span>801 Alluvial Valley Floors: Preservation of Essential Hydrologic Functions and Protection of Farming</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule" required>
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="801(1)">801(1)</option>
+	                            <option value="801(2)">801(2)</option>
+	                            <option value="801(3)">801(3)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename" required>
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>   
+        <h3 class="iconswitch"><span class="comply"></span>802 Alluvial Valley Floor: Protection of Farming and Prevention of Material Damage</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="802(1)(a)">802(1)(a)</option>
+	                            <option value="802(1)(a)(i)">802(1)(a)(i)</option>
+                                <option value="802(1)(a)(i)">802(1)(a)(ii)</option>
+	                            <option value="802(1)(b)">802(1)(b)</option>
+                                <option value="802(2)">802(2)</option>	
+                                <option value="802(3)">802(3)</option>		                            
+	                            <option value="802(3)(a)">802(3)(a)</option>
+                                <option value="802(3)(b)">802(3)(b)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+          <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>804 Alluvial Valley Floors: Monitoring</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="804(1)">804(1)</option>
+                                <option value="804(1)(a)">804(1)(a)</option>	
+                                <option value="804(1)(b)">804(1)(b)</option>		                            
+	                            <option value="804(1)(c)">804(1)(c)</option>
+                                <option value="804(1)(d)">804(1)(d)</option>
+	                            <option value="804(1)(e)">804(1)(e)</option>
+                                <option value="804(1)(f)">804(1)(f)</option>	
+                                <option value="804(2)">804(2)</option>		                            
+	                            <option value="804(3)">804(3)</option>
+                                <option value="804(4)">804(4)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>805 Alluvial Valley Floors: Significance Determination</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Entire Section</td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>806 Alluvial Valley Floors: Material Damage Determination</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="806(1)">806(1)</option>
+	                            <option value="806(2)">806(2)</option>
+	                            <option value="806(3)">806(3)</option>
+                                <option value="806(4)">806(4)</option>	
+                                <option value="806(5)">806(5)</option>		                            
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>811 Prime Farmland: Soil Handling</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="811(1)">811(1)</option>
+	                            <option value="811(2)">811(2)</option>
+	                            <option value="811(3)">811(3)</option>
+                                <option value="811(4)">811(4)</option>		                            
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+            <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>815 Prime Farmland: Revegetation</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="815(1)">815(1)</option>
+	                            <option value="815(1)(a)">815(1)(a)</option>
+                                <option value="815(1)(a)(i)">815(1)(a)(i)</option>
+	                            <option value="815(1)(a)(ii)">815(1)(a)(ii)</option>
+                                <option value="815(1)(b)">815(1)(b)</option>
+                                <option value="815(2)">815(2)</option>
+                                <option value="815(2)(a)">815(2)(a)</option>
+	                            <option value="815(2)(a)(i)">815(2)(a)(i)</option>
+	                            <option value="815(2)(a)(ii)">815(2)(a)(ii)</option>
+                                <option value="815(2)(a)(iii)">815(2)(a)(iii)</option>
+	                            <option value="815(2)(b)">815(2)(b)</option>
+                                <option value="815(2)(c)">815(2)(c)</option>
+                                <option value="815(2)(d)">815(2)(d)</option>
+	                            <option value="815(2)(e)(i)">815(2)(e)(i)</option>
+	                            <option value="815(2)(e)(i)(A)">815(2)(e)(i)(A)</option>
+                                <option value="815(2)(e)(i)(B)">815(2)(e)(i)(B)</option>
+	                            <option value="815(2)(e)(i)(C)">815(2)(e)(i)(C)</option>
+                                <option value="815(2)(e)(ii)">815(2)(e)(ii)</option>
+                                <option value="815(2)(e)(ii)(A)">815(2)(e)(ii)(A)</option>
+	                            <option value="815(2)(e)(ii)(B)">815(2)(e)(ii)(B)</option>
+	                            <option value="815(2)(e)(iii)">815(2)(e)(iii)</option>
+                                <option value="815(2)(e)(iii)(A)">815(2)(e)(iii)(A)</option>
+	                            <option value="815(2)(e)(iii)(B)">815(2)(e)(iii)(B)</option>
+                                <option value="815(2)(f)">815(2)(f)</option>
+	                            <option value="815(2)(f)(i)">815(2)(f)(i)</option>
+	                            <option value="815(2)(f)(ii)">815(2)(f)(ii)</option>
+                                <option value="815(2)(g)">815(2)(g)</option>
+	                            <option value="815(2)(h)">815(2)(h)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+         <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>821 Alternative Postmining Land Uses: Submission of Plan</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="821">821</option>
+	                            <option value="821(1)(a)">821(1)(a)</option>
+                                <option value="821(1)(b)">821(1)(b)</option>
+	                            <option value="821(1)(c)">821(1)(c)</option>
+                                <option value="821(2)">821(2)</option>
+                            </select>
+                            </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+          <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="alert"></span>823 Alternative Postmining Land Uses: Approval of Plan</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+                                <option value="823(1)">823(1)</option>
+	                            <option value="823(1)(a)">823(1)(a)</option>
+                                <option value="823(1)(b)(i)">823(1)(b)(i)</option>
+                                <option value="823(1)(b)(ii)">823(1)(b)(ii)</option>
+                                <option value="823(1)(b)">823(1)(b)</option>
+                                <option value="823(1)(c)">823(1)(c)</option>
+	                            <option value="823(1)(d)">823(1)(d)</option>
+                                <option value="823(1)(e)">823(1)(e)</option>
+                                <option value="823(1)(f)">823(1)(f)</option>
+                                <option value="823(1)(g)">823(1)(g)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>831 Auger Mining: General Requirements</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                       <td>Entire Section</td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>832 Auger Mining: Specific Performance Standards</h3>
+        <div>
+             <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="832(1)">832(1)</option>
+	                            <option value="832(2)">832(2)</option>
+                                <option value="832(2)(a)">832(2)(a)</option>
+	                            <option value="832(2)(b)">832(2)(b)</option>
+                                <option value="832(2)(c)">832(2)(c)</option>
+	                            <option value="832(3)">832(3)</option>
+                                <option value="832(4)">832(4)</option>
+	                            <option value="832(5)">832(5)</option>
+                                <option value="832(5)(a)">832(5)(a)</option>
+	                            <option value="832(5)(b)">832(5)(b)</option>
+                                <option value="832(5)(c)">832(5)(c)</option>
+	                            <option value="832(6)">832(6)</option>
+                                <option value="832(6)(a)">832(6)(a)</option>
+	                            <option value="832(6)(b)">832(6)(b)</option>
+                                <option value="832(7)">832(7)</option>
+	                            <option value="832(7)(a)">832(7)(a)</option>
+                                <option value="832(7)(b)">832(7)(b)</option>
+	                            <option value="832(7)(c)">832(7)(c)</option>
+                                <option value="832(7)(d)">832(7)(d)</option>
+                            </select>
+                            </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+            <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>833 Auger Mining: Requirements for Permit</h3>
+        <div>
+             <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Entire Section
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>834 Remining: Applicability</h3>
+        <div>
+             <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Entire Section
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>835 Remining: Application and Operating Requirements</h3>
+        <div>
+             <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="835(1)">835(1)</option>
+	                            <option value="835(2)">835(2)</option>
+                                <option value="835(3)">835(3)</option>
+	                            <option value="835(3)(a)">835(3)(a)</option>
+	                            <option value="835(3)(b)">835(3)(b)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+           <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        <h3 class="iconswitch"><span class="comply"></span>836 Remining: Eligibility For Abandoned Mine Land Status</h3>
+        <div>
+             <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="836(1)">836(1)</option>
+	                            <option value="836(2)">836(2)</option>
+	                            <option value="836(3)">836(3)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+            <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+           <h3 class="iconswitch"><span class="comply"></span>837 Remining: Bonding</h3>
+        <div>
+            <input type="checkbox" title="Compliance" name="Compliance" checked aria-checked="true" />&nbsp;I agree to comply with the requirements of this section.
+            <br /><br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Location of Rule Complied with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="Rule">
+	                            <option value="Choose Rule" selected>Choose Rule</option>
+                                <option value="Entire Section">Entire Section</option>
+	                            <option value="837(1)">837(1)</option>
+	                            <option value="837(2)">837(2)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="pagename">
+	                            <option value="Choose Page/Screen Reference" selected>Choose Page/Screen Reference</option>
+	                            <option value="Screen 1">Screen 1</option>
+	                            <option value="Screen 2">Screen 2</option>
+	                            <option value="Screen 3">Screen 3</option>
+	                            <option value="Screen 4">Screen 4</option>
+	                            <option value="Screen 5">Screen 5</option>
+	                            <option value="Screen 6">Screen 6</option>
+	                            <option value="Screen 7">Screen 7</option>
+	                            <option value="Screen 8">Screen 8</option>
+	                            <option value="Screen 9">Screen 9</option>
+	                            <option value="Screen 10">Screen 10</option>
+	                            <option value="Screen 11">Screen 11</option>
+	                            <option value="Screen 12">Screen 12</option>
+	                            <option value="Screen 13">Screen 13</option>
+	                            <option value="Screen 14">Screen 14</option>
+	                            <option value="Screen 15">Screen 15</option>
+	                            <option value="Screen 16">Screen 16</option>
+	                            <option value="Screen 17">Screen 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button value="Submit" class="tertiary" title="+ Add New Rule">+ Add New Rule</button>
+            <label for="Operator Comments">Operator Comments</label>
+            <textarea id="" placeholder="Provide Comments if necessary..."></textarea>
+            <br />
+            <button value="Submit" title="Deficiency" class="ShowComments CommentsButton Primary">Deficiency ▼</button>
+                <div class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+        </div>
+        </div>   
+        <br />
+        <button class="primary" value="Submit" title="Save">SAVE</button>
+        <button class="secondary" value="Cancel" title="Cancel">CANCEL</button>
+      </fieldset> 
+</article>

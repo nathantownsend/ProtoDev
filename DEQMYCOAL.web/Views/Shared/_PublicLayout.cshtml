@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - myCOAL</title>
+        <link href="~/favicon.ico?v=1" rel="shortcut icon" type="image/x-icon" />
+        <link rel="icon" href="~/favicon.ico?v=1" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/base/jquery-ui.css">
+        <style type="text/css">
+            #preview ul {list-style: none;}
+            #preview ul li:before {content: "\25BA \0020";}
+        </style>
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.8.24/jquery-ui.js"></script>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jqueryval")        
+        <script src="~/Scripts/template.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1>DEQ ePermitting Portal</h1>
+                <img src="~/Images/mycoallogo.png" height="64" width="150" alt="myCOAL Logo" title="myCOAL Logo" />
+                @*<nav id="headernav">
+		            @{
+                        Html.RenderPartial("_primarynav");
+                    }
+		            @{
+                        Html.RenderPartial("_tasks");
+                    }
+                </nav>
+                <span id="user">Welcome @ViewBag.User | <a href="">LOGOUT</a></span>
+                <span id="breadcrumbs"></span>*@
+            </header>
+            
+            <div id="main">
+		            @*@{
+                        Html.RenderPartial("_filterbutton");
+                    }
+		            @{
+                        Html.RenderPartial("_filters");
+                    }
+		            @{
+                        Html.RenderPartial("_subnav");
+                    }*@
+                <section>
+@*		            @{ this doesn't work as is because the RenderBody throws an error when living in a partial view
+                        Html.RenderPartial("_primarycontent");
+                    }*@
+                        @RenderBody()
+                </section>
+            </div>
+        </div>
+        <footer id="footer">
+            <nav id="footernav">
+		            @{
+                        Html.RenderPartial("_footernav");
+                    }
+                <div id="egovfooter">
+                    <div id="footfloat">
+                        <a href="http://montana.gov/">
+                            <img src="//template.mt.gov/resources/template/montanalogo.png" alt="montana.gov" title="montana.gov" width="248" height="48"></a>
+                    </div>
+                    <ul>
+                        <li><a style="color:#6E9699;" title="Online Services" href="http://mt.gov/services">ONLINE SERVICES</a></li>
+                        <li><a style="color:#6E9699;" class="text-color" title="Agency Name" href="http://montana.gov/">AGENCY NAME</a></li>
+                        <li><a style="color:#6E9699;" title="Privacy &amp; Security Policy" href="http://itsd.mt.gov/policy/policies/ENTINT030.asp">PRIVACY &amp; SECURITY</a></li>
+                        <li><a style="color:#6E9699;" title="Accessibility" href="http://mt.gov/discover/disclaimer.asp#accessibility">ACCESSIBILITY</a></li>
+                        <li><a style="color:#6E9699;" href="https://app.mt.gov/contactus/" title="Contact Us">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>

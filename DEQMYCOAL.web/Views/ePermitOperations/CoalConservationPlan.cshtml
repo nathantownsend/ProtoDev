@@ -1,0 +1,157 @@
+﻿@{
+    ViewBag.Title = "CoalConservationPlan";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="16">Coal Conservation Plan</h2>
+
+    <textarea class="planstextarea" id='coalConsPlan' placeholder="Describe the measures to be used to maximize the use and conservation of coal."></textarea>
+
+    @*coal conservation plan attachments*@
+
+    <fieldset class="setapart">
+        <legend>Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>11/27/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>11/27/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*coal conservation map layers*@
+
+    <fieldset class="setapart">
+        <legend>Coal Conservation Maps</legend>
+        <h4>Required Map Layers:</h4>
+         <div class="checkboxes"> 
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Geologic Cross Sections(17.24.322)
+            <br />
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Underground Mine Workings(17.24.322) &nbsp &nbsp <a href="#">MAP</a>
+            <br />
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Unmined Coal(17.24.322) &nbsp &nbsp <a href="#">MAP</a>
+            <br />
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Overburden Isopach(17.24.322)
+            <br />
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Interburden Isopach(17.24.322)
+            <br />
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Coal Seam Isopach(17.24.322) &nbsp &nbsp <a href="#">MAP</a>
+            <br />
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Historic Mining(17.24.322)
+            <br />
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Test Bore Holes(17.24.322)
+            <br />
+            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Coal Crop Lines(17.24.322)
+        </div>
+               <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">ThisLandWasMadeforuandme.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Coal Seam Isopach(17.24.322</option>
+                            <option>Historic Mining(17.24.322)</option>
+                            <option>Test Bore Holes(17.24.322)</option>
+                            <option>Coal Crop Lines(17.24.322)</option>
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    <fieldset class="setapart">
+        <legend>Determined That Not All Coal Will Be Mined</legend>
+        <p>Has the department determined that all of the minable or marketable coal will not be mined?</p>
+        <p>
+            <input id="yes" type="radio" name="radios" value="yes" />Yes
+            <input id="no" type="radio" name="radios" value="no" />No
+        </p>
+        <p style="color: #f26522;">If YES, attach required documentation here:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>11/27/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>11/27/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

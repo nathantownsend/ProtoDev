@@ -1,0 +1,145 @@
+﻿@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Security / User Management</h2> 
+<article>
+    <h3>Edit or Add Users</h3>
+    <p style="color:#F26522;">Edit current users or add new users once registration forms come in and are approved for access.</p>
+@*<fieldset>*@
+       @* <legend></legend>*@
+        <div id="lookup-wrapper">
+            <input id="lookup" type="text" value="Lookup by Name, Company&hellip;" name="q">
+            <input id="lookup-button" type="button">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                    <th>Role</th>
+                    <th>Expiration Date</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Al Ford</td>
+                    <td>aford1964@gmail.com</td>
+                    <td>Operator</td>
+                    <td>06/31/14</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+     <div class="text-right" style="text-align: right;">
+        <button class="tertiary">+&nbsp;Add New</button>
+    </div>
+    <div id="accordion">
+        <h3>User Details</h3>
+        <div>
+        <label>First Name&nbsp;<input type="text" title="First Name" id="FName" name="FName" required /></label>
+        <label>Last Name&nbsp;<input type="text" title="Last Name" id="LName" name="LName" required /></label>
+        <label>User Name&nbsp;<input type="text" title="User Name" id="UserName" name="UserName" required /></label>
+        <label>Password&nbsp;<input type="text" title="Password" id="Password" name="Password" required /></label>
+        <label>Activation Date&nbsp;<input type="text" title="Activation" class="datepicker" name="Activation" value="mm/dd/yy" required /></label>
+        <label>Expiration Date&nbsp;<input type="text" title="Expiration" class="datepicker" name="Expiration" value="mm/dd/yy" required /></label>
+        <label>Title&nbsp;<input type="text" title="Title" id="Title" name="Title" required /></label>
+        <label>Company&nbsp;<input type="text" title="Company" id="Company" name="Company" size="30" required /></label>
+        <label>Address&nbsp;<input type="text" title="Address" id="Address" name="Address" size="50" required /></label>
+        <label>City&nbsp;<input type="text" title="City" id="City" name="Address" required /></label>
+        <label>State&nbsp;<select name="state" required>
+	        <option value="AL">AL</option>
+	        <option value="AK">AK</option>
+	        <option value="AZ">AZ</option>
+	        <option value="AR">AR</option>
+	        <option value="CA">CA</option>
+	        <option value="CO">CO</option>
+	        <option value="CT">CT</option>
+	        <option value="DE">DE</option>
+	        <option value="DC">DC</option>
+	        <option value="FL">FL</option>
+	        <option value="GA">GA</option>
+	        <option value="HI">HI</option>
+	        <option value="ID">ID</option>
+	        <option value="IL">IL</option>
+	        <option value="IN">IN</option>
+	        <option value="IA">IA</option>
+	        <option value="KS">KS</option>
+	        <option value="KY">KY</option>
+	        <option value="LA">LA</option>
+	        <option value="ME">ME</option>
+	        <option value="MD">MD</option>
+	        <option value="MA">MA</option>
+	        <option value="MI">MI</option>
+	        <option value="MN">MN</option>
+	        <option value="MS">MS</option>
+	        <option value="MO">MO</option>
+	        <option value="MT" selected>MT</option>
+	        <option value="NE">NE</option>
+	        <option value="NV">NV</option>
+	        <option value="NH">NH</option>
+	        <option value="NJ">NJ</option>
+	        <option value="NM">NM</option>
+	        <option value="NY">NY</option>
+	        <option value="NC">NC</option>
+	        <option value="ND">ND</option>
+	        <option value="OH">OH</option>
+	        <option value="OK">OK</option>
+	        <option value="OR">OR</option>
+	        <option value="PA">PA</option>
+	        <option value="RI">RI</option>
+	        <option value="SC">SC</option>
+	        <option value="SD">SD</option>
+	        <option value="TN">TN</option>
+	        <option value="TX">TX</option>
+	        <option value="UT">UT</option>
+	        <option value="VT">VT</option>
+	        <option value="VA">VA</option>
+	        <option value="WA">WA</option>
+	        <option value="WV">WV</option>
+	        <option value="WI">WI</option>
+	        <option value="WY">WY</option>
+        </select></label>
+        <label>Zip&nbsp;<input type="text" title="Zip Code" id="Zip Code" name="Zip Code" size="5" required /></label>
+        <label>Phone Number&nbsp;<input type="text" title="Phone Number" id="Phone Number" name="Phone Number" size="12" required />(xxx-xxx-xxxx)</label>
+        <label>Email Address&nbsp;<input type="text" title="Email Address" id="Email Address" name="Email Address" required />(Sample@gmail.com)</label>
+        <label>Role
+        <select required style="width:12em;">
+            <option selected>-- Select a type --</option>
+            <option>Operator</option>
+            <option>Public</option>
+            <option>Partner Agency</option>
+        </select></label>
+        </div>   
+        <h3>Notifications</h3>
+        <div>
+            <label><input type="checkbox" name="" value="" class="parent" />Receive Email All Notifications</label>
+            <label><input type="checkbox" name="" value="" class="child" />Permitting Actions</label>
+            <label><input type="checkbox" name="" value="" class="child" />Bond Estimates Actions</label>
+            <label><input type="checkbox" name="" value="" class="child" />Inspection Reports</label>
+            <label><input type="checkbox" name="" value="" class="child" />User Tasks</label>
+            <label><input type="checkbox" name="" value="" class="child" />Account Changes</label>
+        </div>
+        <h3>Permissions and Access</h3>
+        <div>
+            <label><input type="checkbox" name="" value="" class="parent" />Access to All Areas + Administrator functions</label>
+            <label><input type="checkbox" name="" value="" class="child" />Permitting Actions</label>
+            <label><input type="checkbox" name="" value="" class="child" />Bond Estimates Actions</label>
+            <label><input type="checkbox" name="" value="" class="child" />Inspections</label>
+            <label><input type="checkbox" name="" value="" class="child" />Coal Permitting and Compliance</label>
+            <label><input type="checkbox" name="" value="" class="child" />Security</label>
+            <label><input type="checkbox" name="" value="" class="child" />User Tasks</label>
+            <label><input type="checkbox" name="" value="" class="child" />Metrics</label>
+            <label><input type="checkbox" name="" value="" class="child" />Search Documents</label>
+        </div>
+        </div>      
+        <br />
+        <button class="primary" value="Submit" title="Save">SAVE</button><button class="secondary" value="Reset" title="Reset">Reset</button>
+ @*   </fieldset>*@
+</article>
+
+

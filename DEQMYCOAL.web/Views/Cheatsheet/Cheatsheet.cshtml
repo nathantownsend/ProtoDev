@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "Location";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>.ui-dialog .ui-dialog-titlebar-close span {display: block;margin: -9px;}</style>
+<h1>Cheat Sheet</h1>
+
+
+<article>
+    <p>These are examples of the different interfaces we'll be building for DEQ.  Use them as examples of how to build new screens, and if new interface elements come up, let's agree on them and get them in here.</p>
+    <h2>This is the Page Subtitle -- the Page's Main Purpose</h2>    
+
+    <h3>Simple Fields</h3>
+    <p>Simple fields are generally vertical, with the label above the input.</p>
+    <label for="field1">Field 1</label><input type="text" title="Field 1" id="field1" name="field1" required="">
+    <label for="field2">Field 2</label><input type="text" title="Field 2" id="field2" name="field2" required="">
+    <label for="field3">Field 3</label><input type="text" title="Field 3" id="field3" name="field3" required="">
+            <p>Radio buttons<br />
+            <input type="radio" name="radiobutton" value="yes" /> Yes
+            <input type="radio" name="radiobutton" value="no" /> No
+        </p>
+
+    <h3>Textareas</h3>
+
+    <p>textareas have instructions inside them:</p>
+    <label for="textareadescription">Textarea Description</label>
+    <textarea id="textareadescription" placeholder="Textarea description"></textarea>
+
+    <h3>Buttons</h3>
+
+    <p>Buttons to modify a part of a page are on the right...</p>
+     <div class="text-right" style="text-align:right;">
+        <button class="primary">Add New</button>
+        <button class="secondary">Delete</button>
+    </div>    
+    <p>...while buttons that apply to the whole page are on left (this would only be on page bottom).  This will only be a Save button, no cancels or clears, until we find a need.</p>
+    <button class="primary">Save</button>
+
+    <p><a class="modal1" href="">Modal screens</a> will have both a Save and Cancel.
+        <div class="dialogbox1" style="display: none;" title="CheatsheetModal">
+            @Html.Partial("CheatsheetModal")
+        </div>
+    </p>
+
+    <h3>Comments Buttons</h3>
+
+    <p>Comments button is on right, straight across from Save button (floated right -- use class="CommentsButton")</p>
+    <button value="Submit" id="ShowComments" title="Comments" class="CommentsButton">Comments</button>    
+    <div id="Comments" style="display:none;">
+            <table>
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Comment</th>
+                    <th>Date &amp; Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jane Staff</td>
+                    <td>My First Application was received but not complete. Need to provide more detail on equipment.</td>
+                    <td>2013-01-08 09:24:56</td>
+                </tr>
+                <tr>
+                    <td>Joe Operator</td>
+                    <td>Uploaded a another application called 'My Second'. Provided extensive detail on the equipment we are using on site.</td>
+                    <td>2013-01-23 11:15:32</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align:right;">
+            <button class="primary">Add New</button>
+            <button class="secondary">Delete</button>
+        </div>    
+    </div>
+    <button class="primary">Save</button>
+
+    <h3>Related Fields/Fieldsets</h3>
+
+    <p>Groups of related fields go in a fieldset with class="setapart".  Buttons that affect included fields go inside the fieldset.</p>
+
+    <fieldset class="setapart" legend="Fieldset Legend">
+        <label for="field1">Field 1</label><input type="text" title="Field 1" id="field1" name="field1" required="">
+        <label for="field2">Field 2</label><input type="text" title="Field 2" id="field2" name="field2" required="">
+        <label for="field3">Field 3</label><input type="text" title="Field 3" id="field3" name="field3" required=""> 
+
+        <p>Is the applicant(s) right to mine subject of current or pending litigation?<br />
+            <input type="radio" name="pendingLitigation" value="yes" /> Yes
+            <input type="radio" name="pendingLitigation" value="no" /> No
+        </p>
+
+        <h3>Attachments</h3>   
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>9/18/2013</td>
+                    <td>Regina</td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>9/18/2013</td>
+                    <td>Regina</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align:right;">
+            <button class="primary">Add New</button>
+            <button class="secondary">Delete</button>
+        </div>
+    </fieldset>
+
+
+
+</article>
+

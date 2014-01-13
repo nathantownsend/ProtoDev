@@ -1,0 +1,142 @@
+﻿@{
+    ViewBag.Title = "UniqueFormations";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="2">Unique&nbsp;/&nbsp;Special Characteristics and Geologic Formations</h2>
+
+    <textarea class="planstextarea" placeholder="Significant or Unique Geologic Formations/Sites Description"></textarea>
+
+    @*significant or geologic formations/sites description attachments*@
+
+    <fieldset class="setapart">
+        <legend>Significant or Unique Geologic Formations&nbsp;/&nbsp;Sites Description Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">SpecialUnique.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">UniqueSpecial.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Significant or Unique Geologic Formations&nbsp;/&nbsp;Sites Map</legend>
+        <h4>Required Map Layers: </h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="UniqueForms" value="x" checked="checked" />Unique Geologic Formations (17.24.304(1)(c))
+               <br />
+            <input type="checkbox" name="UniqueForms" value="x" checked="checked" />Scenic Sites (17.24.304(1)(c))          &nbsp &nbsp <a href="#">MAP</a>     
+        </div>
+        <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">UniqueFormasheeown.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                           
+                            <option>Scenic Sites (17.24.304(1)(c))</option>
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    <fieldset class="setapart">
+        <legend>Special Characteristics</legend>
+        <p>Does the permit area or surrounding area possess special, exceptional, critical, or unique characteristics that would be adversely affected by mining?</p>
+        <p>
+            <input id="yes" type="radio" name="radios" value="yes" />Yes
+     <input id="no" type="radio" name="radios" value="no" />No
+        </p>
+        <p style="color: #f26522;">If Yes, attach the Special Characteristics Report below.</p>
+        <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">UniqueBublich.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">BublichUnique.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <div>
+        <button class="primary">Save</button>
+        <button class="secondary">Reset</button>
+    </div>
+</article>
+

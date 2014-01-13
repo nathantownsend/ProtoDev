@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Violations and Cessations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="8">Violations and/or Cessations</h2>
+    <fieldset class="setapart">
+        <legend>Applicant Violations</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name of Person, Company, or Organization</th>
+                    <th>Permit ID</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">Big Hole Mining Company</a></td>
+                    <td>123456789</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button></td>
+                </tr>
+                <tr>
+                    <td><a href="#">The Other Mining Company</a></td>
+                    <td>123456789</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button value="AddNew" title="Enter Violation and/or Cessation Information" class="modal5 tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox5" style="display: none;" title="Enter Violation and/or Cessation Information">
+                @Html.Partial("ViolationCessationInformation")
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="setapart">
+        <legend>Parent Company Violations Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>9/19/2013</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button></td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>9/19/2013</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+
+</article>
+

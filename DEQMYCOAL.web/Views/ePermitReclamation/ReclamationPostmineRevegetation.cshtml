@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "ReclamationPostmineRevegetation";
+}
+
+<h1>ePermit</h1>
+<article>
+
+    <h2 data-submenu="1">Postmine Land Use&nbsp;/&nbsp;Revegetation Types</h2>
+
+    @*postmine land use/revegetation types table*@
+
+    <fieldset class="setapart">
+        <table>
+            <thead>
+                <tr>
+                    <th>Postmine Land Use (Revegetation Type)</th>
+                    <th>Acreage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr>
+                    <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                    <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;">
+                         <p style="clear:both; white-space: pre-wrap;font-size: 1.2em; font-weight:bold;">Total:</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+    @*mining and reclamation timetable*@
+
+    <fieldset class="setapart">
+        <legend>Mining and Reclamation Table</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Acreage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input style="width: 100%" type="text" value="Phase One" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" value="Jan 1" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" value="Jan 5" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" value="10" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                    <td>
+                        <input style="width: 100%" type="text" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Comments</legend>
+        <textarea id='commentstextarea' placeholder="Comments"></textarea>
+    </fieldset>
+    <br />
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

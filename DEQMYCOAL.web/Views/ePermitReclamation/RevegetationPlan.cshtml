@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "RevegetationPlan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+
+<article>
+    <h2 data-submenu="7">Revegetation Plan (Part I)</h2>
+    <fieldset class="setapart">
+        <legend>Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">Manyveggeie.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">Manyveggie2.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    <fieldset class="setapart">
+        <legend>Land Use Table </legend>
+
+        <table id="tableproperties" >
+            <!-- First row -->
+
+            <tr>
+                <th>Premine Community Type</th>
+                <th style="width: 6.5em;">Acreage</th>
+                <th>Premine Land Use</th>
+                <th style="width: 6.5em;">Acreage</th>
+                <th>Postmine Reveg Type</th>
+                <th style="width: 6.5em;">Acreage</th>
+                <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+            </tr>
+
+            <!-- Second row -->
+
+            <tr>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Social" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="12" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Local" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="255" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Widespread" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="133" /></td>
+                <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+            </tr>
+
+            <!-- Third row -->
+
+            <tr>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Single" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Gardening" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Sunflowers" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
+                <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+            </tr>
+
+            <!-- Fourth row -->
+
+            <tr>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Industrial" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="15" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Industry" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="33" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Grasslands" /></td>
+                <td>
+                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="22" /></td>
+                <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+            </tr>
+
+            <!-- Fifth row -->
+
+            <tr class='rowpropheader' style="font-size: 1.1em; font-weight: 600;">
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;">Total:   28 </td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;">Total:  289</td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;">Total:  156</td>
+            </tr>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    
+    <fieldset class="setapart">
+        <legend>Seed Mixes Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">FruityMix.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">VarietyMix.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

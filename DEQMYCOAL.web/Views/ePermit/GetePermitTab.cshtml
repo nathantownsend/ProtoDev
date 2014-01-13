@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "ePermit";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h1>ePermit</h1>
+
+<article>
+
+<h2>Current Permits</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Permit ID</th>
+            <th>Application Type</th>
+            <th>App #</th>
+            <th>Status</th>
+            <th>Status Date</th>
+        </tr>
+    </thead>
+    <tr>
+        <td><a href="/deq/mycoal/ePermitAdmin/ApplicationForm">C1979012</a></td>
+        <td>Amendment</td>
+        <td>AM2</td>
+        <td>Technical Review</td>
+        <td>11/25/2012</td>
+    </tr>
+    <tr>
+        <td><a href="/deq/mycoal/ePermitAdmin/ApplicationForm">C1979012</a></td>
+        <td>Bond Release</td>
+        <td>SL9</td>
+        <td>Approved</td>
+        <td>6/18/2011</td>
+    </tr>
+    <tr>
+        <td><a href="/deq/mycoal/ePermitAdmin/ApplicationForm">C1979012</a></td>
+        <td>Minor Revision</td>
+        <td>MR153</td>
+        <td>Draft</td>
+        <td>11/15/2012</td>
+    </tr>
+</table>
+
+        <button value="Add" class="modal2 primary">Add</button>
+                <div class="dialogbox2" style="display: none;" title="Enter New Application Type">
+                    <select style="padding-right: 0em;">
+                        <option>Permit ID</option>
+                        <option>C1978011</option>
+                        <option>C1979012</option>
+                        <option>C1981003E</option>
+                        <option>C1983004CR</option>
+                        <option>C1983007</option>
+                        <option>C1984002</option>
+                        <option>C1984003B</option>
+                        <option>C1985003C</option>
+                        <option>C1985005</option>
+                        <option>C1986003A</option>
+                        <option>C1986003D</option>
+                        <option>C1986016</option>
+                        <option>C1987001C</option>
+                        <option>C1988004B</option>
+                        <option>C1993017</option>
+                        <option>C2011003F</option>
+                        <option>C2012018</option>
+                    </select>
+                    <br />
+                    <select style="padding-right: 0em;">
+                        <option>Application Type</option>
+                        <option>New Permit</option>
+                        <option>Amendment</option>
+                        <option>Major Revision</option>
+                        <option>Minor Revision</option>
+                        <option>Renewal</option>
+                        <option>Bond Release</option>
+                    </select>
+                    <br />
+                    <select style="padding-right: 0em;">
+                        <option>Status</option>
+                        <option>Draft</option>
+                        <option>Completeness Review</option>
+                        <option>Deficiency</option>
+                        <option>Technical Review</option>
+                        <option>Awaiting Decision</option>
+                        <option>Approved</option>
+                        <option>Withdrawn</option>
+                    </select>
+                    <label for="ApplicationNumber" style="width: 150px; text-align: left; margin-top: 0.5em;">Application Number</label><input type="text" title="ApplicationNumber" id="ApplicationNumber" name="ApplicationNumber" required="" style="display: inline-block; float: left;">
+                    <textarea id='commentstextarea' placeholder="Application Description"></textarea>
+                    <div style="clear: both;">
+                        <button class="primary">Save</button>
+                        <button class="secondary">Cancel</button>
+                    </div>
+                </div>
+        <button class="secondary">Delete Draft</button>
+        <button class="secondary">Withdraw</button>
+
+
+
+
+
+
+</article>

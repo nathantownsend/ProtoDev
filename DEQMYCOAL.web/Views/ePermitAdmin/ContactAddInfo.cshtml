@@ -1,0 +1,209 @@
+﻿@*basic contact information setapart*@
+
+<fieldset class="setapart">
+    <legend>Basic Contact Information</legend>
+    <label>Contact Type</label>
+    <select class="dropdownList">
+        <option value="Individual">Individual</option>
+        <option value="Business">Business</option>
+    </select>
+    <div>
+        <div style="float: left; padding-right: 1.5em;">
+            <label>Salutation</label>
+            <select class="dropdownList">
+                <option>Mr.</option>
+                <option>Mrs.</option>
+            </select>
+        </div>
+        <div style="float: left; padding-right: 1.5em;">
+            <label>First Name</label>
+            <input type="text" id="FirstName" name="FirstName" required />
+        </div>
+        <div style="float: left; padding-right: 1.5em;">
+            <label>Last Name</label>
+            <input type="text" id="LastName" name="LastName" required />
+        </div>
+    </div>
+    <fieldset style="margin-bottom: 1.5em; background-color: #f8f8f8; /*border-radius: 1em; */ margin-left: -1.1em;">
+        <legend></legend>
+        <label for="companyname">Company Name</label><input type="text" title="companyname" id="CompanyName" name="CompanyName" required="" />
+        <label for="title">Title</label><input type="text" title="title" id="title" name="title" required="" />
+        <label for="id">Employer ID or Tax ID</label><input type="text" title="id" id="id" name="id" required="" />
+        <label for="telephone">Office Telephone</label><input type="text" title="telephone" id="telephone" name="telephone" required="" />
+        <label for="extension">Extension</label><input type="text" title="extension" id="extension" name="extension" required="" />
+        <label for="fax">Fax</label><input type="text" title="fax" id="fax" name="fax" required="" />
+        <label for="email">Email Address</label><input type="text" title="email" id="email" name="email" required />
+    </fieldset>
+</fieldset>
+
+@*addresses setapart*@
+
+<fieldset class="setapart">
+    <legend>Addresses</legend>
+    <label>Address Type</label>
+    <select class="dropdownList">
+        <option>Permanent</option>
+        <option>Temporary</option>
+    </select>
+    <label>Mailing Address Line 1</label>
+    <input type="text" title="Mailing Address Line 1" id="Mailing Address Line 1" name="Mailing Address Line 1" size="70" required /><br />
+    <label>Mailing Address Line 2</label>
+    <input type="text" title="Mailing Address Line 2" id="Mailing Address Line 2" name="Mailing Address Line 2" size="70" required /><br />
+    <label>P.O. Box</label>
+    <input type="text" title="POBox" id="POBox" name="POBox" required /><br />
+
+    <div>
+        <div style="float: left; padding-right: 1.5em;">
+            <label>City</label>
+            <input type="text" title="City" id="City" name="Address" required />
+        </div>
+        <div style="float: left; padding-right: 1.5em;">
+            <label>State</label>
+            <select class="dropdownList" name="state" required>
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="DC">DC</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+            </select>
+        </div>
+        <div style="float: left;">
+            <label>Zip Code</label>
+            <input type="text" title="Zip Code" id="Zip Code" name="Zip Code" size="10" required /><br />
+        </div>
+    </div>
+    <div class="text-right" style="clear: both; text-align: right;">
+        <button class="tertiary">+&nbsp;Add New Address</button>
+        <button class="secondary">Delete</button>
+    </div>
+</fieldset>
+
+@*additional information setapart*@
+
+<fieldset class="setapart">
+    <legend>Additional Information</legend>
+    <label>Legal Entity</label>
+    <select name="selectOpt" id="selectOpt" class="dropdownList selectOpt">
+        <option value="LegalEntity">Legal Entity</option>
+        <option value="Corporation">Corporation</option>
+        <option value="Partnership">Partnership</option>
+        <option value="Association">Association</option>
+        <option value="LimitedLiability">Limited Liability Company</option>
+        <option value="Proprietorship">Sole Proprietorship</option>
+        <option value="Other">Other</option>
+    </select>
+    <div id="describeEntity" class="describeEntity" style="display: none">
+        <label for="Describe">Describe Other Legal Entity</label>
+        <input type="text" title="Describe" id="Describe" name="Describe" size="70" /><br />
+    </div>
+    <label>Legal Structure</label>
+    <input type="text" title="LegalStructure" id="LegalStructure" name="LegalStructure" size="70" required /><br />
+    <label>Date of Incorporation</label><input type="text" title="Incorporation" class="datepicker" name="Incorporation" value="mm/dd/yy" required />
+    @*<input type="text" title="DateIncorporation" id="DateIncorporation" name="DateIncorporation" required /><br />*@
+    <label>State of Incorporation</label>
+    <select class="dropdownList" name="state" required>
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="AR">AR</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DE">DE</option>
+        <option value="DC">DC</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="IA">IA</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="ME">ME</option>
+        <option value="MD">MD</option>
+        <option value="MA">MA</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MS">MS</option>
+        <option value="MO">MO</option>
+        <option value="MT">MT</option>
+        <option value="NE">NE</option>
+        <option value="NV">NV</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NY">NY</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WV">WV</option>
+        <option value="WI">WI</option>
+        <option value="WY">WY</option>
+    </select><br />
+</fieldset>
+<div>
+    <button class="primary">Save</button>
+    <button class="secondary">Cancel</button>
+</div>
+
+

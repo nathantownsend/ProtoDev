@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "MiningNearUndergroundMining";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="11">Mining Near Underground Mining</h2>
+    <fieldset class="setapart">
+        <legend>Mining Conducted Within 500 feet of an Underground Mine</legend>
+    <p>Will proposed mining operations be conducted within 500 feet of an active or abandoned underground mine?</p>
+    <p>
+        <input id="yes" type="radio" name="radios" value="yes" />Yes
+     <input id="no" type="radio" name="radios" value="no" />No
+    </p>
+    <label for="describeMeasures" style="color: #f26522;">If YES, describe measures to be taken to comply with Rules 82-4-227(8) and 17.24.516.</label>
+    <textarea class="planstextarea" id="describeMeasures" placeholder="Compliance Description"></textarea>
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>MSHA Approval Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <div>
+        <button class="primary">Save</button>
+        <button class="secondary">Reset</button>
+    </div>
+</article>
+

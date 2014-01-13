@@ -1,0 +1,176 @@
+﻿@{
+    ViewBag.Title = "WildlifeSurvey";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="7">Wildlife Survey</h2>
+
+    @* wildlife survey report attachments*@
+
+    <fieldset class="setapart">
+        <legend>Wildlife Survey Report Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*threatened and endangered species list table*@
+
+    <fieldset class="setapart">
+        <table>
+            <!-- First row -->
+            <thead>
+                <tr>
+                    <th style="width: 35em;">Threatened and Endangered Species List </th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <!-- Second row -->
+            <tbody>
+                <tr>
+                    <td>
+                        <input style="width: 100%" type="text" name="endangeredspecies" required="" value="Three Headed Mongoose" /></td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input style="width: 100%" type="text" name="endangeredspecies" required="" value="Red Tailed Deer" /></td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*mitigation plan attachments*@
+
+    <fieldset class="setapart">
+        <legend>Migration Plan Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*wildlife habitat map layers and attachments*@
+
+    <fieldset class="setapart">
+        <legend>Wildlife Habitat Maps</legend>
+        <h4>Required Map Layers: </h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="WildlifeHabitat" value="x" checked="checked" />Wildlife Habitats (17.24.304(1)(j)(iv)) &nbsp &nbsp <a href="#">MAP</a>
+               <br />
+
+            <input type="checkbox" name="WildlifeHabitat" value="x" checked="checked" />Wildlife Survey Area (17.24.304(1)(j)(iv))
+              @* <br />*@
+        </div>
+        <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">MutualofOmaha.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Wildlife Habitats (17.24.304(1)(j)(iv))</option>
+                            <option>Wildlife Survey Area (17.24.304(1)(j)(iv))</option>
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+
+</article>
+

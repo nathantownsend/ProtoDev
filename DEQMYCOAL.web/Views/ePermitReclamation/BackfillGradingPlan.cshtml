@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "BackfillGradingPlan";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="4">Backfill and Grading Plan</h2>
+
+    <textarea class="planstextarea" id='backfillGradingPlan' placeholder="Backfill and Grading Plan"></textarea>
+
+    @*backfill and grading plan attachments*@
+
+    <fieldset class="setapart">
+        <legend>Backfill and Grading Plan Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>11/29/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>11/29/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*general location map layers*@
+
+    <fieldset class="setapart">
+        <legend>General Location Maps</legend>
+        <h4>Required Map Layers:</h4>
+        <div class="checkboxes">
+             <input type="checkbox" name="Backfill" value="x" checked="checked" />Postmine Topography (PMT) (17.24.313(1)(D)(IV)) &nbsp &nbsp <a href="#">MAP</a>
+        </div>
+                <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">BEEPBEEPBEEP.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Postmine Topography (PMT) (17.24.313(1)(D)(IV))</option>
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

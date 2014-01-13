@@ -1,0 +1,34 @@
+﻿<fieldset class="setapart" style="padding-top: 0em;">
+    
+    <label for="name">Name of Person, Company, or Organization</label><input type="text" title="name" id="name" name="name" size="50" required="" />
+    <label for="id">Permit ID</label><input type="text" title="id" id="id" name="id" required="" />
+    <label for="novCoNumber">NOV/CO Number</label><input type="text" title="novCoNumber" id="novCoNumber" name="novCoNumber" required="" />
+    <label for="mshaID">MSHA ID</label><input type="text" title="mshaID" id="mshaID" name="mshaID" required="" />
+    <label>Date of Issuance</label><input type="text" title="Issuance" class="datepicker" name="Issuance" value="mm/dd/yy" required />
+    <label for="authority">Name of Regulatory Authority</label><input type="text" title="authority" id="authority" name="authority" size="50" required />
+    <label for="reason">Reason for Action</label><input type="text" title="reason" id="reason" name="reason" size="50" required /><br />
+
+    <div>
+        <div style="float: left; padding-right: 1.5em;">
+            <label>Type of Proceedings</label>
+            <select class="dropdownList">
+                <option>Administrative</option>
+                <option>Judicial</option>
+            </select>
+        </div>
+        <div style="float: left; padding-right: 1.5em;">
+            <label>Date of Proceedings</label><input type="text" title="Proceedings" class="datepicker" name="Proceedings" value="mm/dd/yy" required />
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <label for="location">Location of Proceedings</label><input type="text" title="location" id="location" name="location" size="50" required />
+    <label for="status">Current Status of Proceedings</label><input type="text" title="status" id="status" name="status" size="50" required />
+    <label for="abatement">Abatement Actions Taken</label><input type="text" title="abatement" id="abatement" name="abatement" size="50" required />
+</fieldset>
+<div>
+    <button class="primary">Save</button>
+    <button class="secondary">Cancel</button>
+</div>
+

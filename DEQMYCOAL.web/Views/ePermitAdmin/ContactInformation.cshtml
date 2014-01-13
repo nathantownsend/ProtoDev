@@ -1,0 +1,232 @@
+﻿@{
+    ViewBag.Title = "Contact Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+
+<article>
+    <h2 data-submenu="1">Contact Information</h2>
+    <div id="notaccordion">
+
+        @*applicant information heading and table*@
+
+        <h3><a href="#">Applicant</a></h3>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-right" style="text-align: right;">
+                <button value="AddNew" title="Contact Information" class="modal3 tertiary">+&nbsp;Add New</button>
+                <div class="dialogbox3" style="display: none;" title="Contact Information">
+                    @Html.Partial("ContactAdd")
+                </div>
+            </div>
+        </div>
+
+        @* operator information heading and table*@
+
+        <h3><a href="#">Operator</a></h3>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-right" style="text-align: right;">
+                <button value="AddNew" title="Contact Information" class="modal4 tertiary">+&nbsp;Add New</button>
+                <div class="dialogbox4" style="display: none;" title="ContactAddInfo">
+                    @Html.Partial("ContactAddInfo")
+                </div>
+            </div>
+        </div>
+        @*<hr />*@
+
+        @*contractor information heading and table*@
+
+        <h3><a href="#">Contractor</a></h3>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-right" style="text-align: right;">
+                <button value="AddNew" title="ContactAddInfo" class="modal5 tertiary">+&nbsp;Add New</button>
+                <div class="dialogbox5" style="display: none;" title="ContactAddInfo">
+                    @Html.Partial("ContactAddInfo")
+                </div>
+            </div>
+        </div>
+
+        @*consultant information heading and table*@
+
+        <h3><a href="#">Consultant</a></h3>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-right" style="text-align: right;">
+                <button value="AddNew" title="Contact Add Info" class="modal6 tertiary">+&nbsp;Add New</button>
+                <div class="dialogbox6" style="display: none;" title="Contact Add Info">
+                    @Html.Partial("ContactAddInfo")
+                </div>
+            </div>
+        </div>
+
+        @*resident agent information heading and table*@
+
+        <h3><a href="#">Resident Agent</a></h3>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Regina Elmose</td>
+                        <td>555-0000</td>
+                        <td>RElmose@mt.gov</td>
+                        <td style="text-align: center;">
+                            <button class="edit" title="Edit">Edit</button>
+                            <button class="delete" title="Delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-right" style="text-align: right;">
+                <button value="AddNew" title="Contact Add Info" class="modal7 tertiary">+&nbsp;Add New</button>
+                <div class="dialogbox7" style="display: none;" title="Contact Add Info">
+                    @Html.Partial("ContactAddInfo")
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">
+    @Html.Partial("Deficiency")
+    </div>
+        <button class="primary">Save</button>
+    
+</article>
+

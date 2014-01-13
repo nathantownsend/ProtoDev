@@ -1,0 +1,178 @@
+﻿@{
+    ViewBag.Title = "AlluvialValleyFloors";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="13">Alluvial Valley Floors</h2>
+    @* Alluvial vally Floor study attachments*@
+
+    <fieldset class="setapart">
+        <legend>Alluvial Valley Floor Study</legend>
+    <p>Will the operation be within or adjacent to a valley holding a stream?</p>
+    <p>
+        <input id="yes" type="radio" name="radios" value="yes" title="If Yes, attach the Alluvial Valley Floor Study below." />Yes
+     <input id="no" type="radio" name="radios" value="no" />No
+    </p>
+    <p style="color: #f26522;">If YES, attach the Alluvial Valley Floor Study (and any additional materials required by the department) below.</p>
+        <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>11/18/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                       <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td> 
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>11/18/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+   @* written determination attachments*@
+
+    <fieldset class="setapart">
+        <legend>Department's Written Determination</legend>
+    <p>Has an alluvial valley floor determination been requested?</p>
+    <p>
+        <input id="yes" type="radio" name="radios" value="yes" title="If Yes, attach the Alluvial Valley Floor Determination request below." />Yes
+     <input id="no" type="radio" name="radios" value="no" />No
+    </p>
+    <p style="color: #f26522;">If YES, attach the Alluvial Valley Floor Determination Request below.</p> 
+        <h4>Attachments</h4>   
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>11/18/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>11/18/13</td>
+                    <td>Regina</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*alluvial valley floor map layers*@
+
+    <fieldset class="setapart">
+        <legend>Alluvial Valley Floor Maps</legend>
+        <h4>Required Map Layers:</h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Cultural Resource Sites (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Streamlaid Deposits (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Streams (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Drainage Boundaries (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Groundwater Flow Direction (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Premine Topography (17.24.304(1)(b)) &nbsp &nbsp <a href="#">MAP</a>
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Landuse (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Historic Flood Irrigation Areas (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Diversions (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Ditches (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Dams (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Reservoirs (17.24.304(1)(b))
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Aerial Imagery (17.24.304(1)(b)) &nbsp &nbsp <a href="#">MAP</a>
+            <br />
+            <input type="checkbox" name="LandUse" value="x" checked="checked" />Infrared Aerial Imagery (17.24.304(1)(b))
+        </div>
+        <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">AlluvialValleyRanch.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Streamlaid Deposits (17.24.304(1)(b))</option>
+                            <option>Diversions (17.24.304(1)(b))</option>
+                            <option>Ditches (17.24.304(1)(b))</option>
+                            <option>Reservoirs (17.24.304(1)(b)</option>
+                            <option>Infrared Aerial Imagery (17.24.304(1)(b))</option>
+                        </select>
+                        </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*end all tables/attachments*@
+
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

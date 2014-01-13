@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Location";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .ui-dialog .ui-dialog-titlebar-close span
+    {
+        display: block;
+        margin: -9px;
+    }
+</style>
+<h1>ePermit</h1>
+
+
+<article>
+    <h2 data-submenu="2">Location</h2>
+    @*<div class="setapart">*@
+    <fieldset class="setapart">
+        <legend>Legal Description of Access</legend>
+        <textarea id='commentstextarea' placeholder="Legal Description of Access"></textarea>
+        <label for="latitude" style="display: inline-block; float: left; clear: left; width: 120px; text-align: left; margin-top: 0.5em;">Latitude</label><input type="text" title="Latitude" id="latitude" name="latitude" required="" style="display: inline-block; float: left;">
+        <label for="longitude" style="display: inline-block; float: left; clear: left; width: 120px; text-align: left; margin-top: 0.5em;">Longitude</label><input type="text" title="Longitude" id="longitude" name="longitude" required="" style="display: inline-block; float: left;">
+        <label for="nearesttown" style="display: inline-block; float: left; clear: left; width: 120px; text-align: left; margin-top: 0.5em;">Nearest Town</label><input type="text" title="Nearest Town" id="nearesttown" name="nearesttown" required="" style="display: inline-block; float: left;">
+
+
+        <div style="clear: both; margin-top: 9em;">
+            <div style="width: 40%; float: left;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>County</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rosebud</td>
+                        </tr>
+                        <tr>
+                            <td>Treasure</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button value="Edit Counties" title="Counties" class="modal3 tertiary">Edit Counties</button>
+                <div class="dialogbox3" style="display: none;" title="Edit Counties">
+                    @Html.Partial("CountyPicker")
+                </div>
+            </div>
+            <div style="width: 40%; float: right;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>USGS Quad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pilot Knob</td>
+                        </tr>
+                        <tr>
+                            <td>Pikes Peak</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button value="Edit USGS Quads" title="USGS Quads" class="modal2 tertiary">Edit USGS Quads</button>
+                <div class="dialogbox2" style="display: none;" title="Edit USGS Quads">
+                    @Html.Partial("USGSQuadPicker")
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <div>
+        <button class="primary">Save</button>
+        <button class="secondary">Reset</button>
+    </div>
+</article>
+

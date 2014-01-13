@@ -1,0 +1,234 @@
+﻿@{
+    ViewBag.Title = "PlansForPondsAndEmbankments";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="10">Plans for Ponds and Embankments</h2>
+
+    @*general plan for impoundments attachments*@
+
+    <fieldset class="setapart">
+        <legend>General Plan for Impoundments Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*generic design plan for small disturbed areas attachments*@
+
+    <fieldset class="setapart">
+        <legend>Generic Design Plan for Small Disturbed Areas Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*certified schedule for detailed design plan attachments*@
+
+    <fieldset class="setapart">
+        <legend>Certified Schedule for Detailed Design Plan Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @* pond specific design and as-built table*@
+
+    <fieldset class="setapart">
+        <legend>Pond Specific Design and As-Built Table</legend>
+        <table id="tableproperties2" style="clear: both; width: 100%;">
+            <!-- First row -->
+            <tr>
+                <th>Pond ID</th>
+                <th>Design Attachment</th>
+                <th>As-Built Attachment</th>
+                <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+            </tr>
+            <!-- Second row -->
+            <tr>
+                <td>
+                    <input class="cell-width-100" type="text" name="pondid" required="" value="Pond 29-A2543" /></td>
+                <td><a href="#">Design.pdf</a></td>
+                <td><a href="#">AsBuilt.pdf</a></td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="cell-width-100" type="text" name="pondid" required="" value="Pond 867-5309" /></td>
+                <td><a href="#">Design2.pdf</a></td>
+                <td class="actionrow">
+                    @*<button class="selectedit">Add New</button>*@</td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="cell-width-100" type="text" name="pondid" required="" value="Pond Beachwood-4-5789  " /></td>
+                <td><a href="#">Design3.pdf</a></td>
+                <td class="actionrow">
+                    @*<button class="selectedit">Add New</button>*@</td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                    <button class="delete" title="Delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+            </tr>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    @*general location map layers and attachments*@
+
+    <fieldset class="setapart">
+        <legend>General Location Map</legend>
+        <h4>Required Map Layers:</h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="Ponds" value="x" checked="checked" />Impoundments (17.24.315(1)(a)(ii)) &nbsp &nbsp <a href="#">MAP</a>
+            <br />
+            <input type="checkbox" name="Ponds" value="x" checked="checked" />Premine Drainage Boundary (17.24.315(1)(a)(ii))
+              @* <br />*@
+        </div>
+        <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">OnGoldenPond.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Premine Drainage Boundary (17.24.315(1)(a)(ii))</option>
+
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <div>
+        <button class="primary">Save</button>
+        <button class="secondary">Reset</button>
+    </div>
+</article>
+

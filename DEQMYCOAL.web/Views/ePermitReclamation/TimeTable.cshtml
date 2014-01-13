@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Timetable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="2">Life of Mine&nbsp;/&nbsp;Estimated Mining Timetable</h2>
+
+    <fieldset class="setapart">
+        <legend>Life of Mine Information</legend>
+        <input class="textwidth" type="text" title="sitename" id="sitename" name="sitename" required="" value="Life of Mine-Years" />
+
+        <h3>Anticipated Production in Tons:</h3>
+
+        <input class="textwidth" type="text" id="annual" name="annual" required value="Annual" />
+        <br />
+        <br />
+        <input class="textwidth" type="text" title="total" id="total" name="mshaid" required="" value="Total (Over Life of Mine)" />
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Mining and Reclamation Timetable</legend>
+        <table id="tableproperties" style="clear: both; width: 100%;">
+            <!-- First row -->
+            <tr>
+                <th class="timetablecolumnheader">Phase</th>
+                <th class="timetablecolumnheader">Start Date</th>
+                <th class="timetablecolumnheader">End Date</th>
+                <th class="timetablecolumnheader">Acreage</th>
+            </tr>
+            <!-- Second row -->
+            <tr class="timetablecolumn">
+                <td class="timetablecolumn">Topsoil Removal</td>
+                <td>
+                    <input type="text" id="topsoilstartdate" name="topsoilstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="topsoilenddate" name="topsoilenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="topsoilacreage" name="topsoilacreage" required="" value="" /></td>
+            </tr>
+
+            <!-- Third row -->
+            <tr>
+                <td class="timetablecolumn">Overburden Removal</td>
+                <td>
+                    <input type="text" id="overburdenremovalstartdate" name="overburdenremovalstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="overburdenremovalenddate" name="overburdenremovalenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="overburdenremovalacreage" name="overburdenremovalacreage" required="" value="" /></td>
+            </tr>
+
+            <!-- Fourth row -->
+
+            <tr>
+                <td class="timetablecolumn">Coal Removal</td>
+                <td>
+                    <input type="text" id="coalremovalstartdate" name="coalremovalstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="coalremovalenddate" name="coalremovalenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="coalremovalacreage" name="coalremovalacreage" required="" value="" /></td>
+            </tr>
+
+            <!-- Fifth row -->
+
+            <tr>
+                <td class="timetablecolumn">Backfilling and Grading</td>
+                <td>
+                    <input type="text" id="backfillstartdate" name="backfillstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="backfillenddate" name="backfillenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="backfillacreage" name="backfillacreage" required="" value="" /></td>
+            </tr>
+
+            <!-- Sixth row -->
+
+            <tr>
+                <td class="timetablecolumn">Topsoil Redistribution</td>
+                <td>
+                    <input type="text" id="redistributionstartdate" name="redistributionstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="redistributionenddate" name="redistributionenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="redistributionacreage" name="redistributionacreage" required="" value="" /></td>
+            </tr>
+
+            <!-- Row 7 -->
+
+            <tr>
+                <td class="timetablecolumn">Revegetation</td>
+                <td>
+                    <input type="text" id="revegetationstartdate" name="revegetationstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="revegetationenddate" name="revegetationenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="revegetationacreage" name="revegetationacreage" required="" value="" /></td>
+            </tr>
+
+            <!-- Row 8 -->
+
+            <tr>
+                <td class="timetablecolumn">Removal of Facilities and Structures</td>
+                <td>
+                    <input type="text" id="structureremovalstartdate" name="structureremovalstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="structureremovalenddate" name="structureremovalenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="structureremovalacreage" name="structureremovalacreage" required="" value="" /></td>
+            </tr>
+
+            <!-- Row 9 -->
+
+            <tr>
+                <td class="timetablecolumn">Removal of Drainage Control Structures</td>
+                <td>
+                    <input type="text" id="drainageremovalstartdate" name="drainageremovalstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="drainageremovalenddate" name="drainageremovalenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="drainageremovalacreage" name="drainageremovalacreage" required="" value="" /></td>
+            </tr>
+
+            <!-- Row 10 -->
+
+            <tr>
+                <td class="timetablecolumn">Removal of Haul Road and Access Road</td>
+                <td>
+                    <input type="text" id="roadremovalstartdate" name="roadremovalstartdate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="roadremovalenddate" name="roadremovalenddate" required="" value="" /></td>
+                <td>
+                    <input type="text" id="roadremovalacreage" name="roadremovalacreage" required="" value="" /></td>
+            </tr>
+        </table>
+
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Comments</legend>
+        <textarea id='commentstextarea' placeholder="Comments"></textarea>
+    </fieldset>
+    <br />
+  
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>
+

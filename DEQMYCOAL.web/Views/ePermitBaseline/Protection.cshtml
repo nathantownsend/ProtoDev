@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Protection";
+}
+
+<h1>ePermit</h1>
+
+<article>
+    <h2 data-submenu="11">Protection of Public Parks and Historic Places</h2>
+    <fieldset class="setapart" style="padding-top: 0em;">
+        <legend></legend>
+        <p>Will any public parks, historic places, or other significant cultural resources be adversely affected by the proposed operation?</p>
+        <p>
+            <input id="yes" type="radio" name="radios" value="yes" />Yes
+     <input id="no" type="radio" name="radios" value="no" />No
+        </p>
+        <textarea class="planstextarea" id="describeMeasures" placeholder="If YES, describe measures used to minimize or prevent adverse impacts."></textarea>
+        </fieldset>
+        <fieldset class="setapart">
+        <legend>Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+
+    <fieldset class="setapart">
+        <legend>Public Parks and Historic Places Maps</legend>
+        <h4>Required Map Layers:</h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="PublicParks" value="x" checked="checked" />Public Parks (17.24.305(1)(h)) &nbsp &nbsp <a href="#">MAP</a>
+            <br />
+            <input type="checkbox" name="PublicParks" value="x" checked="checked" />NRHP Locations (17.24.305(1)(h))
+            <br />
+            <input type="checkbox" name="PublicParks" value="x" checked="checked" />Archaeological Sites (17.24.305(1)(h))
+        </div>
+           
+                <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">Mangnome.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>NRHP Locations (17.24.305(1)(h))</option>
+                            <option>Archaeological Sites (17.24.305(1)(h))</option>
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <div>
+        <button class="primary">Save</button>
+        <button class="secondary">Reset</button>
+    </div>
+</article>
+

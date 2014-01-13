@@ -1,0 +1,789 @@
+﻿@{
+    ViewBag.Title = "Map Summary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>.ui-dialog .ui-dialog-titlebar-close span {display: block;margin: -9px;}</style>
+<h1>Maps</h1>
+
+<article>
+    <h2>Maps Overview</h2>    
+
+    <fieldset class="setapart" legend="Master CAD">
+        Is there a Master CAD drawing for this permit?<br />
+            <input type="radio" name="radiobutton" value="yes" /> Yes
+            <input type="radio" name="radiobutton" value="no" /> No
+        <p style="color:red;">Note: clicking "Yes" expands a attachment control at this location and grays out the Attachments section.</p>
+    </fieldset>
+
+    <fieldset class="setapart" legend="Fieldset Legend">
+        <h3>Attachments</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Attachment Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>6/01/2013</td>
+                    <td>Nate</td>
+                    <td style="text-align:center;"><a href="">edit</a> &nbsp;&nbsp;<a href="">delete</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>6/12/2013</td>
+                    <td>Nate</td>
+                    <td style="text-align:center;"><a href="">edit</a> &nbsp;&nbsp;<a href="">delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <button value="Add New" title="Add New" class="modal1 tertiary text-right" style="text-align:right;float:right;">Add New</button>
+        <div class="dialogbox1" style="display: none;width:90%;" title="Add New">
+            <div style="margin-bottom:1em;">
+                <label for="sitename">Attachment Name</label><input style="padding-right: 14.5em;" type="text" title="attachmentname" id="attachmentname" name="attachmentname" required="" value="Browse..." />
+            </div>
+
+
+
+
+
+
+            <div>
+
+    
+
+    <h4>17.24.303(1)(s) - Historic Mining Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Mined-out Prior to October 22, 2004</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Non-mined-out Prior to October 22, 2004</div>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+    <h4>17.24.325(2)(a) - Alluvial Valley Floors</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Unconsolidated Deposits</div>
+                    <div><input type="checkbox">Streamlaid Deposits</div>
+                    <div><input type="checkbox">Streams</div>
+                    <div><input type="checkbox">Drainage Boundaries</div>
+                    <div><input type="checkbox">Groundwater Flow Direction</div>
+                    <div><input type="checkbox">Premine Topography</div>
+                    <div><input type="checkbox">Land Use</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Historic Flood Irrigation Areas</div>
+                    <div><input type="checkbox">Diversions</div>
+                    <div><input type="checkbox">Ditches</div>
+                    <div><input type="checkbox">Dams</div>
+                    <div><input type="checkbox">Reservoirs</div>
+                    <div><input type="checkbox">Aerial Imagery</div>
+                    <div><input type="checkbox">Infrared Aerial Imagery</div>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+    <h4>17.24.301(1)(b) - Cultural Resources</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Cultural Resource Sites</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">NRHP Eligible Sites</div>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+    <h4>17.24.304(1)(f) - Hydrologic Information</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Isopach Layers</div>
+                    <div><input type="checkbox">Contour Layers</div>
+                    <div><input type="checkbox">Groundwater Monitoring Wells</div>
+                    <div><input type="checkbox">Water Supply Wells</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Irrigation Ditches</div>
+                    <div><input type="checkbox">Diversions</div>
+                    <div><input type="checkbox">Alternative Water Supplies</div>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+    <h4>17.24.322 - Hydrologic Information</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Springs</div>
+                </td>
+            </tr>
+        </table>
+    </div>    
+
+    <h4>17.24.304(1)(f)/17.2.313(1)(e)/17.24.305 - Hydrologic Information/Drainage Basin Reclamation Plan/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Premine Streams</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h4>17.24.304(1)(f)/17.2.315(a)(ii)/17.24.305 - Hydrologic Information/Plans for Ponds and Embankments/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Impoundments</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.304(1)(f)/17.2.315(a)(ii) - Hydrologic Information/Plans for Ponds and Embankments</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Premine Drainage Divides</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h4>17.24.304(1)(f) - Hydrologic Information</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Isopach Layers</div>
+                    <div><input type="checkbox">Contour Layers</div>
+                    <div><input type="checkbox">Groundwater Monitoring Wells</div>
+                    <div><input type="checkbox">Water Supply Wells</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Irrigation Ditches</div>
+                    <div><input type="checkbox">Diversions</div>
+                    <div><input type="checkbox">Alternative Water Supplies</div>
+                </td>
+            </tr>
+        </table>
+    </div>  
+
+    <h4>17.24.304(1)(f)/17.24.305 - Hydrologic Information/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Surface Water Monitoring Stations</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h4>17.24.304(1)(l) - Premine Land Use</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Premine Land Use</div>
+                    <div><input type="checkbox">Historic Land Use</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Premine Topography</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+      
+    <h4>17.24.304(1)(c) - Unique/Special Characteristics Geologic Formations</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Unique Geologic Formations</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Scenic Sites</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+      
+    <h4>17.24.322/17.24.305 - Geologic Information/Coal Conservation Plan Map/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Geologic Cross Sections</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Historic Mining</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.322 - Geologic Information/Coal Conservation Plan Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Test Bore Holes</div>
+                    <div><input type="checkbox">Coal Seam Isopach</div>
+                    <div><input type="checkbox">Overburden Isopach</div>
+                    <div><input type="checkbox">Interburden Isopach</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Coal Crop Lines</div>
+                    <div><input type="checkbox">Underground Mine Workings</div>
+                    <div><input type="checkbox">Unmined Coal</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+      
+    <h4>17.34.305(1)(h) - Protection of Public Parks and Historic Places</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Public Parks</div>
+                    <div><input type="checkbox">NRHP Locations</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Archaeological Sites</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.3=24.304(1)(j)(iv) - Wildlife Survey</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Wildlife Habitats</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Wildlife Survey Area</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.34.320(1) - Relocation of Use of Public Roads</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Public Road (including right-of-way)</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.304(1)(k) - Soil Survey</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Soil Mapping Units</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.321 - Transportation Facilities Plan</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Roads</div>
+                    <div><input type="checkbox">Rail Loops</div>
+                    <div><input type="checkbox">Drainage Ditches</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Drainage Structures</div>
+                    <div><input type="checkbox">Low-Water Crossings</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.24.321/17.24.305 - Transportation Facilities Plan/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Conveyors</div>
+                    <div><input type="checkbox">Culverts</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Bridges</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.320(1) - Plans for Disposal of Excess Spoil</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Excess Spoil Disposal Sites</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.24.313(1)(e) - Drainage Basin Reclamation Plan</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Premine Drainage Basins</div>
+                    <div><input type="checkbox">Postmine Drainage Basins</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Postmine Streams</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.24.304(1)(i) - Vegetation Survey</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Vegetation Community Types</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                                
+    <h4>17.24.305 - Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Permit Boundary</div>
+                    <div><input type="checkbox">Stockpiles</div>
+                    <div><input type="checkbox">Premine Drainage Boundaries</div>
+                    <div><input type="checkbox">Soil Survey</div>
+                    <div><input type="checkbox">Vegetation Survey</div>
+                    <div><input type="checkbox">Adjacent Permits</div>
+                    <div><input type="checkbox">Air Pollution Control Facilities</div>
+                    <div><input type="checkbox">Alluvial Valley Floors</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Cemetaries</div>
+                    <div><input type="checkbox">Croplines</div>
+                    <div><input type="checkbox">Ditches or Diversions</div>
+                    <div><input type="checkbox">Groundwater Contours</div>
+                    <div><input type="checkbox">Monitoring Wells</div>
+                    <div><input type="checkbox">LOM Disturbance</div>
+                    <div><input type="checkbox">Mine Plan</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    </div>
+    <button class="primary">Save</button>
+            </div>
+        <h3 style="clear:both;">Layers</h3>
+
+    
+
+    <h4>17.24.303(1)(s) - Historic Mining Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Mined-out Prior to October 22, 2004</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Non-mined-out Prior to October 22, 2004</div>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+    <h4>17.24.325(2)(a) - Alluvial Valley Floors</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Unconsolidated Deposits</div>
+                    <div><input type="checkbox">Streamlaid Deposits</div>
+                    <div><input type="checkbox">Streams</div>
+                    <div><input type="checkbox">Drainage Boundaries</div>
+                    <div><input type="checkbox">Groundwater Flow Direction</div>
+                    <div><input type="checkbox">Premine Topography</div>
+                    <div><input type="checkbox">Land Use</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Historic Flood Irrigation Areas</div>
+                    <div><input type="checkbox">Diversions</div>
+                    <div><input type="checkbox">Ditches</div>
+                    <div><input type="checkbox">Dams</div>
+                    <div><input type="checkbox">Reservoirs</div>
+                    <div><input type="checkbox">Aerial Imagery</div>
+                    <div><input type="checkbox">Infrared Aerial Imagery</div>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+    <h4>17.24.301(1)(b) - Cultural Resources</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Cultural Resource Sites</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">NRHP Eligible Sites</div>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+    <h4>17.24.304(1)(f) - Hydrologic Information</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Isopach Layers</div>
+                    <div><input type="checkbox">Contour Layers</div>
+                    <div><input type="checkbox">Groundwater Monitoring Wells</div>
+                    <div><input type="checkbox">Water Supply Wells</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Irrigation Ditches</div>
+                    <div><input type="checkbox">Diversions</div>
+                    <div><input type="checkbox">Alternative Water Supplies</div>
+                </td>
+            </tr>
+        </table>
+    </div>   
+
+    <h4>17.24.322 - Hydrologic Information</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Springs</div>
+                </td>
+            </tr>
+        </table>
+    </div>    
+
+    <h4>17.24.304(1)(f)/17.2.313(1)(e)/17.24.305 - Hydrologic Information/Drainage Basin Reclamation Plan/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Premine Streams</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h4>17.24.304(1)(f)/17.2.315(a)(ii)/17.24.305 - Hydrologic Information/Plans for Ponds and Embankments/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Impoundments</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.304(1)(f)/17.2.315(a)(ii) - Hydrologic Information/Plans for Ponds and Embankments</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Premine Drainage Divides</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h4>17.24.304(1)(f) - Hydrologic Information</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Isopach Layers</div>
+                    <div><input type="checkbox">Contour Layers</div>
+                    <div><input type="checkbox">Groundwater Monitoring Wells</div>
+                    <div><input type="checkbox">Water Supply Wells</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Irrigation Ditches</div>
+                    <div><input type="checkbox">Diversions</div>
+                    <div><input type="checkbox">Alternative Water Supplies</div>
+                </td>
+            </tr>
+        </table>
+    </div>  
+
+    <h4>17.24.304(1)(f)/17.24.305 - Hydrologic Information/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Surface Water Monitoring Stations</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h4>17.24.304(1)(l) - Premine Land Use</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Premine Land Use</div>
+                    <div><input type="checkbox">Historic Land Use</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Premine Topography</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+      
+    <h4>17.24.304(1)(c) - Unique/Special Characteristics Geologic Formations</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Unique Geologic Formations</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Scenic Sites</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+      
+    <h4>17.24.322/17.24.305 - Geologic Information/Coal Conservation Plan Map/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Geologic Cross Sections</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Historic Mining</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.322 - Geologic Information/Coal Conservation Plan Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Test Bore Holes</div>
+                    <div><input type="checkbox">Coal Seam Isopach</div>
+                    <div><input type="checkbox">Overburden Isopach</div>
+                    <div><input type="checkbox">Interburden Isopach</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Coal Crop Lines</div>
+                    <div><input type="checkbox">Underground Mine Workings</div>
+                    <div><input type="checkbox">Unmined Coal</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+      
+    <h4>17.34.305(1)(h) - Protection of Public Parks and Historic Places</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Public Parks</div>
+                    <div><input type="checkbox">NRHP Locations</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Archaeological Sites</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.3=24.304(1)(j)(iv) - Wildlife Survey</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Wildlife Habitats</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Wildlife Survey Area</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.34.320(1) - Relocation of Use of Public Roads</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Public Road (including right-of-way)</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.304(1)(k) - Soil Survey</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Soil Mapping Units</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.321 - Transportation Facilities Plan</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Roads</div>
+                    <div><input type="checkbox">Rail Loops</div>
+                    <div><input type="checkbox">Drainage Ditches</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Drainage Structures</div>
+                    <div><input type="checkbox">Low-Water Crossings</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.24.321/17.24.305 - Transportation Facilities Plan/Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Conveyors</div>
+                    <div><input type="checkbox">Culverts</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Bridges</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h4>17.24.320(1) - Plans for Disposal of Excess Spoil</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td>
+                    <div><input type="checkbox">Excess Spoil Disposal Sites</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.24.313(1)(e) - Drainage Basin Reclamation Plan</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Premine Drainage Basins</div>
+                    <div><input type="checkbox">Postmine Drainage Basins</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Postmine Streams</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                
+    <h4>17.24.304(1)(i) - Vegetation Survey</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Vegetation Community Types</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+                                
+    <h4>17.24.305 - Map</h4>
+    <div>
+        <table class="checkboxtable">
+            <tr>
+                <td style="width:50%;">
+                    <div><input type="checkbox">Permit Boundary</div>
+                    <div><input type="checkbox">Stockpiles</div>
+                    <div><input type="checkbox">Premine Drainage Boundaries</div>
+                    <div><input type="checkbox">Soil Survey</div>
+                    <div><input type="checkbox">Vegetation Survey</div>
+                    <div><input type="checkbox">Adjacent Permits</div>
+                    <div><input type="checkbox">Air Pollution Control Facilities</div>
+                    <div><input type="checkbox">Alluvial Valley Floors</div>
+                </td>
+                <td>
+                    <div><input type="checkbox">Cemetaries</div>
+                    <div><input type="checkbox">Croplines</div>
+                    <div><input type="checkbox">Ditches or Diversions</div>
+                    <div><input type="checkbox">Groundwater Contours</div>
+                    <div><input type="checkbox">Monitoring Wells</div>
+                    <div><input type="checkbox">LOM Disturbance</div>
+                    <div><input type="checkbox">Mine Plan</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</article>
+

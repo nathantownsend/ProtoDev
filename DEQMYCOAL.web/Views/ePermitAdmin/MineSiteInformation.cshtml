@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "MineSiteInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+
+<article>
+    <h2 data-submenu="5">Mine Site Information</h2>
+
+    <fieldset class="setapart" style="padding-top: 0em;">
+        <legend></legend>
+        <label for="sitename">Site Name</label><input style="padding-right: 14.5em;" type="text" title="sitename" id="sitename" name="sitename" required="" value="East Berkley Pit" />
+        <label>Mine Type</label>
+        <select style="padding-right: 0em;">
+            <option>Surface</option>
+            <option>Underground</option>
+            <option>Combined</option>
+        </select>
+        <label>Proposed Acres to be Remined</label>
+        <input type="text" id="proposedacres" name="proposedacres" required value="810" />
+        <label for="mshaid">MSHA ID</label><input type="text" title="mshaid" id="mshaid" name="mshaid" required="" value="8675309" />
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Proposed Mineral&nbsp;/&nbsp;Surface Acreage and Reserved Tonnage </legend>
+
+        <table id="tableproperties" style="table-layout: fixed; word-wrap: break-word;">
+            <!-- First row -->
+
+            <tr>
+                <th>Governance</th>
+                <th>Permitted Mineral</th>
+                <th>Permitted Surface</th>
+                <th>Disturbed Mineral</th>
+                <th>Disturbed Surface</th>
+                <th>Reserved Tonnage</th>
+            </tr>
+
+            <!-- Second row -->
+
+            <tr>
+                <td class='rowpropheader'>Federal</td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" id="2federalpm" name="2federalpm" required="" value="0" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" id="2federalps" name="2federalps" required="" value="3" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" id="2federaldm" name="2federaldm" required="" value="0" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" id="2federalds" name="2federalds" required="" value="0" /></td>
+                <td>
+                    <input style="width: 95%; float: left;" type="text" id="2federalrt" name="2federalrt" required="" value="0" /></td>
+            </tr>
+
+            <!-- Third row -->
+
+            <tr>
+                <td class='rowpropheader'>Tribal</td>
+                <td>
+                    <input class='inputstyle' type="text" id="tribalpm" name="tribalpm" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="tribalps" name="tribalps" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="tribaldm" name="tribaldm" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="tribalds" name="tribalds" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="tribalrt" name="tribalrt" required="" value="0" /></td>
+            </tr>
+
+            <!-- Fourth row -->
+
+            <tr>
+                <td class='rowpropheader'>State</td>
+                <td>
+                    <input class='inputstyle' type="text" id="statepm" name="statepm" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="stateps" name="stateps" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="statedm" name="statedm" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="stateds" name="stateds" required="" value="7" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="statert" name="statert" required="" value="0" /></td>
+            </tr>
+
+            <!-- Fifth row -->
+
+            <tr>
+                <td class='rowpropheader'>Private</td>
+                <td>
+                    <input class='inputstyle' type="text" id="privatepm" name="privatepm" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="privateps" name="privateps" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="privatedm" name="privatedm" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="privateds" name="privateds" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="privatert" name="privatert" required="" value="0" /></td>
+            </tr>
+
+            <!-- Sixth row -->
+
+            <tr>
+                <td class='rowpropheader'>County</td>
+                <td>
+                    <input class='inputstyle' type="text" id="countypm" name="countypm" required="" value="0"></td>
+                <td>
+                    <input class='inputstyle' type="text" id="countyps" name="countyps" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="countydm" name="countydm" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="countyds" name="countyds" required="" value="0" /></td>
+                <td>
+                    <input class='inputstyle' type="text" id="countyrt" name="countyrt" required="" value="0" /></td>
+            </tr>
+
+            <!-- Seventh row -->
+
+            <tr class='rowpropheader' style="font-size: 1.1em; font-weight: 600;">
+                <td>Totals </td>
+                <td>0</td>
+                <td>3</td>
+                <td>0</td>
+                <td>7</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <div class="text-right" style="text-align: right;">
+        <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+    </div>
+    </fieldset>
+
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

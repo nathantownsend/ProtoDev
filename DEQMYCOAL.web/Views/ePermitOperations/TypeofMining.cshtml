@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "TypeofMining";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ePermit</h1>
+
+
+<article>
+    <h2 data-submenu="1">Type and Method of Mining Plan</h2>
+
+    <textarea class="planstextarea" id='TypeofMiningDescription' placeholder="Type and Method of Mining Plan Description"></textarea>
+    <fieldset class="setapart">
+        <legend>Anticipated Mining</legend>
+        <label>Anticipated Annual Production (Tons)</label>
+        <input type="text" id="annualproduction" name="annualproduction" required value="50,010" />
+        <label>Anticipated Total Production (Tons)</label>
+        <input type="text" id="totalproduction" name="totalproduction" required value="350,010" />
+        <label>Total Reserves (Tons)</label>
+        <input type="text" id="reserves" name="reserves" required value="540,010" />
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Equipment Table </legend>
+        <table id="tableproperties" style="clear: both; width: 100%;">
+            <!-- First row -->
+            <tr>
+                <th class="equipmentheader">Equipment Description</th>
+                <th class="purposeheader">Purpose</th>
+                <th class="numberofunitsheader">Number of Units</th>
+                <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+            </tr>
+            <!-- Second row -->
+            <tr>
+                <td>
+                    <input class="equipmentrow" type="text" id="equipment" name="equipment" required="" value="BIG Truck" /></td>
+                <td>
+                    <input class="purposerow" type="text" name="purpose" required="" value="Carry Rock" /></td>
+                <td>
+                    <input class="numberofunitsrow" type="text" id="numberofunits" name="numberofunits" required="" value="2,434" /></td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="equipmentrow" type="text" name="equipment" required="" value="Digger" /></td>
+                <td>
+                    <input class="purposerow" type="text" name="purpose" required="" value="Dig up Rocks" /></td>
+                <td>
+                    <input class="numberofunitsrow" type="text" name="numberofunits" required="" value="3" /></td>
+                <td style="text-align: center;">
+                    <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+            </tr>
+            <tr>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
+                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;">
+                    <p style="clear: both; white-space: pre-wrap; font-size: 1.1em; font-weight: 600;">Total:    2,437 </p>
+                </td>
+            </tr>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+</article>

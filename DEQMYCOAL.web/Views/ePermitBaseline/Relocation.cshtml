@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Relocation";
+}
+
+<h1>ePermit</h1>
+<article>
+    <h2 data-submenu="12">Relocation or Use of Public Roads</h2>
+    <fieldset class="setapart">
+        <legend>Proposed Mining Within Public Roads</legend>
+        <p>Does the applicant propose to conduct mining with 100 feet, measured horizontally, of the outside right‐of‐way line of a public road or to relocate or close a public road?</p>
+        <p>
+            <input id="yes" type="radio" name="radios" value="yes" />Yes
+            <input id="no" type="radio" name="radios" value="no" />No
+        </p>
+        <textarea class="planstextarea" id="describeMeasures" placeholder="If YES, describe the measures to be used to ensure that the interests of the public and the landowners affected are protected, or attach a plan below."></textarea>
+        </fieldset>
+        <fieldset class="setapart">
+        <legend>Attachments</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">My First Attachment File.pdf</a></td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                       <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+                <tr>
+                    <td><a href="#">My Second Attachment File.pdf</a></td>
+                    <td>7/18/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <fieldset class="setapart">
+        <legend>Relocation or Use of Public Roads Maps</legend>
+        <h4>Required Map Layers:</h4>
+        <div class="checkboxes">
+            <input type="checkbox" name="Relocation" value="x" checked="checked" /> Public Roads (including rights-of-way) (17.24.320(1)) &nbsp &nbsp <a href="#">MAP</a>
+            @*<br />  *@
+        </div>       
+                <h4>Attachments</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Satisfied Map Layers</th>
+                    <th>Date Uploaded</th>
+                    <th>User</th>
+                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">FreedomRoad.pdf</a></td>
+                    <td>
+                        <select class="dropdownListMaps">
+                            <option>Public Roads (including rights-of-way) (17.24.320(1))</option>
+
+                        </select>
+                    </td>
+                    <td>3/26/2013</td>
+                    <td>JB</td>
+                    <td style="text-align: center;">
+                        <button class="edit" title="Edit">Edit</button>
+                        <button class="delete" title="Delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right" style="text-align: right;">
+            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+        </div>
+    </fieldset>
+    <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
+    <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
+    <div>
+        <button class="primary">Save</button>
+        <button class="secondary">Reset</button>
+    </div>
+</article>
+
