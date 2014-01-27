@@ -27,7 +27,7 @@
     </tr>
     <tr>
         <td><a href="/deq/mycoal/ePermitAdmin/ApplicationForm">C1979012</a></td>
-        <td>Bond Release</td>
+        <td>Renewal</td>
         <td>SL9</td>
         <td>Approved</td>
         <td>6/18/2011</td>
@@ -42,8 +42,9 @@
 </table>
 
         <button value="Add" class="modal2 primary">Add</button>
-                <div class="dialogbox2" style="display: none;" title="Enter New Application Type">
-                    <select style="padding-right: 0em;">
+                <div class="dialogbox2" style="display: none;" title="Enter New Application">
+
+                    <select id="PermitId" name="PermitId" style="padding-right: 0em;">
                         <option>Permit ID</option>
                         <option>C1978011</option>
                         <option>C1979012</option>
@@ -64,32 +65,39 @@
                         <option>C2012018</option>
                     </select>
                     <br />
-                    <select style="padding-right: 0em;">
+
+                    <select id="Type" name="Type" style="padding-right: 0em;">
                         <option>Application Type</option>
-                        <option>New Permit</option>
                         <option>Amendment</option>
                         <option>Major Revision</option>
                         <option>Minor Revision</option>
                         <option>Renewal</option>
-                        <option>Bond Release</option>
                     </select>
                     <br />
-                    <select style="padding-right: 0em;">
+
+                    <select id="Status" name="Status" style="padding-right: 0em;">
                         <option>Status</option>
+                        <option disabled="disabled">Denied</option>
                         <option>Draft</option>
-                        <option>Completeness Review</option>
-                        <option>Deficiency</option>
-                        <option>Technical Review</option>
-                        <option>Awaiting Decision</option>
-                        <option>Approved</option>
-                        <option>Withdrawn</option>
+                        <option disabled="disabled">Completeness Review</option>
+                        <option disabled="disabled">Deficiency</option>
+                        <option disabled="disabled">Technical Review</option>
+                        <option disabled="disabled">Awaiting Decision</option>
+                        <option disabled="disabled">Approved</option>
+                        <option disabled="disabled">Pending Withdraw</option>
+                        <option disabled="disabled">Withdrawn</option>
                     </select>
-                    <label for="ApplicationNumber" style="width: 150px; text-align: left; margin-top: 0.5em;">Application Number</label><input type="text" title="ApplicationNumber" id="ApplicationNumber" name="ApplicationNumber" required="" style="display: inline-block; float: left;">
-                    <textarea id='commentstextarea' placeholder="Application Description"></textarea>
+
+                    <label for="ApplicationNumber">Application Number</label>
+                    <input type="text" title="ApplicationNumber" id="ApplicationNumber" name="ApplicationNumber" required="" style="display: inline-block; float: left;">
+                    <br />
+
+                    <textarea id='commentstextarea' name="commentstextarea" placeholder="Application Description"></textarea>
                     <div style="clear: both;">
                         <button class="primary">Save</button>
                         <button class="secondary">Cancel</button>
-                    </div>
+                    </div>
+
                 </div>
         <button class="secondary">Delete Draft</button>
         <button class="secondary">Withdraw</button>

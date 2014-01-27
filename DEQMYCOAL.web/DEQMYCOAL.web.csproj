@@ -421,6 +421,8 @@
     <Content Include="Views\Shared\_filtersHome.cshtml" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="Views\ePermitAcceptability\Acceptability.cshtml" />
+    <Content Include="Views\Shared\_attachmentTable.cshtml" />
+    <Content Include="Views\Shared\_layoutSecurity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

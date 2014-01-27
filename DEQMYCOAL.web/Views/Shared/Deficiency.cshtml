@@ -20,12 +20,12 @@
                 <td>R</td>
                 <td class="actionrow">
                     <button value="Edit" title="Edit Deficiency" class="modal8 edit">Edit</button>
-                    <div class="dialogbox8" style="display: none;" title="Deficiency Dialog">
+                    <div class="dialogbox8" style="display: none;" title="Deficiency">
                         @Html.Partial("DeficiencyDialog")
                     </div>
                     <button value="View" title="View Deficiency" class="modal9 view">View</button>
-                    <div class="dialogbox9" style="display: none;" title="Deficiency Dialog View">
-                        @Html.Partial("DeficiencyDialogView")
+                    <div class="dialogbox9" style="display: none;" title="Deficiency View">
+                        @Html.Partial("DeficiencyDialogView", false)
                     </div>
                 </td>
             </tr>
@@ -37,12 +37,12 @@
                 <td>D</td>
                 <td class="actionrow">
                     <button value="Edit" title="Edit Deficiency" class="modal10 edit">Edit</button>
-                    <div class="dialogbox10" style="display: none;" title="Deficiency Dialog">
+                    <div class="dialogbox10" style="display: none;" title="Deficiency">
                         @Html.Partial("DeficiencyDialog")
                     </div>
                     <button value="View" title="View Deficiency" class="modal11 view">View</button>
-                    <div class="dialogbox11" style="display: none;" title="Deficiency Dialog View">
-                        @Html.Partial("DeficiencyDialogView")
+                    <div class="dialogbox11" style="display: none;" title="Deficiency View">
+                        @Html.Partial("DeficiencyDialogView", false)
                     </div>
                 </td>
             </tr>
@@ -54,20 +54,20 @@
                 <td>ND</td>
                 <td class="actionrow">
                     <button value="Edit" title="Edit Deficiency" class="modal13 edit">Edit</button>
-                    <div class="dialogbox13" style="display: none;" title="Deficiency Dialog">
+                    <div class="dialogbox13" style="display: none;" title="Deficiency">
                         @Html.Partial("DeficiencyDialog")
                     </div>
                     <button value="View" title="View Deficiency" class="modal14 view">View</button>
-                    <div class="dialogbox14" style="display: none;" title="Deficiency Dialog View">
-                        @Html.Partial("DeficiencyDialogView")
+                    <div class="dialogbox14" style="display: none;" title="Deficiency View">
+                        @Html.Partial("DeficiencyDialogView", false)
                     </div>
                 </td>
             </tr>
         </table>
         <div style="float: right;">
             <button class="tertiary">No Deficiency</button>
-            <button value="+ Add New" title="New Deficiency Dialog" class="modal15 tertiary">+ Add New</button>
-            <div class="dialogbox15" style="display: none;" title="New Deficiency Dialog">
+            <button value="+ Add New" title="New Deficiency" class="modal15 tertiary">+ Add New</button>
+            <div class="dialogbox15" style="display: none;" title="New Deficiency">
                 @Html.Partial("DeficiencyNew")
             </div>
         </div>
@@ -93,12 +93,12 @@
                 <td>R</td>
                 <td class="actionrow">
                     <button value="Edit" title="Edit Deficiency" class="modal16 edit">Edit</button>
-                    <div class="dialogbox16" style="display: none;" title="Deficiency Dialog">
+                    <div class="dialogbox16" style="display: none;" title="Deficiency">
                         @Html.Partial("DeficiencyDialog")
                     </div>
                     <button value="View" title="View Deficiency" class="modal17 view">View</button>
-                    <div class="dialogbox17" style="display: none;" title="Deficiency Dialog">
-                        @Html.Partial("DeficiencyDialogView")
+                    <div class="dialogbox17" style="display: none;" title="Deficiency">
+                        @Html.Partial("DeficiencyDialogView", true)
                     </div>
                 </td>
             </tr>
@@ -111,18 +111,18 @@
                     <td>D</td>
                 <td class="actionrow">
                     <button value="Edit" title="Edit Deficiency" class="modal18 edit">Edit</button>
-                    <div class="dialogbox18" style="display: none;" title="Deficiency Dialog">
+                    <div class="dialogbox18" style="display: none;" title="Deficiency">
                         @Html.Partial("DeficiencyDialog")
                     </div>
                     <button value="View" title="View Deficiency" class="modal19 view">View</button>
-                    <div class="dialogbox19" style="display: none;" title="Deficiency Dialog">
-                        @Html.Partial("DeficiencyDialogView")
+                    <div class="dialogbox19" style="display: none;" title="Deficiency">
+                        @Html.Partial("DeficiencyDialogView", true)
                     </div>
                 </td>
         </table>
         <div style="float: right;">
-            <button value="+ Add New" title="New Deficiency Dialog" class="modal20 tertiary">+ Add New</button>
-            <div class="dialogbox20" style="display: none;" title="New Deficiency Dialog">
+            <button value="+ Add New" title="New Deficiency" class="modal20 tertiary">+ Add New</button>
+            <div class="dialogbox20" style="display: none;" title="New Deficiency">
                 @Html.Partial("DeficiencyNew")
             </div>
         </div>
