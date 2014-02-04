@@ -1,92 +1,11 @@
-﻿@{
-    ViewBag.Title = "Map Summary";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<style>.ui-dialog .ui-dialog-titlebar-close span {display: block;margin: -9px;}</style>
-<h1>Maps</h1>
+﻿<fieldset class="setapart">
+    <legend>Map File</legend>
+    <input type="file" placeholder="Select a Map" /><button class="primary">Upload</button>
+</fieldset>
 
-<article>
-    <h2>Maps Overview</h2>    
-
-    <fieldset class="setapart">
-        <legend>Master CAD</legend>
-        <p>Is there a Master CAD drawing for this permit that lists all layers below?<br />
-            <input type="radio" name="radiobutton" value="yes" /> Yes
-            <input type="radio" name="radiobutton" value="no" /> No
-        </p>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="checkbox" /></td>
-                    <td><a href="#">Master CAD Drawing.cad</a></td>
-                    <td>12/11/2013</td>
-                    <td>Regina</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
-
-    </fieldset>
-
-    
-
-    <fieldset class="setapart">
-        <legend>Maps</legend>
-
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="checkbox" checked="checked" /></td>
-                    <td><a href="#">My First Attachment File.pdf</a></td>
-                    <td>12/11/2013</td>
-                    <td>Regina</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" /></td>
-                    <td><a href="#">My Second Attachment File.pdf</a></td>
-                    <td>12/11/2013</td>
-                    <td>Regina</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
-
-
-        <h3 style="clear:both;">Map Layers</h3>
-
+<fieldset class="setapart">
+    <legend>Layers</legend>
+    <div>
         <h4>17.24.303(1)(s) - Historic Mining Map</h4>
         <div>
             <table class="checkboxtable">
@@ -107,18 +26,18 @@
                 <tr>
                     <td style="width:50%;">
                         <div><input type="checkbox">Unconsolidated Deposits</div>
-                        <div><input type="checkbox" checked="checked">Streamlaid Deposits</div>
+                        <div><input type="checkbox">Streamlaid Deposits</div>
                         <div><input type="checkbox">Streams</div>
                         <div><input type="checkbox">Drainage Boundaries</div>
-                        <div><input type="checkbox" checked="checked">Groundwater Flow Direction</div>
+                        <div><input type="checkbox">Groundwater Flow Direction</div>
                         <div><input type="checkbox">Premine Topography</div>
                         <div><input type="checkbox">Land Use</div>
                     </td>
                     <td>
                         <div><input type="checkbox">Historic Flood Irrigation Areas</div>
-                        <div><input type="checkbox" checked="checked">Diversions</div>
-                        <div><input type="checkbox" checked="checked">Ditches</div>
-                        <div><input type="checkbox" checked="checked">Dams</div>
+                        <div><input type="checkbox">Diversions</div>
+                        <div><input type="checkbox">Ditches</div>
+                        <div><input type="checkbox">Dams</div>
                         <div><input type="checkbox">Reservoirs</div>
                         <div><input type="checkbox">Aerial Imagery</div>
                         <div><input type="checkbox">Infrared Aerial Imagery</div>
@@ -152,8 +71,8 @@
                         <div><input type="checkbox">Water Supply Wells</div>
                     </td>
                     <td>
-                        <div><input type="checkbox" checked="checked">Irrigation Ditches</div>
-                        <div><input type="checkbox" checked="checked">Diversions</div>
+                        <div><input type="checkbox">Irrigation Ditches</div>
+                        <div><input type="checkbox">Diversions</div>
                         <div><input type="checkbox">Alternative Water Supplies</div>
                     </td>
                 </tr>
@@ -182,6 +101,7 @@
             </table>
         </div>
 
+
         <h4>17.24.304(1)(f)/17.2.315(a)(ii)/17.24.305 - Hydrologic Information/Plans for Ponds and Embankments/Map</h4>
         <div>
             <table class="checkboxtable">
@@ -203,6 +123,7 @@
                 </tr>
             </table>
         </div>
+
 
         <h4>17.24.304(1)(f) - Hydrologic Information</h4>
         <div>
@@ -233,6 +154,7 @@
                 </tr>
             </table>
         </div>
+
 
         <h4>17.24.304(1)(l) - Premine Land Use</h4>
         <div>
@@ -442,8 +364,11 @@
                 </tr>
             </table>
         </div>
-    
-    </fieldset>
 
-</article>
+    </div>
 
+    <button class="primary">Save</button>
+        
+        
+
+</fieldset>

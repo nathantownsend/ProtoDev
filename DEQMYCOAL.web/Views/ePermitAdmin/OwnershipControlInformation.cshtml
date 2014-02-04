@@ -10,10 +10,7 @@
     <div>
         <div style="float: left; padding-right: 1.5em;">
             <label>Salutation</label>
-            <select class="dropdownList">
-                <option>Mr.</option>
-                <option>Mrs.</option>
-            </select>
+            @Html.Partial("_salutationDropdown")
         </div>
         <div style="float: left; padding-right: 1.5em;">
             <label>First Name</label>
@@ -130,6 +127,7 @@
 
 <fieldset class="setapart">
     <legend>Additional Information</legend>
+    <label>AVS Entity Number</label><input type="text" title="AVS Entity Number" name="AVSEntity" />
     <label>Date Position Assumed</label><input type="text" title="Position" class="datepicker" name="Position" value="mm/dd/yy" required />
     <label>Date of Departure</label><input type="text" title="Departure" class="datepicker" name="Departure" value="mm/dd/yy" required />
     <label>Percentage of Ownership</label>

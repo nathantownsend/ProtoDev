@@ -11,9 +11,9 @@
         <legend>Historic Mining Maps</legend>
         <h4>Required Map Layers:</h4>
         <div class="checkboxes">
-            <input type="checkbox" name="Mining" value="x" checked="checked" />Mined-out Prior to October 22, 2004 (17.24.303(1)(s))
+            <input type="checkbox" disabled="disabled" name="Mining" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Mined-out Prior to October 22, 2004 (17.24.303(1)(s))</a>
                <br />
-            <input type="checkbox" name="Mining" value="x" checked="checked" />Non-mined-out Prior to October 22, 2004 (17.24.303(1)(s)) &nbsp &nbsp <a href="#">MAP</a>
+            <input type="checkbox" disabled="disabled" name="Mining" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Non-mined-out Prior to October 22, 2004 (17.24.303(1)(s))</a>
               @* <br />*@
         </div>
                <h4>Attachments</h4>
@@ -29,7 +29,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">MiningaLongtimeago.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">MiningaLongtimeago.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Mined-out Prior to October 22, 2004 (17.24.303(1)(s))</option>
@@ -46,12 +46,15 @@
             </tbody>
         </table>
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
+
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton">Deficiency ▼</button>
     <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
-    <button class="primary">Save</button>
-    <button class="secondary">Reset</button>
+    <p>&nbsp;</p>
 
 </article>

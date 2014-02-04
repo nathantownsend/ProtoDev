@@ -423,6 +423,8 @@
     <Content Include="Views\ePermitAcceptability\Acceptability.cshtml" />
     <Content Include="Views\Shared\_attachmentTable.cshtml" />
     <Content Include="Views\Shared\_layoutSecurity.cshtml" />
+    <Content Include="Views\Shared\_salutationDropdown.cshtml" />
+    <Content Include="Views\Shared\_addNewMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
