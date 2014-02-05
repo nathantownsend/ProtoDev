@@ -186,10 +186,9 @@
         <legend>General Location Map</legend>
         <h4>Required Map Layers:</h4>
         <div class="checkboxes">
-            <input type="checkbox" name="Ponds" value="x" checked="checked" />Impoundments (17.24.315(1)(a)(ii)) &nbsp &nbsp <a href="#">MAP</a>
+            <input disabled="disabled" type="checkbox" name="Ponds" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Impoundments (17.24.315(1)(a)(ii))</a>
             <br />
-            <input type="checkbox" name="Ponds" value="x" checked="checked" />Premine Drainage Boundary (17.24.315(1)(a)(ii))
-              @* <br />*@
+            <input disabled="disabled" type="checkbox" name="Ponds" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Premine Drainage Boundary (17.24.315(1)(a)(ii))</a>
         </div>
         <h4>Attachments</h4>
         <table>
@@ -204,7 +203,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">OnGoldenPond.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">OnGoldenPond.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Premine Drainage Boundary (17.24.315(1)(a)(ii))</option>
@@ -221,7 +220,10 @@
             </tbody>
         </table>
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>

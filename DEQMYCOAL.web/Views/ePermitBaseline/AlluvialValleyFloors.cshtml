@@ -104,33 +104,33 @@
         <legend>Alluvial Valley Floor Maps</legend>
         <h4>Required Map Layers:</h4>
         <div class="checkboxes">
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Cultural Resource Sites (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Cultural Resource Sites (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Streamlaid Deposits (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Streamlaid Deposits (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Streams (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Streams (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Drainage Boundaries (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Drainage Boundaries (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Groundwater Flow Direction (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Groundwater Flow Direction (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Premine Topography (17.24.304(1)(b)) &nbsp &nbsp <a href="#">MAP</a>
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Premine Topography (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Landuse (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Landuse (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Historic Flood Irrigation Areas (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Historic Flood Irrigation Areas (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Diversions (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Diversions (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Ditches (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Ditches (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Dams (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Dams (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Reservoirs (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Reservoirs (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Aerial Imagery (17.24.304(1)(b)) &nbsp &nbsp <a href="#">MAP</a>
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Aerial Imagery (17.24.304(1)(b))</a>
             <br />
-            <input type="checkbox" name="LandUse" value="x" checked="checked" />Infrared Aerial Imagery (17.24.304(1)(b))
+            <input disabled="disabled" type="checkbox" name="LandUse" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Infrared Aerial Imagery (17.24.304(1)(b))</a>
         </div>
         <h4>Attachments</h4>
         <table>
@@ -145,7 +145,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">AlluvialValleyRanch.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">AlluvialValleyRanch.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Streamlaid Deposits (17.24.304(1)(b))</option>
@@ -160,12 +160,15 @@
                     <td style="text-align: center;">
                         <button class="edit" title="Edit">Edit</button>
                         <button class="delete" title="Delete">Delete</button>
-                        </td>
+                    </td>
                 </tr>
             </tbody>
         </table>
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
 

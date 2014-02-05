@@ -30,21 +30,11 @@
                 <span id="breadcrumbs"></span>
             </header>            
             <div id="main">
-		           @* @{
-                        Html.RenderPartial("_filterbutton");
-                    }*@
 		            @{
                         Html.RenderPartial("_filtersHome");
                     }
-@*		            @{
-                        Html.RenderPartial("_subnav");
-                    }*@
                 <section>
-                    <a class="opener" title="Help"></a> 
-@*		            @{ this doesn't work as is because the RenderBody throws an error when living in a partial view
-                        Html.RenderPartial("_primarycontent");
-                    }*@
-                        @RenderBody()
+                    @RenderBody()
                 </section>
             </div>
         </div>

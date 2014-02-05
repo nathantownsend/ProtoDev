@@ -227,30 +227,30 @@
         <h4>Required Map Layers:</h4>
         <div class="checkboxes">
             <div>
-                <input type="checkbox" name="GeologicSections" id="maplayer1" value="x" checked="checked" />Geologic Cross Sections (17.24.322) &nbsp &nbsp <a href="#">MAP</a>
+                <input disabled="disabled" type="checkbox" name="GeologicSections" id="maplayer1" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Geologic Cross Sections (17.24.322)</a>
 
                 <br />
-                <input type="checkbox" name="GeologicSections" value="x" checked="checked" />Test Bore Holes (17.24.322)
+                <input disabled="disabled" type="checkbox" name="GeologicSections" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Test Bore Holes (17.24.322)</a>
                <br />
 
-                <input type="checkbox" name="GeologicSections" value="x" checked="checked" />Coal Seam Isopach (17.24.322)
+                <input disabled="disabled" type="checkbox" name="GeologicSections" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Coal Seam Isopach (17.24.322)</a>
                <br />
 
-                <input type="checkbox" name="GeologicSections" value="x" checked="checked" />Overburden Isopach (17.24.322)
+                <input disabled="disabled" type="checkbox" name="GeologicSections" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Overburden Isopach (17.24.322)</a>
                <br />
 
-                <input type="checkbox" name="GeologicSections" value="x" checked="checked" />Interburden Isopach (17.24.322)
+                <input disabled="disabled" type="checkbox" name="GeologicSections" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Interburden Isopach (17.24.322)</a>
                 <br />
-                <input type="checkbox" name="GeologicSections" value="x" checked="checked" />Coal Crop Lines (17.24.322)
+                <input disabled="disabled" type="checkbox" name="GeologicSections" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Coal Crop Lines (17.24.322)</a>
                <br />
 
-                <input type="checkbox" name="GeologicSections" value="x" checked="checked" />Underground Mine Workings (17.24.322) &nbsp &nbsp <a href="#">MAP </a>
+                <input disabled="disabled" type="checkbox" name="GeologicSections" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Underground Mine Workings (17.24.322)</a>
                 <br />
 
-                <input type="checkbox" name="GeologicSections" value="x" checked="checked" />Historic Mining (17.24.322)
+                <input disabled="disabled" type="checkbox" name="GeologicSections" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Historic Mining (17.24.322)</a>
                <br />
 
-                <input type="checkbox" name="GeologicSections" value="x" checked="checked" />Unmined Coal (17.24.322)
+                <input disabled="disabled" type="checkbox" name="GeologicSections" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Unmined Coal (17.24.322)</a>
               
             </div>
         </div>
@@ -268,7 +268,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">Geospread.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">Geospread.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Coal Seam Isopach (17.24.322)</option>
@@ -286,7 +286,10 @@
         </table>
 
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>

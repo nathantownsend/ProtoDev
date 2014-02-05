@@ -251,22 +251,10 @@
         <legend>Cultural Resources Map</legend>
         <h4>Required Map Layers:</h4>
         <div class="checkboxes">
-            <input type="checkbox" name="Resources" value="x" checked="checked" />Cultural Resource Sites (17.24.304(1)(b)) &nbsp &nbsp <a href="#">MAP</a>
+            <input type="checkbox" disabled="disabled" name="Resources" value="" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Cultural Resource Sites (17.24.304(1)(b))</a>
                <br />
-            <input type="checkbox" name="Resources" value="x" checked="checked" />NRHP Eligible Sites (17.24.304(1)(b))
+            <input type="checkbox" disabled="disabled" name="Resources" value="" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">NRHP Eligible Sites (17.24.304(1)(b))</a>
                <br />
-           
-            @*<div>
-                <select class="dropdownList">
-                    <option>Reference Another Map</option>
-                    <option>Air-Pollution Control Facilities - APCFMap.pdf</option>
-                    <option>Air-Pollution Control Facilities - APCFMapdetail.pdf</option>
-                    <option>Air-Pollution Control Facilities - APCFMapdetail2.pdf</option>
-                    <option>Permit Boundary - PermitBoundarymap.pdf</option>
-                    <option>Vegetation Survey - VSMap.pdf</option>
-                    <option>Vegetation Survey - VSMapv2.pdf</option>
-                </select>
-            </div>*@
         </div>
               <h4>Attachments</h4>
         <table>
@@ -281,7 +269,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">CulturalMulch.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">CulturalMulch.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Cultural Resource Sites (17.24.304(1)(b))</option>
@@ -298,7 +286,10 @@
             </tbody>
         </table>
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
 

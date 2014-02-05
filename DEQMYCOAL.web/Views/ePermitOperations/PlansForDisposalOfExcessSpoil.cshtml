@@ -56,8 +56,7 @@
         <legend>Excess Spoil Disposal Site Map</legend>
         <h4>Required Map Layers: </h4>
         <div class="checkboxes">
-            <input type="checkbox" name="ExcessSpoil" value="x" checked="checked" />
-            Excess Spoil Disposal Sites (17.24.320(1)) &nbsp &nbsp <a href="#">MAP</a>
+            <input type="checkbox" name="ExcessSpoil" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Excess Spoil Disposal Sites (17.24.320(1))</a>
                <br />
         </div>
                <h4>Attachments</h4>
@@ -73,7 +72,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">RottenEggs.pdf</a></td>
+                    <td></ted><a href="@Url.Action("Maps", "ePermitMaps")">RottenEggs.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Excess Spoil Disposal Sites (17.24.320(1))</option>
@@ -89,7 +88,10 @@
             </tbody>
         </table>
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>

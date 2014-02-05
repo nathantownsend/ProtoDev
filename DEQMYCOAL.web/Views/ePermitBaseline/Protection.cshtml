@@ -56,11 +56,11 @@
         <legend>Public Parks and Historic Places Maps</legend>
         <h4>Required Map Layers:</h4>
         <div class="checkboxes">
-            <input type="checkbox" name="PublicParks" value="x" checked="checked" />Public Parks (17.24.305(1)(h)) &nbsp &nbsp <a href="#">MAP</a>
+            <input disabled="disabled" type="checkbox" name="PublicParks" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Public Parks (17.24.305(1)(h))</a>
             <br />
-            <input type="checkbox" name="PublicParks" value="x" checked="checked" />NRHP Locations (17.24.305(1)(h))
+            <input disabled="disabled" type="checkbox" name="PublicParks" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">NRHP Locations (17.24.305(1)(h))</a>
             <br />
-            <input type="checkbox" name="PublicParks" value="x" checked="checked" />Archaeological Sites (17.24.305(1)(h))
+            <input disabled="disabled" type="checkbox" name="PublicParks" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Archaeological Sites (17.24.305(1)(h))</a>
         </div>
            
                 <h4>Attachments</h4>
@@ -76,7 +76,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">Mangnome.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">Mangnome.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>NRHP Locations (17.24.305(1)(h))</option>
@@ -93,7 +93,10 @@
             </tbody>
         </table>
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>

@@ -1,9 +1,78 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-
+        <meta charset="utf-8" />
+        <title>myCOAL : State of Montana Department of Envivonmental Quality</title>
+        <link href="~/favicon.ico?v=1" rel="shortcut icon" type="image/x-icon" />
+        <link rel="icon" href="~/favicon.ico?v=1" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="Content/site.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="Scripts/template.js"></script>
     </head>
     <body>
-        <p>Welcome to myCoal.  This is a placeholder page.  Kilroy was Here.</p>
+        <div id="wrap">
+            <header>
+                <h1>DEQ ePermitting Portal</h1>
+                <img src="Images/mycoallogo.png" height="64" width="150" alt="myCOAL Logo" title="myCOAL Logo" />
+                <nav id="headernav">
+
+                </nav>
+            </header>            
+            <div id="main">
+                <section>
+                    <h1>Welcome to the DEQ ePermitting Portal for Coal and Uranium Mining</h1>
+                    <p>The ePermitting Portal allows you to find and manage all the information you need to know about Coal Mine Permitting and Compliance.</p>
+                    <article id="preview">
+                        <h3>REGISTER TO ACCESS MORE&hellip;</h3>
+                        <ul>
+                            <li>Search Documents</li>
+                            <li>Make Public Comment on an Application</li>
+                            <li>Check Status of Permitting Actions</li>
+                            <li>Learn to Keep in Compliance</li>
+                        </ul>
+                    </article>
+                    <aside id="login">    
+                        <h4>New User?</h4>
+                        <p>Register to access myCOAL</p>
+                        <button value="REGISTER" title="myCOAL / Registration Form" class="modal1 primary">REGISTER</button>
+                        <div class="dialogbox1" style="display: none;" title="Registration Form">
+                            @Html.Partial("Register")
+                        </div>
+                        <hr />
+                        <button value="LOGIN" title="myCOAL / ePass User Registration" class="modal2 secondary">LOGIN</button>
+                        <div class="dialogbox2" style="display: none;" title="ePass User Registration">
+                            @Html.Partial("ePassRegister")
+                        </div>
+                        <p>with ePass Montana</p>
+                    </aside>
+
+                </section>
+            </div>
+        </div>
+        <footer id="footer">
+            <nav id="footernav">
+		        <ul>
+                    <li><a href="">SEARCH</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="">HELP</a></li>
+                </ul>
+                <div id="egovfooter">
+                    <div id="footfloat">
+                        <a href="http://montana.gov/">
+                            <img src="//template.mt.gov/resources/template/montanalogo.png" alt="montana.gov" title="montana.gov" width="248" height="48"></a>
+                    </div>
+                    <ul>
+                        <li><a style="color:#6E9699;" title="Online Services" href="http://mt.gov/services">ONLINE SERVICES</a></li>
+                        <li><a style="color:#6E9699;" class="text-color" title="Agency Name" href="http://montana.gov/">AGENCY NAME</a></li>
+                        <li><a style="color:#6E9699;" title="Privacy &amp; Security Policy" href="http://itsd.mt.gov/policy/policies/ENTINT030.asp">PRIVACY &amp; SECURITY</a></li>
+                        <li><a style="color:#6E9699;" title="Accessibility" href="http://mt.gov/discover/disclaimer.asp#accessibility">ACCESSIBILITY</a></li>
+                        <li><a style="color:#6E9699;" href="https://app.mt.gov/contactus/" title="Contact Us">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </footer>
     </body>
 </html>

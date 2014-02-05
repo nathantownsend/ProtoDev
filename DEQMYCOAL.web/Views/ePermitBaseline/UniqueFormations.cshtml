@@ -51,9 +51,9 @@
         <legend>Significant or Unique Geologic Formations&nbsp;/&nbsp;Sites Map</legend>
         <h4>Required Map Layers: </h4>
         <div class="checkboxes">
-            <input type="checkbox" name="UniqueForms" value="x" checked="checked" />Unique Geologic Formations (17.24.304(1)(c))
+            <input type="checkbox" disabled="disabled" name="UniqueForms" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Unique Geologic Formations (17.24.304(1)(c))</a>
                <br />
-            <input type="checkbox" name="UniqueForms" value="x" checked="checked" />Scenic Sites (17.24.304(1)(c))          &nbsp &nbsp <a href="#">MAP</a>     
+            <input type="checkbox" disabled="disabled" name="UniqueForms" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Scenic Sites (17.24.304(1)(c))</a>
         </div>
         <h4>Attachments</h4>
         <table>
@@ -68,7 +68,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">UniqueFormasheeown.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">UniqueFormasheeown.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                            
@@ -85,7 +85,10 @@
             </tbody>
         </table>
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
 

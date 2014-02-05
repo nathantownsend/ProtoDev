@@ -170,25 +170,25 @@
         <legend>Hydrologic Information Maps</legend>
         <h4>Required Map Layers: </h4>
         <div class="checkboxes">
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Isopach Layers (17.24.304(1)(f))
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Isopach Layers (17.24.304(1)(f))</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Contour Layers (17.24.304(1)(f))
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Contour Layers (17.24.304(1)(f))</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Groundwater Monitoring Wells (17.24.304(1)(f))
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Groundwater Monitoring Wells (17.24.304(1)(f))</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Water Supply Wells (17.24.304(1)(f)) &nbsp &nbsp <a href="#">MAP</a>
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Water Supply Wells (17.24.304(1)(f))</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Springs (17.24.322)
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Springs (17.24.322)</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Premine Streams (17.24.304(1)(f))
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Premine Streams (17.24.304(1)(f))</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Irrigation Ditches (17.24.304(1)(f))
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Irrigation Ditches (17.24.304(1)(f))</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Diversions (17.24.304(1)(f))
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Diversions (17.24.304(1)(f))</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Alternative Water Supplies (17.24.304(1)(f)) &nbsp &nbsp <a href="#">MAP</a>
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Alternative Water Supplies (17.24.304(1)(f))</a>
             <br />
-            <input type="checkbox" name="HydroInfoMaps" value="x" checked="checked" />Surface Water Monitoring Stations (17.24.304(1)(f))
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Surface Water Monitoring Stations (17.24.304(1)(f))</a>
         </div>
         <h4>Attachments</h4>
         <table>
@@ -203,7 +203,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">Countour.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">Countour.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Contour Layers (17.24.304(1)(f))</option>
@@ -218,7 +218,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="#">AlternativeWater.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">AlternativeWater.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Alternative Water Supplies (17.24.304(1)(f)) </option>
@@ -232,7 +232,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="#">Surfacewater.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">Surfacewater.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Springs (17.24.322)</option>
@@ -250,7 +250,10 @@
         </table>
 
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>

@@ -53,15 +53,15 @@
         <legend>General Location Maps</legend>
         <h4>Required Map Layers:</h4>
          <div class="checkboxes">
-            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Premine Drainage Basins (17.24.313(1)(e))
+            <input disabled="disabled" type="checkbox" name="CoalConservation" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Premine Drainage Basins (17.24.313(1)(e))</a>
             <br />
-            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Postmine Drainage Basins (17.24.313(1)(e)) &nbsp &nbsp <a href="#">MAP</a>
+            <input disabled="disabled" type="checkbox" name="CoalConservation" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Postmine Drainage Basins (17.24.313(1)(e))</a>
             <br />
-            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Premine Streams (17.24.313(1)(e)) &nbsp &nbsp <a href="#">MAP</a>
+            <input disabled="disabled" type="checkbox" name="CoalConservation" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Premine Streams (17.24.313(1)(e))</a>
             <br />
-            <input type="checkbox" name="CoalConservation" value="x" checked="checked" />Postmine Streams (17.24.313(1)(e))
+            <input disabled="disabled" type="checkbox" name="CoalConservation" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Postmine Streams (17.24.313(1)(e))</a>
            </div> 
-                <h4>Attachments</h4>
+            <h4>Attachments</h4>
         <table>
             <thead>
                 <tr>
@@ -74,7 +74,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="#">Mucinex.pdf</a></td>
+                    <td><a href="@Url.Action("Maps", "ePermitMaps")">Mucinex.pdf</a></td>
                     <td>
                         <select class="dropdownListMaps">
                             <option>Premine Drainage Basins (17.24.313(1)(e))</option>
@@ -92,7 +92,10 @@
         </table>
 
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal22 tertiary" title="Add New Map"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox22" style="display: none;" title="Add New Map">
+                @Html.Partial("_addNewMap", false)
+            </div>
         </div>
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>

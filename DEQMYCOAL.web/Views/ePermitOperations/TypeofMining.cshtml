@@ -10,6 +10,12 @@
     <h2 data-submenu="1">Type and Method of Mining Plan</h2>
 
     <textarea class="planstextarea" id='TypeofMiningDescription' placeholder="Type and Method of Mining Plan Description"></textarea>
+
+    <fieldset class="setapart">
+        <legend>Attachments</legend>
+        @Html.Partial("_attachmentTable")
+    </fieldset>
+
     <fieldset class="setapart">
         <legend>Anticipated Mining</legend>
         <label>Anticipated Annual Production (Tons)</label>
