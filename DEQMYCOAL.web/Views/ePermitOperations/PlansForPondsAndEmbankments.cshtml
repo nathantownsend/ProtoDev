@@ -143,7 +143,7 @@
                 <td><a href="#">Design.pdf</a></td>
                 <td><a href="#">AsBuilt.pdf</a></td>
                 <td style="text-align: center;">
-                    <button class="edit" title="Edit">Edit</button>
+                    <button class="modal23 edit" title="Pond Specific Design and As-Built">Edit</button>
                     <button class="delete" title="Delete">Delete</button>
                 </td>
             </tr>
@@ -154,7 +154,7 @@
                 <td class="actionrow">
                     @*<button class="selectedit">Add New</button>*@</td>
                 <td style="text-align: center;">
-                    <button class="edit" title="Edit">Edit</button>
+                    <button class="modal23 edit" title="Pond Specific Design and As-Built">Edit</button>
                     <button class="delete" title="Delete">Delete</button>
                 </td>
             </tr>
@@ -165,18 +165,17 @@
                 <td class="actionrow">
                     @*<button class="selectedit">Add New</button>*@</td>
                 <td style="text-align: center;">
-                    <button class="edit" title="Edit">Edit</button>
+                    <button class="modal23 edit" title="Pond Specific Design and As-Built">Edit</button>
                     <button class="delete" title="Delete">Delete</button>
                 </td>
             </tr>
-            <tr>
-                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
-                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
-                <td style="border-right-color: transparent; border-top-color: transparent; border-bottom-color: transparent; border-left-color: transparent;"></td>
-            </tr>
+
         </table>
         <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <button class="modal23 tertiary" title="Pond Specific Design and As-Built"><span class="plussymbol">+</span>&nbsp;Add New</button>
+            <div class="dialogbox23" style="display: none;" title="Pond Specific Design and As-Built">
+                @Html.Partial("_pondSpecificDesignDialog", false)
+            </div>
         </div>
     </fieldset>
 
@@ -228,9 +227,6 @@
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
     <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
-    <div>
-        <button class="primary">Save</button>
-        <button class="secondary">Reset</button>
-    </div>
+    <p>&nbsp;</p>
 </article>
 

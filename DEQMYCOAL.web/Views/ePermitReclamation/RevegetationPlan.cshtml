@@ -47,7 +47,9 @@
 
     <fieldset class="setapart">
         <legend>Land Use Table </legend>
-
+        <p>
+            The table below is for reference only. To change values please use the following links: <a href="@Url.Action("VegetationSurvey", "ePermitBaseline")">Premine Community Type & Acerage</a>, <a href="@Url.Action("PremineLandUse", "ePermitBaseline")">Premine Land Use & Acerage</a>, <a href="@Url.Action("ReclamationPostmineRevegetation", "ePermitReclamation")">Postmine Reveg Type & Acerage</a>.
+        </p>
         <table id="tableproperties" >
             <!-- First row -->
 
@@ -58,67 +60,57 @@
                 <th style="width: 6.5em;">Acreage</th>
                 <th>Postmine Reveg Type</th>
                 <th style="width: 6.5em;">Acreage</th>
-                <th style="text-align: center;">View</th>
             </tr>
 
             <!-- Second row -->
 
             <tr>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Social" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Social" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="12" /></td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="12" /></td>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Local" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Local" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="255" /></td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="255" /></td>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Widespread" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Widespread" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="133" /></td>
-                <td style="text-align: center;">
-                    <button class="view" title="View">View</button>
-                </td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="133" /></td>
             </tr>
 
             <!-- Third row -->
 
             <tr>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Single" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Single" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Gardening" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Gardening" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Sunflowers" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Sunflowers" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
-                <td style="text-align: center;">
-                    <button class="view" title="View">View</button>
-                </td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="1" /></td>
             </tr>
 
             <!-- Fourth row -->
 
             <tr>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Industrial" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="preminetype" required="" value="Industrial" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="15" /></td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="15" /></td>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Industry" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="premineuse" required="" value="Industry" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="33" /></td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="33" /></td>
                 <td>
-                    <input style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Grasslands" /></td>
+                    <input readonly="readonly" style="width: 95%; float: left;" type="text" name="preminevtype" required="" value="Grasslands" /></td>
                 <td>
-                    <input style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="22" /></td>
-                <td style="text-align: center;">
-                    <button class="view" title="View">View</button>
-                </td>
+                    <input readonly="readonly" style="width: 95%; text-align: right;" type="text" name="acreage" required="" value="22" /></td>
             </tr>
 
             <!-- Fifth row -->
@@ -175,6 +167,5 @@
 
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
     <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
-    <button class="primary">Save</button>
-    <button class="secondary">Reset</button>
+    <p>&nbsp;</p>
 </article>
