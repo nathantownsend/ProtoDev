@@ -8,6 +8,10 @@
 
 <article>
     <h2 data-submenu="14">Insurance</h2>
+
+    <h3>Expiration Date of Insurance</h3>
+    <input class="textwidth" type="text" id="annual" name="annual" required value="" />
+
     <fieldset class="setapart">
     <legend>Attachments</legend>
     <table>
@@ -46,8 +50,11 @@
     </fieldset>
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton">Deficiency ▼</button>
     <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
-    <p>&nbsp;</p>
-
+    
+    <div>
+    <button class="primary">Save</button>
+    <button class="secondary">Reset</button>
+    </div>
 
 </article>
 

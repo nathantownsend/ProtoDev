@@ -11,6 +11,7 @@
 
     @*applicant information heading and table*@
     <fieldset class ="setapart">
+        <legend>Other Coal Permits</legend>
         <table>
             <thead>
                 <tr>
@@ -46,6 +47,14 @@
             </div>
         </div>
         </fieldset>
+
+        <fieldset class ="setapart">
+        <legend>Other Non-Coal Permits</legend>
+            @Html.Partial("_attachmentTable")
+        </fieldset>
+
+
+
         <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton">Deficiency ▼</button>
         <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
         <p>&nbsp;</p>

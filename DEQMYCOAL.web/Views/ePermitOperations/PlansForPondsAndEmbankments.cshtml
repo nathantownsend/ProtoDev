@@ -8,87 +8,20 @@
     <h2 data-submenu="10">Plans for Ponds and Embankments</h2>
 
     @*general plan for impoundments attachments*@
-
+    <h3>General Plan for Sedimentation Ponds and Water Impoundments</h3>
+    <textarea id="PondsAndImpoundments" class="planstextarea" placeholder="General Plan for Sedimentation Ponds and Water Impoundments Description"></textarea>
+    
     <fieldset class="setapart">
-        <legend>General Plan for Impoundments Attachments</legend>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#">My First Attachment File.pdf</a></td>
-                    <td>3/26/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">My Second Attachment File.pdf</a></td>
-                    <td>7/18/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
+        <legend>Attachments</legend>
+        @Html.Partial("_attachmentTable")
     </fieldset>
 
-    @*generic design plan for small disturbed areas attachments*@
 
-    <fieldset class="setapart">
-        <legend>Generic Design Plan for Small Disturbed Areas Attachments</legend>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#">My First Attachment File.pdf</a></td>
-                    <td>3/26/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">My Second Attachment File.pdf</a></td>
-                    <td>7/18/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
-    </fieldset>
 
     @*certified schedule for detailed design plan attachments*@
 
     <fieldset class="setapart">
-        <legend>Certified Schedule for Detailed Design Plan Attachments</legend>
+        <legend>Certification Statement for Detailed Design Plan Attachments</legend>
         <table>
             <thead>
                 <tr>

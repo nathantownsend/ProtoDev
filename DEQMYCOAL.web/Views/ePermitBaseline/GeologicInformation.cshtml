@@ -11,82 +11,11 @@
     @* geologic description attachments*@
 
     <fieldset class="setapart">
-        <legend>Geologic Description Attachments</legend>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#">My First Attachment File.pdf</a></td>
-                    <td>3/26/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">My Second Attachment File.pdf</a></td>
-                    <td>7/18/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
-        <br />
+        <legend>Geologic Description and Lithologic & Geophysical Logs Attachments</legend>
+        @Html.Partial("_attachmentTable")            
     </fieldset>
 
-    @*lithologic and geophysical logs attachments*@
 
-    <fieldset class="setapart">
-        <legend>Lithologic and Geophysical Logs Attachments</legend>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#">My First Attachment File.pdf</a></td>
-                    <td>3/26/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">My Second Attachment File.pdf</a></td>
-                    <td>7/18/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
-        <br />
-    </fieldset>
 
     @*overburden analysis and suitability attachments*@
 
@@ -227,6 +156,10 @@
         <h4>Required Map Layers:</h4>
         <div class="checkboxes">
             <div>
+                
+                <input disabled="disabled" type="checkbox" name="GeologicSections" id="maplayer1" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Aquifers (17.24.322(2)(a))</a>
+                <br />
+
                 <input disabled="disabled" type="checkbox" name="GeologicSections" id="maplayer1" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Geologic Cross Sections (17.24.322)</a>
 
                 <br />

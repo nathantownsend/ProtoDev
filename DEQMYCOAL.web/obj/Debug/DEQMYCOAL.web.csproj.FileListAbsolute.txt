@@ -96,3 +96,4 @@ C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\DotNetOpenAuth.OpenI
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\obj\Debug\DEQMYCOAL.web.csprojResolveAssemblyReference.cache
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\obj\Debug\DEQMYCOAL.web.dll
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\obj\Debug\DEQMYCOAL.web.pdb
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll

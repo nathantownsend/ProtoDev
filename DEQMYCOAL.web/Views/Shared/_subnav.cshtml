@@ -1,284 +1,268 @@
 ﻿<aside class="subnav">
     <ul class="subnav">
-        <li>@*<a href="/ePermit">ePermit Menu</a>*@
+        <li>
 			<ul id="menu" class="nav1">
 				<li>
-                    <a href="~~/ePermitAdmin">Admin</a>
+                    @Html.ActionLink("Admin", "ApplicationForm", "ePermitAdmin")
 					<ul class="nav2 admin" style="overflow: hidden; display: none;">
 						<li> 
-							<a href="~/ePermitAdmin/ApplicationForm">Application Form / Verification</a>						 
+							@Html.ActionLink("Application Form / Verification", "ApplicationForm", "ePermitAdmin")						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/ContactInformation">Contact Information</a>    						 
+							@Html.ActionLink("Contact Information", "ContactInformation", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/Location">Location</a>    						 
+							@Html.ActionLink("Location", "Location", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/SurfaceMineralOwnership">Surface &amp; Mineral Ownership</a>    						 
+							@Html.ActionLink("Surface & Mineral Ownership", "SurfaceMineralOwnership", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/OwnershipControl">Ownership &amp; Control</a>    						 
+							@Html.ActionLink("Ownership & Control", "OwnershipControl", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/MineSiteInformation">Mine Site Information</a>    						 
+							@Html.ActionLink("Mine Site Information", "MineSiteInformation", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/ApplicantDescriptionOfInterests">Applicant Description of Interests</a>   						 
+							@Html.ActionLink("Applicant Description of Interests", "ApplicantDescriptionOfInterests", "ePermitAdmin")   						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/NonComplianceSuspensionPermits" title="Non-Compliance (Suspension, Revocations, Bond Forfeitures)">Non-Compliance</a>  						 
+							@Html.ActionLink("Non-Compliance", "NonComplianceSuspensionPermits", "ePermitAdmin", null, new { title = "Non-Compliance (Suspension, Revocations, Bond Forfeitures)" })  						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/ViolationsCessations">Violations &amp; Cessations</a>    						 
+							@Html.ActionLink("Violations & Cessations", "ViolationsCessations", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/LegalRightEnter">Legal Right to Enter</a>    						 
+							@Html.ActionLink("Legal Right to Enter", "LegalRightEnter", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/StatusPrivateMineralSurfaceEstate">Status of Private Mineral/Surface Estate</a> 						 
+							@Html.ActionLink("Status of Private Mineral/Surface Estate", "StatusPrivateMineralSurfaceEstate", "ePermitAdmin") 						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/LandsUnsuitable">Lands Unsuitable</a>   						 
+							@Html.ActionLink("Lands Unsuitable", "LandsUnsuitable", "ePermitAdmin")   						 
 						</li>
                         <li> 
-							<a href="~/ePermitAdmin/Exemptions">Exemptions</a>   						 
+							@Html.ActionLink("Exemptions", "Exemptions", "ePermitAdmin")   						 
 						</li>
                         <li> 
-							<a href="~/ePermitAdmin/Timetable">Life of Mine / Estimated Mining Timetable</a>   						 
+							@Html.ActionLink("Life of Mine / Estimated Mining Timetable", "Timetable", "ePermitAdmin")   						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/Insurance">Insurance</a>    						 
+							@Html.ActionLink("Insurance", "Insurance", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/OtherPermits" title="Other Permits (Coal &amp; Non-Coal)">Other Permits</a>    						 
+							@Html.ActionLink("Other Permits", "OtherPermits", "ePermitAdmin", null, new { title = "Other Permits (Coal & Non-Coal)" })    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/PublicCopyApplication">Public Copy of Application</a>   						 
+							@Html.ActionLink("Public Copy of Application", "PublicCopyApplication", "ePermitAdmin")   						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/ProofPublication">Proof of Publication</a>    						 
+							@Html.ActionLink("Proof of Publication", "ProofPublication", "ePermitAdmin")    						 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/Bonding">Bonding</a>    					 
+							@Html.ActionLink("Bonding", "Bonding", "ePermitAdmin")    					 
 						</li>
 						<li> 
-							<a href="~/ePermitAdmin/HistoricMining">Historic Mining</a>    						 
+							@Html.ActionLink("Historic Mining", "HistoricMining", "ePermitAdmin")    						 
 						</li>
 					</ul>
 				</li>
-				<li><a href="~/ePermitBaseline">Baseline</a>
+				<li>@Html.ActionLink("Baseline", "Timetable", "ePermitBaseline")
                     <ul class="nav2 baseline" style="overflow: hidden; display: none;">
                          <li> 
-							<a href="~/ePermitBaseline/Timetable">Life of Mine / Estimated Mining Timetable</a>   						 
+							@Html.ActionLink("Life of Mine / Estimated Mining Timetable", "Timetable", "ePermitBaseline")   						 
 						</li>
                         <li> 
-                        <a href="~/ePermitBaseline/CulturalResources">Cultural Resources</a>   
+                            @Html.ActionLink("Cultural Resources", "CulturalResources", "ePermitBaseline")   
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/UniqueFormations">Unique/Special Characteristics & Geologic Formations</a>    
+                            @Html.ActionLink("Unique/Special Characteristics & Geologic Formations", "UniqueFormations", "ePermitBaseline")    
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/HydrologicInformation">Hydrologic Information</a>   
+                            @Html.ActionLink("Hydrologic Information", "HydrologicInformation", "ePermitBaseline")   
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/GeologicInformation">Geologic Information</a>  
+                            @Html.ActionLink("Geologic Information", "GeologicInformation", "ePermitBaseline")  
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/ClimatologicalData">Climatological Data</a> 
+                            @Html.ActionLink("Climatological Data", "ClimatologicalData", "ePermitBaseline") 
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/VegetationSurvey">Vegetation Survey</a>     
+                            @Html.ActionLink("Vegetation Survey", "VegetationSurvey", "ePermitBaseline")     
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/WildlifeSurvey">Wildlife Survey</a>     
+                            @Html.ActionLink("Wildlife Survey", "WildlifeSurvey", "ePermitBaseline")     
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/SoilSurvey">Soil Survey</a>     
+                            @Html.ActionLink("Soil Survey", "SoilSurvey", "ePermitBaseline")     
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/PremineLandUse">Premine Land Use</a>   
+                            @Html.ActionLink("Premine Land Use", "PremineLandUse", "ePermitBaseline")   
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/PrimeFarmlandInvestigation">Prime Farmland Investigation</a>   
+                            @Html.ActionLink("Prime Farmland Investigation", "PrimeFarmlandInvestigation", "ePermitBaseline")   
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/Protection">Protection of Public Parks and Historic Places</a>     
+                            @Html.ActionLink("Protection of Public Parks and Historic Places", "Protection", "ePermitBaseline")     
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/Relocation">Relocation or Use of Public Roads</a>     
+                            @Html.ActionLink("Relocation or Use of Public Roads", "Relocation", "ePermitBaseline")     
                         </li>
                         <li> 
-                        <a href="~/ePermitBaseline/AlluvialValleyFloors">Alluvial Valley Floors</a>   
+                            @Html.ActionLink("Alluvial Valley Floors", "AlluvialValleyFloors", "ePermitBaseline")   
                         </li>
                     </ul>
 				</li>
-				<li><a href="~/ePermitOperations">Operations</a>
+				<li>@Html.ActionLink("Operations", "OperationsPlan", "ePermitOperations")
                     <ul class="nav2 operations" style="overflow: hidden; display: none;">
                         <li> 
-                        <a href="~/ePermitOperations/OperationsPlan">Operations Plan</a>    
- 
+                           @Html.ActionLink("Operations Plan", "OperationsPlan", "ePermitOperations")    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/TypeOfMining" title="Operations Plan - Type and Method of Mining">Type and Method of Mining</a>    
- 
+                           @Html.ActionLink("Type and Method of Mining", "TypeOfMining", "ePermitOperations", null, new { title = "Operations Plan - Type and Method of Mining" })    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/FacilitiesManagement" title="Operations Plan - Facilities Management Plan">Facilities Management Plan</a>    
- 
+                           @Html.ActionLink("Facilities Management Plan", "FacilitiesManagement", "ePermitOperations", null, new { title = "Operations Plan - Facilities Management Plan" })    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/Disposal" title="Operations Plan - Toxic and Undesirable Materials Disposal Plan">Toxic and Undesirable Materials Disposal Plan</a>    
- 
+                           @Html.ActionLink("Toxic and Undesirable Materials Disposal Plan", "Disposal", "ePermitOperations", null, new { title = "Operations Plan - Toxic and Undesirable Materials Disposal Plan" })    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/FireContingencyPlan" title="Operations Plan - Fire Contingency Plan">Fire Contingency Plan</a>    
- 
+                           @Html.ActionLink("Fire Contingency Plan", "FireContingencyPlan", "ePermitOperations", null, new { title = "Operations Plan - Fire Contingency Plan" })    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/Compliance" title="Operations Plan - Compliance with Air &amp; Water Quality Laws">Compliance with Air &amp; Water Quality Laws</a>    
- 
+                           @Html.ActionLink("Compliance with Air & Water Quality Laws", "Compliance", "ePermitOperations", null, new { title = "Operations Plan - Compliance with Air & Water Quality Laws" })    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/NoxiousWeedsManagementPlan" title="Operations Plan - Noxious Weed Management">Noxious Weed Management</a>    
- 
+                            @Html.ActionLink("Noxious Weed Management", "NoxiousWeedsManagementPlan", "ePermitOperations", null, new { title = "Operations Plan - Noxious Weed Management" })    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/BlastingPlan">Blasting Plan</a>    
- 
+                            @Html.ActionLink("Blasting Plan", "BlastingPlan", "ePermitOperations")    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/AirPollutionControlPlan">Air Pollution Control</a>    
- 
+                            @Html.ActionLink("Air Pollution Control", "AirPollutionControlPlan", "ePermitOperations")    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/FishandWildlifePlan">Fish &amp; Wildlife Plan</a>    
- 
+                            @Html.ActionLink("Fish & Wildlife Plan", "FishandWildlifePlan", "ePermitOperations")    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/PlansForPondsAndEmbankments">Plans for Ponds and Embankments</a>    
- 
+                            @Html.ActionLink("Plans for Ponds and Embankments", "PlansForPondsAndEmbankments", "ePermitOperations")    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/MiningNearUndergroundMining">Mining Near Underground Mining</a>    
- 
+                            @Html.ActionLink("Mining Near Underground Mining", "MiningNearUndergroundMining", "ePermitOperations")    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/Diversions">Diversions</a>    
- 
+                            @Html.ActionLink("Diversions", "Diversions", "ePermitOperations")    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/PlansForDisposalOfExcessSpoil">Plans for Disposal of Excess Spoil</a>    
- 
+                            @Html.ActionLink("Plans for Disposal of Excess Spoil", "PlansForDisposalOfExcessSpoil", "ePermitOperations")    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/TransportationFacilitiesPlan" title="Transportation Facilities Plan (During Mining)">Transportation Facilities Plan</a>    
-                         </li>
-                        <li> 
-                        <a href="~/ePermitOperations/CoalConservationPlan">Coal Conservation Plan</a>    
- 
+                            @Html.ActionLink("Transportation Facilities Plan", "TransportationFacilitiesPlan", "ePermitOperations", null, new { title = "Transportation Facilities Plan (During Mining)" })    
                         </li>
                         <li> 
-                        <a href="~/ePermitOperations/AugerMining">Auger Mining</a>    
- 
+                            @Html.ActionLink("Coal Conservation Plan", "CoalConservationPlan", "ePermitOperations")    
+                        </li>
+                        <li> 
+                            @Html.ActionLink("Auger Mining", "AugerMining", "ePermitOperations")    
                         </li>
                     </ul>
 				</li>
-				<li><a href="~/ePermitReclamation">Reclamation</a>
+				<li>@Html.ActionLink("Reclamation", "ReclamationPlan", "ePermitReclamation")
                     <ul class="nav2 reclamation" style="overflow: hidden; display: none;">
                         <li> 
-                        <a href="~/ePermitReclamation/ReclamationPlan">Reclamation Plan</a>    
+                        @Html.ActionLink("Reclamation Plan", "ReclamationPlan", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/ReclamationPostmineRevegetation">Postmine Land Use/Revegetation Types</a>    
+                        @Html.ActionLink("Postmine Land Use/Revegetation Types", "ReclamationPostmineRevegetation", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/Timetable">Life of Mine / Estimated Mining Timetable</a>    
+                        @Html.ActionLink("Life of Mine / Estimated Mining Timetable", "Timetable", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/ReclamationBondCalculation">Bond Calculation</a>    
+                        @Html.ActionLink("Bond Calculation", "ReclamationBondCalculation", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/BackfillGradingPlan">Backfill &amp; Grading Plan</a>    
+                        @Html.ActionLink("Backfill & Grading Plan", "BackfillGradingPlan", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/DrainageBasinReclamationPlan">Drainage Basin Reclamation Plan</a>    
+                        @Html.ActionLink("Drainage Basin Reclamation Plan", "DrainageBasinReclamationPlan", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/SoilHandlingPlan">Soil Handling Plan</a>    
+                        @Html.ActionLink("Soil Handling Plan", "SoilHandlingPlan", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/RevegetationPlan">Revegetation Plan (Part I)</a> 
+                        @Html.ActionLink("Revegetation Plan (Part I)", "RevegetationPlan", "ePermitReclamation") 
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/PostMineLandUse">Revegetation Plan (Part II)</a> 
+                        @Html.ActionLink("Revegetation Plan (Part II)", "PostMineLandUse", "ePermitReclamation") 
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/PlanForSealingMineOpenings">Plan for Sealing Mine Openings</a>    
+                        @Html.ActionLink("Plan for Sealing Mine Openings", "PlanForSealingMineOpenings", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/FacilitiesReclamation">Facilities Reclamation Plan</a>    
+                        @Html.ActionLink("Facilities Reclamation Plan", "FacilitiesReclamation", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/PlanForTheProtectionOfHydrologicBalance">Plan for the Protection of the Hydrologic Balance</a>    
+                        @Html.ActionLink("Plan for the Protection of the Hydrologic Balance", "PlanForTheProtectionOfHydrologicBalance", "ePermitReclamation")    
  
                         </li>
                         <li> 
-                        <a href="~/ePermitReclamation/PrimeFarmland">Prime Farmland Special Application</a>    
+                        @Html.ActionLink("Prime Farmland Special Application", "PrimeFarmland", "ePermitReclamation")    
  
                         </li>
                     </ul>
 				</li>
-               <li><a href="~/ePermitMaps/Maps">Map Summary</a>
+               <li>@Html.ActionLink("Map Summary", "Maps", "ePermitMaps")
                     <ul class="nav2 maps" style="overflow: hidden; display: none;">
                         <li> 
-						    <a href="~/ePermitMaps/Maps">Maps</a>						 
+						    @Html.ActionLink("Maps", "Maps", "ePermitMaps")						 
 					    </li>
                     </ul>
                 </li>               
-				<li><a href="/ePermitPerformance">Performance Standards</a>
+				<li><a href="/ePermitPerformance/FiveHundreds">Performance Standards</a>
                     <ul class="nav2 performance" style="overflow: hidden; display: none;">
                         <li> 
-                        <a href="~/ePermitPerformanceStandards/FiveHundreds">500's</a>  
+                        @Html.ActionLink("500's", "FiveHundreds", "ePermitPerformanceStandards")  
                         </li>
                         <li> 
-                        <a href="~/ePermitPerformanceStandards/SixHundreds">600's</a>  
+                        @Html.ActionLink("600's", "SixHundreds", "ePermitPerformanceStandards")  
                         </li>
                         <li> 
-                        <a href="~/ePermitPerformanceStandards/SevenHundreds">700's</a>    
+                        @Html.ActionLink("700's", "SevenHundreds", "ePermitPerformanceStandards")    
                         </li>
                         <li> 
-                        <a href="~/ePermitPerformanceStandards/EightHundreds">800's</a>    
+                        @Html.ActionLink("800's", "EightHundreds", "ePermitPerformanceStandards")    
                         </li>
                         <li> 
-                        <a href="~/ePermitPerformanceStandards/NineHundreds">900's (Underground Mining Only)</a>     
+                        @Html.ActionLink("900's (Underground Mining Only)", "NineHundreds", "ePermitPerformanceStandards")     
                         </li>
                     </ul>
 				</li>
-                <li><a href="~/ePermitCompleteness/Checklist">Completeness</a>
+                <li>@Html.ActionLink("Completeness", "Checklist", "ePermitCompleteness")
                     <ul class="nav2 completeness" style="overflow: hidden; display: none; ">
                         <li>
-                            <a href="~/ePermitCompleteness/Checklist">Checklist</a>
+                            @Html.ActionLink("Checklist", "Checklist", "ePermitCompleteness")
                         </li>
-                        </ul>
+                    </ul>
                 </li>
-                <li><a href="~/ePermitAcceptability/Acceptability">Acceptability</a>
+                <li>@Html.ActionLink("Acceptability", "Acceptability", "ePermitAcceptability")
                     <ul class="nav2 completeness" style="overflow: hidden; display: none; ">
                         <li>
-                            <a href="~/ePermitAcceptability/Acceptability">Checklist</a>
+                            @Html.ActionLink("Checklist", "Acceptability", "ePermitAcceptability")
                         </li>
                     </ul>
                 </li>	
-                <li><a href="~/ePermitCompleteness/">Audit Report</a></li>			
+                <li><a href="#">Audit Report</a></li>			
 			</ul>
          </li>
     </ul>

@@ -7,6 +7,11 @@
 
     <h2 data-submenu="1">Postmine Land Use&nbsp;/&nbsp;Revegetation Types</h2>
 
+    <fieldset class="setapart">
+        <legend>Postmine land use attachments</legend>
+        @Html.Partial("_attachmentTable")
+    </fieldset>
+
     @*postmine land use/revegetation types table*@
 
     <fieldset class="setapart">
@@ -59,6 +64,7 @@
 
     @*mining and reclamation timetable*@
 
+    @*
     <fieldset class="setapart">
         <legend>Mining and Reclamation Table</legend>
         <table>
@@ -117,6 +123,8 @@
             <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
         </div>
     </fieldset>
+    *@
+
     <fieldset class="setapart">
         <legend>Comments</legend>
         <textarea id='commentstextarea' placeholder="Comments"></textarea>

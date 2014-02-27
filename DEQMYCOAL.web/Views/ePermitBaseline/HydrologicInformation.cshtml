@@ -8,121 +8,30 @@
 <article>
     <h2 data-submenu="3">Hydrologic Information</h2>
 
+    <fieldset class="setapart">
+        <legend>Ground, surface, alternative Water Inventory Report(s) Attachments</legend>
+        @Html.Partial("_attachmentTable")
+    </fieldset>
+
     @*ground water inventory report attachments*@
 
     <fieldset class="setapart">
         <legend>Ground Water Inventory Report Attachments</legend>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#">My First Attachment File.pdf</a></td>
-                    <td>3/26/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">My Second Attachment File.pdf</a></td>
-                    <td>7/18/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
+        @Html.Partial("_attachmentTable")
     </fieldset>
 
     @* surface water inventory report attachments*@
 
     <fieldset class="setapart">
         <legend>Surface Water Inventory Report Attachments</legend>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#">My First Attachment File.pdf</a></td>
-                    <td>3/26/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">My Second Attachment File.pdf</a></td>
-                    <td>7/18/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
+        @Html.Partial("_attachmentTable")
     </fieldset>
 
     @*alternative water supplies attachments*@
 
     <fieldset class="setapart">
         <legend>Alternative Water Supplies Attachments</legend>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Date Uploaded</th>
-                    <th>User</th>
-                    <th style="text-align: center;">Edit&nbsp;/&nbsp;Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#">My First Attachment File.pdf</a></td>
-                    <td>3/26/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">My Second Attachment File.pdf</a></td>
-                    <td>7/18/2013</td>
-                    <td>JB</td>
-                    <td style="text-align: center;">
-                        <button class="edit" title="Edit">Edit</button>
-                        <button class="delete" title="Delete">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-right" style="text-align: right;">
-            <button class="tertiary"><span class="plussymbol">+</span>&nbsp;Add New</button>
-        </div>
+        @Html.Partial("_attachmentTable")
     </fieldset>
 
     @*additional information attachments*@
@@ -170,6 +79,8 @@
         <legend>Hydrologic Information Maps</legend>
         <h4>Required Map Layers: </h4>
         <div class="checkboxes">
+            <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Lakes, Impoundments, Ponds, Dams, Traps, Reservoirs (17.24.304(1)(f)(ii)(A))</a>
+            <br />
             <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Isopach Layers (17.24.304(1)(f))</a>
             <br />
             <input disabled="disabled" type="checkbox" name="HydroInfoMaps" value="x" checked="checked" /><a href="@Url.Action("Maps", "ePermitMaps")">Contour Layers (17.24.304(1)(f))</a>
