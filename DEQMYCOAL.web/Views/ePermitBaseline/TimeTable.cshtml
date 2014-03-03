@@ -3,17 +3,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h1>ePermit</h1>
 
-
 <article>
-    <h2 data-submenu="0">Life of Mine&nbsp/&nbsp;Estimated Mining Timetable</h2>
+    <h2 data-submenu="2">Life of Mine&nbsp;/&nbsp;Estimated Mining Timetable</h2>
 
     <fieldset class="setapart">
         <legend>Life of Mine Information</legend>
         <input class="textwidth" type="text" title="sitename" id="sitename" name="sitename" required="" value="Life of Mine-Years" />
-        <br />
-        <h3>Anticipated Production in Tons</h3>
+
+        <h3>Anticipated Production in Tons:</h3>
 
         <input class="textwidth" type="text" id="annual" name="annual" required value="Annual" />
         <br />
@@ -21,14 +21,14 @@
         <input class="textwidth" type="text" title="total" id="total" name="mshaid" required="" value="Total (Over Life of Mine)" />
     </fieldset>
     <fieldset class="setapart">
-        <legend>Mining and Reclamation Timetable</legend>
+        <legend>Estimated total life of mining activities</legend>
         <table id="tableproperties" style="clear: both; width: 100%;">
             <!-- First row -->
             <tr>
                 <th class="timetablecolumnheader">Phase</th>
-                <th class="timetablecolumnheader">Start Date</th>
-                <th class="timetablecolumnheader">End Date</th>
-                <th class="timetablecolumnheader">Acreage</th>
+                <th class="timetablecolumnheader">Anticipated Start</th>
+                <th class="timetablecolumnheader">Anticipated End</th>
+                <th class="timetablecolumnheader">Anticipated Acreage</th>
             </tr>
             <!-- Second row -->
             <tr class="timetablecolumn">
@@ -99,7 +99,22 @@
                 <td>
                     <input type="text" id="revegetationacreage" name="revegetationacreage" required="" value="" /></td>
             </tr>
+        </table>
+        
+        <h3>Comments</h3>
+        <textarea id='commentstextarea' placeholder="Comments"></textarea>
+    </fieldset>
 
+    <fieldset class="setapart">
+        <legend>Estimated end of life activities</legend>
+        <table id="tableproperties2" style="clear: both; width: 100%;">
+            <!-- First row -->
+            <tr>
+                <th class="timetablecolumnheader">Phase</th>
+                <th class="timetablecolumnheader">Anticipated Start</th>
+                <th class="timetablecolumnheader">Anticipated End</th>
+                <th class="timetablecolumnheader">Anticipated Acreage</th>
+            </tr>
             <!-- Row 8 -->
 
             <tr>
@@ -137,15 +152,15 @@
             </tr>
         </table>
 
-    </fieldset>
-    <fieldset class="setapart">
-        <legend>Comments</legend>
+        <h3>Comments</h3>
         <textarea id='commentstextarea' placeholder="Comments"></textarea>
     </fieldset>
+
     <br />
-   
+  
     <button value="Submit" id="ShowComments" title="Deficiency" class="CommentsButton Primary">Deficiency ▼</button>
     <div id="Comments" class="Comments" style="display: none;">@Html.Partial("Deficiency")</div>
     <button class="primary">Save</button>
     <button class="secondary">Reset</button>
 </article>
+

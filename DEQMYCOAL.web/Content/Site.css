@@ -86,8 +86,9 @@ select{background-color: #FFFFFA;color: #555;border: solid 1px #999;margin-top:.
 input {background-color: #FFFFFA;  border: solid 1px #999;}
 input[type="checkbox"] {border: none;padding-right: 0.5em;}
 input[type="radio"] {background-color: transparent;border: 0px!important;}
-button.primary {padding: .5em 2em;background-color: #F26522;color: #FFFFFF;font-weight: bold;font-size: 1em;letter-spacing: 2px;border:solid 2px #eee;border-radius: 6px;text-transform: uppercase;cursor: pointer;}
-button.secondary { background-color: #555555; color: #FFFFFF; padding: .5em 2em; font-weight: bold; letter-spacing: 1px;border:solid 2px #eee;border-radius: 6px; cursor: pointer; margin-left: .25em; }
+button.primary, input[type="submit"].primary{padding: .5em 2em;background-color: #F26522;color: #FFFFFF;font-weight: bold;font-size: 1em;letter-spacing: 2px;border:solid 2px #eee;border-radius: 6px;text-transform: uppercase;cursor: pointer;}
+button:disabled.primary, input[type="submit"]:disabled.primary { background-color:#CCA999; color:#999; cursor:default; }
+button.secondary, input[type="reset"] { background-color: #555555; color: #FFFFFF; padding: .5em 2em; font-weight: bold; letter-spacing: 1px;border:solid 2px #eee;border-radius: 6px; cursor: pointer; margin-left: .25em; }
 button.tertiary {background-color: #aaaaaa;padding: .5em 1em;border:solid 2px #eee;margin-bottom: 1em;color: #FFFFFF;font-weight: bold;letter-spacing: 1px;border-radius:6px;cursor: pointer;position: relative;}
 button.selectx {cursor: pointer; border: solid 1px #999; border-radius: 6px;background-color: #555555; color: #FFFFFF;}
 button.selectedit {cursor: pointer; border: solid 1px #999; border-radius: 6px;background-color: #F26522; color: #FFFFFF;}

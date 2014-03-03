@@ -1,107 +1,153 @@
 ﻿@*@using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary()*@
-<fieldset>
+<article>
+
+    <fieldset class="setapart">
+        
         <legend>Register to Access myCOAL</legend>
         <p>New coal mining or prospecting operators, public users or partner agency users must register with the form below, before gaining access to the Montana DEQ ePermitting Portal. If registering as a representative of an existing coal mining or prospecting operation, please contact the company directly in order to be registered to use this site.</p>
+        
         <hr />
-        <label for="reason">Describe your reason for registering:</label><br />
-        <textarea id="reason" name="reason" required></textarea><br />
-        Which type of Access are you applying for?
-        <select required>
+
+        <label for="reason">Describe your reason for registering:</label>
+        <textarea class="" id="commentstextarea" name="reason" required></textarea>
+        
+        <label for="AccessType">Which type of Access are you applying for?</label>
+        <select name="AccessType" id="AccessType" required>
             <option selected>-- Select a type --</option>
             <option>Operator</option>
             <option>Public</option>
             <option>Partner Agency</option>
-        </select><hr />
-        First Name&nbsp;<input type="text" title="First Name" id="FName" name="FName" required />
-        Last Name&nbsp;<input type="text" title="Last Name" id="LName" name="LName" required /><br />
-        Title&nbsp;<input type="text" title="Title" id="Title" name="Title" required />
-        Company&nbsp;<input type="text" title="Company" id="Company" name="Company" size="30" required /><br />
-        Address&nbsp;<input type="text" title="Address" id="Address" name="Address" size="50" required /><br />
-        City&nbsp;<input type="text" title="City" id="City" name="Address" required />
-        State&nbsp;<select name="state" required>
-	        <option value="AL">AL</option>
-	        <option value="AK">AK</option>
-	        <option value="AZ">AZ</option>
-	        <option value="AR">AR</option>
-	        <option value="CA">CA</option>
-	        <option value="CO">CO</option>
-	        <option value="CT">CT</option>
-	        <option value="DE">DE</option>
-	        <option value="DC">DC</option>
-	        <option value="FL">FL</option>
-	        <option value="GA">GA</option>
-	        <option value="HI">HI</option>
-	        <option value="ID">ID</option>
-	        <option value="IL">IL</option>
-	        <option value="IN">IN</option>
-	        <option value="IA">IA</option>
-	        <option value="KS">KS</option>
-	        <option value="KY">KY</option>
-	        <option value="LA">LA</option>
-	        <option value="ME">ME</option>
-	        <option value="MD">MD</option>
-	        <option value="MA">MA</option>
-	        <option value="MI">MI</option>
-	        <option value="MN">MN</option>
-	        <option value="MS">MS</option>
-	        <option value="MO">MO</option>
-	        <option value="MT">MT</option>
-	        <option value="NE">NE</option>
-	        <option value="NV">NV</option>
-	        <option value="NH">NH</option>
-	        <option value="NJ">NJ</option>
-	        <option value="NM">NM</option>
-	        <option value="NY">NY</option>
-	        <option value="NC">NC</option>
-	        <option value="ND">ND</option>
-	        <option value="OH">OH</option>
-	        <option value="OK">OK</option>
-	        <option value="OR">OR</option>
-	        <option value="PA">PA</option>
-	        <option value="RI">RI</option>
-	        <option value="SC">SC</option>
-	        <option value="SD">SD</option>
-	        <option value="TN">TN</option>
-	        <option value="TX">TX</option>
-	        <option value="UT">UT</option>
-	        <option value="VT">VT</option>
-	        <option value="VA">VA</option>
-	        <option value="WA">WA</option>
-	        <option value="WV">WV</option>
-	        <option value="WI">WI</option>
-	        <option value="WY">WY</option>
         </select>
-        Zip&nbsp;<input type="text" title="Zip Code" id="Zip Code" name="Zip Code" size="6" required /><br />
-        Phone Number&nbsp;<input type="text" title="Phone Number" id="Phone Number" name="Phone Number" size="12" required />(xxx-xxx-xxxx)<br />
-        Email Address&nbsp;<input type="text" title="Email Address" id="Email Address" name="Email Address" required />(Sample@gmail.com)<br />
-        Confirm Email Address&nbsp;<input type="text" title="Confirm Email Address" id="Confirm Email Address" name="Confirm Email Address" required />(Sample@gmail.com)
+        
         <hr />
+        
+        
+        <fieldset class="setapart"  style="float:left; width:45%;">
+                <legend>Personal</legend>
+            <label for="FName">First Name</label>
+            <input type="text" title="First Name" id="FName" name="FName" required />
+        
+            <label for="LName">Last Name</label>
+            <input type="text" title="Last Name" id="LName" name="LName" required />
+        
+            <label for="Title">Title</label>
+            <input type="text" title="Title" id="Title" name="Title" required />
+
+            <label for="Company">Company</label>
+            <input type="text" title="Company" id="Company" name="Company" size="30" required />
+        </fieldset>
+        
+        <fieldset class="setapart" style="float:right; width:45%;">
+            <legend>Contact</legend>
+            <label for="Address">Address</label>
+            <input type="text" title="Address" id="Address" name="Address" size="50" required />
+
+
+            <div style="float:left;">
+                <label for="City">City</label>
+                <input type="text" title="City" id="City" name="Address" required />
+            </div>        
+
+            <div style="float:left; padding-left:15px;">
+                <label for="state">State</label>
+                <select name="state" style="margin-top:2px;" required>
+	            <option value="AL">AL</option>
+	            <option value="AK">AK</option>
+	            <option value="AZ">AZ</option>
+	            <option value="AR">AR</option>
+	            <option value="CA">CA</option>
+	            <option value="CO">CO</option>
+	            <option value="CT">CT</option>
+	            <option value="DE">DE</option>
+	            <option value="DC">DC</option>
+	            <option value="FL">FL</option>
+	            <option value="GA">GA</option>
+	            <option value="HI">HI</option>
+	            <option value="ID">ID</option>
+	            <option value="IL">IL</option>
+	            <option value="IN">IN</option>
+	            <option value="IA">IA</option>
+	            <option value="KS">KS</option>
+	            <option value="KY">KY</option>
+	            <option value="LA">LA</option>
+	            <option value="ME">ME</option>
+	            <option value="MD">MD</option>
+	            <option value="MA">MA</option>
+	            <option value="MI">MI</option>
+	            <option value="MN">MN</option>
+	            <option value="MS">MS</option>
+	            <option value="MO">MO</option>
+	            <option value="MT">MT</option>
+	            <option value="NE">NE</option>
+	            <option value="NV">NV</option>
+	            <option value="NH">NH</option>
+	            <option value="NJ">NJ</option>
+	            <option value="NM">NM</option>
+	            <option value="NY">NY</option>
+	            <option value="NC">NC</option>
+	            <option value="ND">ND</option>
+	            <option value="OH">OH</option>
+	            <option value="OK">OK</option>
+	            <option value="OR">OR</option>
+	            <option value="PA">PA</option>
+	            <option value="RI">RI</option>
+	            <option value="SC">SC</option>
+	            <option value="SD">SD</option>
+	            <option value="TN">TN</option>
+	            <option value="TX">TX</option>
+	            <option value="UT">UT</option>
+	            <option value="VT">VT</option>
+	            <option value="VA">VA</option>
+	            <option value="WA">WA</option>
+	            <option value="WV">WV</option>
+	            <option value="WI">WI</option>
+	            <option value="WY">WY</option>
+            </select>
+            </div>
+
+            <div style="float:left; padding-left:15px;">
+                <label for="ZipCode">Zip Code</label>
+                <input type="text" title="Zip Code" id="ZipCode" name="ZipCode" size="6" required />
+            </div>
+
+            <div style="clear:both;"></div>
+
+            <label for="PhoneNumber">Phone Number</label>
+            <input type="text" title="Phone Number" id="PhoneNumber" name="PhoneNumber" size="12" required />(xxx-xxx-xxxx)
+
+            <label for="Email">Email Address</label>
+            <input type="text" title="Email Address" id="EmailAddress" name="EmailAddress" required />(Sample@gmail.com)
+
+            <label for="ConfirmEmail">Confirm Email Address</label>
+            <input type="text" title="Confirm Email Address" id="ConfirmEmail" name="ConfirmEmail" required />(Sample@gmail.com)
+        </fieldset>
+
+        <div style="clear:both;"></div>
+        <hr />
+
         <p>NOTE: Once the department has verified the information provided, an email will be sent to the address provided, with a temporary password and instructions for completing registration.</p>
+        <br />
         <fieldset style="border:dotted #F26522 1px;">
             <legend>Terms of Use</legend> 
-            <input type="checkbox" name="terms" style="border:0;" value="" />I have read and agree to the Terms of Use. Checking this boxes implies a signature.
+            <input type="checkbox" name="terms" id="terms" style="border:0;" value="" />I have read and agree to the Terms of Use. Checking this boxes implies a signature.
         </fieldset><br />
-        @*<ol>
-            <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.ConfirmPassword)
-                @Html.PasswordFor(m => m.ConfirmPassword)
-            </li>
-        </ol>*@
-@*        <input type="submit" value="Submit" class="primary" /><input type="submit" value="Cancel" class="secondary" />*@
-        <button class="primary" value="Register">Submit</button><button class="secondary" value="Cancel">Cancel</button>
+
+        <input id="submit" disabled="disabled" type="submit" value="Submit" class="primary" />
+        <input type="reset" value="Cancel" class="secondary" />
     </fieldset>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#terms").change(function () {
+                var accepted = $(this).is(":checked");
+                if (accepted)
+                    $("#submit").removeAttr("disabled");
+                else
+                    $("#submit").attr("disabled", "disabled");
+            });
+        });
+    </script>
 
-@*@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}*@
+</article>
