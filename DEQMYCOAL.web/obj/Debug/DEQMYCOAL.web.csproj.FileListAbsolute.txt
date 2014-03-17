@@ -93,7 +93,12 @@ C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\DotNetOpenAuth.OAuth
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\DotNetOpenAuth.OAuth.xml
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\DotNetOpenAuth.OpenId.xml
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\obj\Debug\DEQMYCOAL.web.csprojResolveAssemblyReference.cache
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\obj\Debug\DEQMYCOAL.web.dll
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\obj\Debug\DEQMYCOAL.web.pdb
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\ePermitBLL.dll
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\ePermitDAL.dll
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\ePermitBLL.pdb
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\ePermitBLL.xml
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\ePermitDAL.pdb
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\obj\Debug\DEQMYCOAL.web.csprojResolveAssemblyReference.cache

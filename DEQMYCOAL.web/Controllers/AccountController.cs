@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DEQMYCOAL.web.Models;
+using DEQMYCOAL.web.ViewModels;
+using ePermitBLL;
+using ePermitDAL.DAL.dbo;
+using ePermitDAL.DO.dbo;
 
 namespace DEQMYCOAL.web.Controllers
 {
@@ -15,12 +20,40 @@ namespace DEQMYCOAL.web.Controllers
             return View();
         }
 
+
         public ActionResult Register()
         {
             ViewBag.Message = "Register";
-
-            return View();
+            RegistrationVM model = new RegistrationVM()
+            {
+                Registration = new RegistrationDO(),
+                Companies = CompanyBLL.GetCompanies()
+            };
+            return View(model);
         }
+
+        [HttpPost]
+        public ActionResult Register(RegistrationVM model)
+        {
+            try
+            {
+                
+                // save the registration
+                model.UserToken = myCoalUser.UserToken;
+                model.RegistrationID = 0;
+                RegistrationBLL.Save(model);
+
+                // take the user home
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                // display the error
+                ModelState.AddModelError("", ex);
+                return View(model);
+            }
+        }
+
 
         public ActionResult ePassRegister()
         {
@@ -32,6 +65,12 @@ namespace DEQMYCOAL.web.Controllers
         {
             ViewBag.Message = "Manage";
 
+            return View();
+        }
+
+
+        public ActionResult Terms()
+        {
             return View();
         }
     }

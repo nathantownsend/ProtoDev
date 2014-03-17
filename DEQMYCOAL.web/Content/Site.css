@@ -169,7 +169,7 @@ html, body {height: 100%;}
 .Comments {display: block; background-color: rgb(238, 238, 238); border-bottom-left-radius: 1.2em; border-bottom-right-radius: 1.2em; padding: 1.2em;margin-bottom: 1em;}
 .Checklist {display: block;}
 #apptextarea {height: 7em!important;}
-#commentstextarea {height: 9em!important;margin-top: 1em; margin-bottom: 2em;}
+#commentstextarea, .commentstextarea {height: 9em!important;margin-top: 1em; margin-bottom: 2em;}
 #legaltextarea {height: 7em!important;}
 .planstextarea {height: 7em!important;  width: 61.2em;}
 
@@ -264,4 +264,11 @@ input {display:inline-block;float:left;}*/
     float:left;
     border-top-right-radius:1.2em;
     border-bottom-right-radius:1.2em;
+}
+
+
+/*Validation*/
+div.ValidationMessages
+{
+
 }

@@ -1,6 +1,10 @@
-﻿@*@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary()*@
+﻿@model DEQMYCOAL.web.ViewModels.RegistrationVM
+
+@{
+    Layout = "~/Views/Shared/_LayoutSecurity.cshtml";
+}
+
+@using (Html.BeginForm()) {
 <article>
 
     <fieldset class="setapart">
@@ -11,117 +15,55 @@
         <hr />
 
         <label for="reason">Describe your reason for registering:</label>
-        <textarea class="" id="commentstextarea" name="reason" required></textarea>
+        <textarea class="commentstextarea" name="RegistrationDescription" id="RegistrationDescription" required>@Model.Registration.RegistrationDescription</textarea>
         
-        <label for="AccessType">Which type of Access are you applying for?</label>
-        <select name="AccessType" id="AccessType" required>
-            <option selected>-- Select a type --</option>
-            <option>Operator</option>
-            <option>Public</option>
-            <option>Partner Agency</option>
-        </select>
+        @Html.Partial("_userAccessRoleDropdown", Model.Registration.AccessRoleID)
         
         <hr />
         
         
         <fieldset class="setapart"  style="float:left; width:45%;">
                 <legend>Personal</legend>
-            <label for="FName">First Name</label>
-            <input type="text" title="First Name" id="FName" name="FName" required />
+            <label for="FirstName">First Name</label>
+            <input type="text" title="First Name" id="FirstName" name="FirstName" value="@Model.Registration.FirstName" required />
         
-            <label for="LName">Last Name</label>
-            <input type="text" title="Last Name" id="LName" name="LName" required />
+            <label for="LastName">Last Name</label>
+            <input type="text" title="Last Name" id="LastName" name="LastName" value="@Model.Registration.LastName" required />
         
             <label for="Title">Title</label>
-            <input type="text" title="Title" id="Title" name="Title" required />
+            <input type="text" title="Title" id="Title" name="Title" value="@Model.Registration.Title" required />
 
-            <label for="Company">Company</label>
-            <input type="text" title="Company" id="Company" name="Company" size="30" required />
+            <label for="CompanyName">Company</label>
+            <input type="text" title="Company" id="CompanyName" name="CompanyName" size="30" value="@Model.Registration.CompanyID" required />
         </fieldset>
         
         <fieldset class="setapart" style="float:right; width:45%;">
             <legend>Contact</legend>
-            <label for="Address">Address</label>
-            <input type="text" title="Address" id="Address" name="Address" size="50" required />
-
-
-            <div style="float:left;">
+            <label for="Address1">Address</label>
+            <input type="text" title="Address" id="Address1" name="Address1" size="50" value="@Model.Registration.Address1" required />
+            
+            <div style="float:left; padding-right:15px;">
                 <label for="City">City</label>
-                <input type="text" title="City" id="City" name="Address" required />
+                <input type="text" title="City" id="City" name="City" value="@Model.Registration.City" required />
             </div>        
 
-            <div style="float:left; padding-left:15px;">
-                <label for="state">State</label>
-                <select name="state" style="margin-top:2px;" required>
-	            <option value="AL">AL</option>
-	            <option value="AK">AK</option>
-	            <option value="AZ">AZ</option>
-	            <option value="AR">AR</option>
-	            <option value="CA">CA</option>
-	            <option value="CO">CO</option>
-	            <option value="CT">CT</option>
-	            <option value="DE">DE</option>
-	            <option value="DC">DC</option>
-	            <option value="FL">FL</option>
-	            <option value="GA">GA</option>
-	            <option value="HI">HI</option>
-	            <option value="ID">ID</option>
-	            <option value="IL">IL</option>
-	            <option value="IN">IN</option>
-	            <option value="IA">IA</option>
-	            <option value="KS">KS</option>
-	            <option value="KY">KY</option>
-	            <option value="LA">LA</option>
-	            <option value="ME">ME</option>
-	            <option value="MD">MD</option>
-	            <option value="MA">MA</option>
-	            <option value="MI">MI</option>
-	            <option value="MN">MN</option>
-	            <option value="MS">MS</option>
-	            <option value="MO">MO</option>
-	            <option value="MT">MT</option>
-	            <option value="NE">NE</option>
-	            <option value="NV">NV</option>
-	            <option value="NH">NH</option>
-	            <option value="NJ">NJ</option>
-	            <option value="NM">NM</option>
-	            <option value="NY">NY</option>
-	            <option value="NC">NC</option>
-	            <option value="ND">ND</option>
-	            <option value="OH">OH</option>
-	            <option value="OK">OK</option>
-	            <option value="OR">OR</option>
-	            <option value="PA">PA</option>
-	            <option value="RI">RI</option>
-	            <option value="SC">SC</option>
-	            <option value="SD">SD</option>
-	            <option value="TN">TN</option>
-	            <option value="TX">TX</option>
-	            <option value="UT">UT</option>
-	            <option value="VT">VT</option>
-	            <option value="VA">VA</option>
-	            <option value="WA">WA</option>
-	            <option value="WV">WV</option>
-	            <option value="WI">WI</option>
-	            <option value="WY">WY</option>
-            </select>
+            <div style="float:left; padding-right:15px;">
+                @Html.Partial("_stateDropdown", @Model.Registration.StateID)
             </div>
 
-            <div style="float:left; padding-left:15px;">
-                <label for="ZipCode">Zip Code</label>
-                <input type="text" title="Zip Code" id="ZipCode" name="ZipCode" size="6" required />
+            <div style="float:left;">
+                <label for="Zipcode">Zip Code</label>
+                <input type="number" title="Zip Code" id="Zipcode" name="Zipcode" max="99999" value="@Model.Registration.Zipcode" required pattern="\d{5}" />
             </div>
 
             <div style="clear:both;"></div>
 
-            <label for="PhoneNumber">Phone Number</label>
-            <input type="text" title="Phone Number" id="PhoneNumber" name="PhoneNumber" size="12" required />(xxx-xxx-xxxx)
+            <label for="Phone">Phone Number</label>
+            <input type="text" title="Phone Number" id="Phone" name="Phone" size="12" value="@Model.Registration.Phone" required pattern="\d{3}-\d{3}-\d{4}" />(xxx-xxx-xxxx)
 
             <label for="Email">Email Address</label>
-            <input type="text" title="Email Address" id="EmailAddress" name="EmailAddress" required />(Sample@gmail.com)
+            <input type="email" title="Email Address" id="Email" name="Email" value="@Model.Registration.Email" required />(Sample@gmail.com)
 
-            <label for="ConfirmEmail">Confirm Email Address</label>
-            <input type="text" title="Confirm Email Address" id="ConfirmEmail" name="ConfirmEmail" required />(Sample@gmail.com)
         </fieldset>
 
         <div style="clear:both;"></div>
@@ -131,16 +73,20 @@
         <br />
         <fieldset style="border:dotted #F26522 1px;">
             <legend>Terms of Use</legend> 
-            <input type="checkbox" name="terms" id="terms" style="border:0;" value="" />I have read and agree to the Terms of Use. Checking this boxes implies a signature.
+            <input type="checkbox" name="TermsOfUse" id="TermsOfUse" style="border:0;" value="true" />I have read and agree to the @Html.ActionLink("Terms of Use", "terms"). Checking this boxes implies a signature.
         </fieldset><br />
 
         <input id="submit" disabled="disabled" type="submit" value="Submit" class="primary" />
         <input type="reset" value="Cancel" class="secondary" />
+
+        <div class="ValidationMessages">
+            @Html.ValidationSummary()
+        </div>
     </fieldset>
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#terms").change(function () {
+            $("#TermsOfUse").change(function () {
                 var accepted = $(this).is(":checked");
                 if (accepted)
                     $("#submit").removeAttr("disabled");
@@ -151,3 +97,4 @@
     </script>
 
 </article>
+}

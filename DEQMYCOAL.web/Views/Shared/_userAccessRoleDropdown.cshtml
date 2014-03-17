@@ -1,0 +1,22 @@
+﻿@model object
+
+@{
+    Dictionary<string, string> values = new Dictionary<string, string>();
+    values.Add("", "-- Select a type --");
+    values.Add("Operator", "Operator");
+    values.Add("Public", "Public");
+    values.Add("PartnerAgency", "Partner Agency");
+}
+
+<label for="AccessRoleID">Which type of Access are you applying for?</label>
+<select name="AccessRoleID" id="AccessRoleID" required>
+    @foreach (KeyValuePair<string, string> opts in values)
+    {
+        if (opts.Key == Model.ToString())
+        {
+            <option selected="selected" value="@opts.Key">@opts.Value</option>
+        } else {
+            <option value="@opts.Key">@opts.Value</option>   
+        }
+    }
+</select>
