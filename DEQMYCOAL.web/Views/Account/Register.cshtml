@@ -4,97 +4,104 @@
     Layout = "~/Views/Shared/_LayoutSecurity.cshtml";
 }
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { novalidate="" }))
+{
 <article>
-
+    
     <fieldset class="setapart">
         
         <legend>Register to Access myCOAL</legend>
         <p>New coal mining or prospecting operators, public users or partner agency users must register with the form below, before gaining access to the Montana DEQ ePermitting Portal. If registering as a representative of an existing coal mining or prospecting operation, please contact the company directly in order to be registered to use this site.</p>
         
-        <hr />
 
         <label for="reason">Describe your reason for registering:</label>
-        <textarea class="commentstextarea" name="RegistrationDescription" id="RegistrationDescription" required>@Model.Registration.RegistrationDescription</textarea>
+        @Html.TextAreaFor(m => m.Registration.RegistrationDescription, new { @class = "commentstextarea" })
+        @Html.ValidationMessageFor(m => m.Registration.RegistrationDescription)
         
-        @Html.Partial("_userAccessRoleDropdown", Model.Registration.AccessRoleID)
+
+        @Html.LabelFor(m => m.AccessRoles)
+        @Html.DropDownListFor(m => m.Registration.AccessRoleID, Model.AccessRoles)
+        @Html.ValidationMessageFor(m => m.Registration.AccessRoleID)
         
         <hr />
         
         
         <fieldset class="setapart"  style="float:left; width:45%;">
-                <legend>Personal</legend>
-            <label for="FirstName">First Name</label>
-            <input type="text" title="First Name" id="FirstName" name="FirstName" value="@Model.Registration.FirstName" required />
-        
-            <label for="LastName">Last Name</label>
-            <input type="text" title="Last Name" id="LastName" name="LastName" value="@Model.Registration.LastName" required />
-        
-            <label for="Title">Title</label>
-            <input type="text" title="Title" id="Title" name="Title" value="@Model.Registration.Title" required />
+            <legend>Personal</legend>
 
-            <label for="CompanyName">Company</label>
-            <input type="text" title="Company" id="CompanyName" name="CompanyName" size="30" value="@Model.Registration.CompanyID" required />
+            @Html.LabelFor(m => m.Registration.FirstName)
+            @Html.TextBoxFor(m => m.Registration.FirstName)
+            @Html.ValidationMessageFor(m => m.Registration.FirstName)
+        
+            @Html.LabelFor(m => m.Registration.LastName)
+            @Html.TextBoxFor(m => m.Registration.LastName)
+            @Html.ValidationMessageFor(m => m.Registration.LastName)
+        
+            @Html.LabelFor(m => m.Registration.Title)
+            @Html.TextBoxFor(m => m.Registration.Title)
+            @Html.ValidationMessageFor(m => m.Registration.Title)
+
+            @Html.LabelFor(m => m.Registration.CompanyName)
+            @Html.TextBoxFor(m => m.Registration.CompanyName, new { size = "30" })
+            @Html.ValidationMessageFor(m => m.Registration.CompanyName)
         </fieldset>
         
         <fieldset class="setapart" style="float:right; width:45%;">
             <legend>Contact</legend>
-            <label for="Address1">Address</label>
-            <input type="text" title="Address" id="Address1" name="Address1" size="50" value="@Model.Registration.Address1" required />
+
+            @Html.LabelFor(m => m.Registration.Address1)
+            @Html.TextBoxFor(m => m.Registration.Address1)
+            @Html.ValidationMessageFor(m => m.Registration.Address1)
             
-            <div style="float:left; padding-right:15px;">
-                <label for="City">City</label>
-                <input type="text" title="City" id="City" name="City" value="@Model.Registration.City" required />
-            </div>        
+            @Html.LabelFor(m => m.Registration.City)
+            @Html.TextBoxFor(m => m.Registration.City)
+            @Html.ValidationMessageFor(m => m.Registration.City)
 
-            <div style="float:left; padding-right:15px;">
-                @Html.Partial("_stateDropdown", @Model.Registration.StateID)
+            @Html.LabelFor(m => m.States)
+            @Html.DropDownListFor(m => m.Registration.StateID, Model.States)
+            @Html.ValidationMessageFor(m => m.Registration.StateID)
+
+            @Html.LabelFor(m => m.Registration.Zipcode)
+            @Html.TextBoxFor(m => m.Registration.Zipcode)
+            @Html.ValidationMessageFor(m => m.Registration.Zipcode)
+
+            <div class="PhoneEntry">
+                <div>
+                    @Html.LabelFor(m => m.Registration.CountryCode, new { @class = "tiny-text" })
+                    @Html.TextBoxFor(m => m.Registration.CountryCode, new { size = "1", maxlength="3" })
+                    @Html.ValidationMessageFor(m => m.Registration.CountryCode)
+                </div>
+
+                <div>
+                    @Html.LabelFor(m => m.Registration.Phone, new { @class = "tiny-text" })
+                    @Html.TextBoxFor(m => m.Registration.Phone, new { size = "14", maxlength="14" })
+                    @Html.ValidationMessageFor(m => m.Registration.Phone)
+                </div>
+
+                <div>
+                    @Html.LabelFor(m => m.Registration.PhoneExtension, new { @class = "tiny-text" })
+                    @Html.TextBoxFor(m => m.Registration.PhoneExtension, new { size = "5", maxlength=5 })
+                    @Html.ValidationMessageFor(m => m.Registration.PhoneExtension)
+                </div>
             </div>
-
-            <div style="float:left;">
-                <label for="Zipcode">Zip Code</label>
-                <input type="number" title="Zip Code" id="Zipcode" name="Zipcode" max="99999" value="@Model.Registration.Zipcode" required pattern="\d{5}" />
-            </div>
-
             <div style="clear:both;"></div>
 
-            <label for="Phone">Phone Number</label>
-            <input type="text" title="Phone Number" id="Phone" name="Phone" size="12" value="@Model.Registration.Phone" required pattern="\d{3}-\d{3}-\d{4}" />(xxx-xxx-xxxx)
-
-            <label for="Email">Email Address</label>
-            <input type="email" title="Email Address" id="Email" name="Email" value="@Model.Registration.Email" required />(Sample@gmail.com)
+            @Html.LabelFor(m => m.Registration.Email)
+            @Html.TextBoxFor(m => m.Registration.Email)
+            @Html.ValidationMessageFor(m => m.Registration.Email)
 
         </fieldset>
 
         <div style="clear:both;"></div>
-        <hr />
 
-        <p>NOTE: Once the department has verified the information provided, an email will be sent to the address provided, with a temporary password and instructions for completing registration.</p>
-        <br />
-        <fieldset style="border:dotted #F26522 1px;">
-            <legend>Terms of Use</legend> 
-            <input type="checkbox" name="TermsOfUse" id="TermsOfUse" style="border:0;" value="true" />I have read and agree to the @Html.ActionLink("Terms of Use", "terms"). Checking this boxes implies a signature.
-        </fieldset><br />
-
-        <input id="submit" disabled="disabled" type="submit" value="Submit" class="primary" />
+        <input id="submit" type="submit" value="Submit" class="primary" />
         <input type="reset" value="Cancel" class="secondary" />
 
         <div class="ValidationMessages">
-            @Html.ValidationSummary()
+            @Html.ValidationSummary(true)
         </div>
     </fieldset>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#TermsOfUse").change(function () {
-                var accepted = $(this).is(":checked");
-                if (accepted)
-                    $("#submit").removeAttr("disabled");
-                else
-                    $("#submit").attr("disabled", "disabled");
-            });
-        });
-    </script>
-
+    
 </article>
 }

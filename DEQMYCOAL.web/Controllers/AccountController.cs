@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using DEQMYCOAL.web.Models;
@@ -23,37 +25,77 @@ namespace DEQMYCOAL.web.Controllers
 
         public ActionResult Register()
         {
-            ViewBag.Message = "Register";
-            RegistrationVM model = new RegistrationVM()
+            // don't allow users to register twice
+            if (RegistrationBLL.IsUserRegistered(myCoalUser.UserToken))
             {
-                Registration = new RegistrationDO(),
-                Companies = CompanyBLL.GetCompanies()
-            };
+                //myCoalUser.GetInstance().
+                return RedirectToAction("RegistrationReceived");
+            }
+
+            ViewBag.Message = "Register";
+            RegistrationDO reg = new RegistrationDO() { CountryCode = "1" };
+            RegistrationVM model = new RegistrationVM() { Registration = reg };
             return View(model);
         }
 
         [HttpPost]
         public ActionResult Register(RegistrationVM model)
         {
+            model.Registration.StateID = model.States.Where(s => s.Selected).FirstOrDefault().Value;
+            model.Registration.AccessRoleID = model.AccessRoles.Where(s => s.Selected).First().Value;
+            model.Registration.UserToken = myCoalUser.UserToken;
+            
+
+            if (!ModelState.IsValid)
+                return View(model);
+
             try
             {
-                
-                // save the registration
-                model.UserToken = myCoalUser.UserToken;
-                model.RegistrationID = 0;
-                RegistrationBLL.Save(model);
+                // strip out any non-numeric characters
+                Regex re = new Regex(@"[^\d]");
+                model.Registration.Phone = re.Replace(model.Registration.Phone, "");
 
-                // take the user home
-                return RedirectToAction("Index", "Home");
+                // request registration
+                RegistrationBLL.Save(model.Registration);
+
+                // show confirmation screen
+                return RedirectToAction("RegistrationReceived", "Account");
             }
             catch (Exception ex)
             {
-                // display the error
-                ModelState.AddModelError("", ex);
+                ModelState.AddModelError("", ex.Message);
                 return View(model);
             }
         }
 
+        #region Registration Information Views
+
+        public ActionResult RegistrationReceived()
+        {
+            return View();
+        }
+
+        public ActionResult Denied()
+        {
+            return View();
+        }
+
+        public ActionResult Inactive()
+        {
+            return View();
+        }
+
+        public ActionResult Pending()
+        {
+            return View();
+        }
+
+        public ActionResult Unknown()
+        {
+            return View();
+        }
+
+        #endregion
 
         public ActionResult ePassRegister()
         {
@@ -61,6 +103,7 @@ namespace DEQMYCOAL.web.Controllers
 
             return View();
         }
+
         public ActionResult Manage()
         {
             ViewBag.Message = "Manage";
@@ -69,10 +112,7 @@ namespace DEQMYCOAL.web.Controllers
         }
 
 
-        public ActionResult Terms()
-        {
-            return View();
-        }
+
     }
 }
 

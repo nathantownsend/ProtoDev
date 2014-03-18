@@ -43,10 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ePermitBLL">
+    <Reference Include="ePermitBLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ePermitBLL\bin\Debug\ePermitBLL.dll</HintPath>
     </Reference>
-    <Reference Include="ePermitDAL">
+    <Reference Include="ePermitDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ePermitBLL\bin\Debug\ePermitDAL.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -442,6 +444,11 @@
     <Content Include="Views\Account\Terms.cshtml" />
     <Content Include="Views\Shared\_userAccessRoleDropdown.cshtml" />
     <Content Include="Views\Shared\_stateDropdown.cshtml" />
+    <Content Include="Views\Account\RegistrationReceived.cshtml" />
+    <Content Include="Views\Account\Denied.cshtml" />
+    <Content Include="Views\Account\Inactive.cshtml" />
+    <Content Include="Views\Account\Pending.cshtml" />
+    <Content Include="Views\Account\Unknown.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

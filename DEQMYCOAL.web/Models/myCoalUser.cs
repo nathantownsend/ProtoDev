@@ -8,7 +8,17 @@ using ePermitBLL;
 
 namespace DEQMYCOAL.web.Models
 {
-    
+    /// <summary>
+    /// Statuses a user may be
+    /// </summary>
+    public enum myCoalUserStatus
+    {
+        Active,
+        Denied,
+        Inactive,
+        Pending,
+        Unknown
+    }
 
     public class myCoalUser
     {
@@ -21,11 +31,12 @@ namespace DEQMYCOAL.web.Models
         /// <param name="Profile"></param>
         private myCoalUser(UserProfileBO Profile)
         {
-            Roles = Profile.Roles.Split(' ');
-            FirstName = Profile.FirstName;
-            LastName = Profile.LastName;
-            RegistrationId = Profile.RegistrationID;
+            Roles = Profile.UserRoles.Split(' ');
+            FirstName = Profile.Registration.FirstName;
+            LastName = Profile.Registration.LastName;
+            RegistrationId = Profile.Registration.RegistrationID;
             IsRegistered = true;
+            Status = (myCoalUserStatus)Enum.Parse(typeof(myCoalUserStatus), Profile.Registration.RegistrationStatusID);
 
             AddProfileCookie();
         }
@@ -42,6 +53,7 @@ namespace DEQMYCOAL.web.Models
             LastName = userCookie.Values["LastName"];
             Roles = userCookie.Values["Roles"].Split(' ');
             RegistrationId = Convert.ToInt64(userCookie.Values["RegistrationId"]);
+            Status = (myCoalUserStatus)Enum.Parse(typeof(myCoalUserStatus), userCookie.Values["RegistrationStatus"]);
         }
 
 
@@ -56,6 +68,7 @@ namespace DEQMYCOAL.web.Models
             LastName = "";
             RegistrationId = 0;
             IsRegistered = false;
+            Status = myCoalUserStatus.Unknown;
         }
 
         
@@ -73,12 +86,14 @@ namespace DEQMYCOAL.web.Models
             // if no cookie try getting the user from database
             if (userCookie == null)
             {
+
                 // if the user is not registered return a default instance
                 if (!RegistrationBLL.IsUserRegistered(myCoalUser.UserToken))
                     return new myCoalUser();
 
-                // if the user is registered return the user
+                // if the user was found then return the user
                 UserProfileBO profile = RegistrationBLL.GetUserProfile(myCoalUser.UserToken);
+                
                 return new myCoalUser(profile);
             }
 
@@ -115,6 +130,7 @@ namespace DEQMYCOAL.web.Models
             cookie.Values.Add("LastName", LastName);
             cookie.Values.Add("Roles", string.Join(" ", Roles));
             cookie.Values.Add("RegistrationId", RegistrationId.ToString());
+            cookie.Values.Add("RegistrationStatus", Status.ToString());
             HttpContext.Current.Response.Cookies.Add(cookie);
         }
 
@@ -158,6 +174,11 @@ namespace DEQMYCOAL.web.Models
         /// The user's first and last name
         /// </summary>
         public string FullName { get { return string.Concat(FirstName, " ", LastName); } }
+
+        /// <summary>
+        /// The registration status of the user
+        /// </summary>
+        public myCoalUserStatus Status { get; set; }
 
 
     }

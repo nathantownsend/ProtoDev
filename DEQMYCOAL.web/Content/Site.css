@@ -10,6 +10,15 @@ h4 {font-size: 1.1em;}
 h5, h6 {font-size: 1em;}
 p {color: #555555;}
 
+/* floating */
+.float-left { float: left; }
+.float-right { float: right; }
+
+/* end floating and clearing */
+
+
+.tiny-text { font-size: 0.8em; }
+
 /* main layout
 /*-------------------------------------------------------*/
 header {background-color:#575757;color:#FFFFFF;height:2.6em;margin:0;}
@@ -266,9 +275,17 @@ input {display:inline-block;float:left;}*/
     border-bottom-right-radius:1.2em;
 }
 
-
-/*Validation*/
-div.ValidationMessages
+.PhoneEntry
 {
 
 }
+
+    .PhoneEntry div
+    {
+        float:left;
+        margin-right:10px;
+    }
+
+
+/*Validation*/
+.field-validation-error { color: red; }

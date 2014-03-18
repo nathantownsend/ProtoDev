@@ -41,11 +41,34 @@ namespace DEQMYCOAL.web
             if (string.IsNullOrEmpty(myCoalUser.UserToken))
                 throw new UnauthorizedAccessException("The system could not retrieve your ePass name identifier. Please contact the system admin.");
 
+            
 
-            // allow any authenticated user to get to the register page 
-            string path = Request.Path.ToString();
-            if (path.ToLower().StartsWith("/account/register") || path.ToLower().StartsWith("/account/terms"))
+            // allow any authenticated user to get to any of the account setup informational pages
+            string[] allowedPaths = new string[] { "/account/register", "/account/registrationreceived", "/account/denied", "/account/inactive", "/account/pending", "/account/unknown" };
+            string path = Request.Path.ToString().ToLower();
+            string[] parts = path.Split('/');
+
+            if (parts.Length >= 3)
+            {
+                string start = string.Join("/", parts.Take(3));
+                if (allowedPaths.Contains(start))
+                    return;
+            }
+
+
+            /*
+            bool allowed = false;
+            foreach (string p in allowedPaths)
+            {
+                if (path.StartsWith(p))
+                    allowed = true;
+            }
+
+            // if allowed stop processing the request
+            if (allowed)
                 return;
+            */
+
 
 
             // get the current user
@@ -54,6 +77,23 @@ namespace DEQMYCOAL.web
             // if the user isn't registered yet direct them to the registration page
             if (!user.IsRegistered)
                 Response.Redirect("~/account/register");
+
+            switch (user.Status)
+            {
+                case myCoalUserStatus.Denied:
+                    Response.Redirect("~/account/denied");
+                    break;
+                case myCoalUserStatus.Inactive:
+                    Response.Redirect("~/account/inactive");
+                    break;
+                case myCoalUserStatus.Pending:
+                    Response.Redirect("~/account/pending");
+                    break;
+                case myCoalUserStatus.Unknown:
+                    Response.Redirect("~/account/unknown");
+                    break;
+
+            }
 
             
 
