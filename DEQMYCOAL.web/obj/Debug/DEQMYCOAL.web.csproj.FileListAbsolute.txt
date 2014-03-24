@@ -102,3 +102,5 @@ C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\ePermitBLL.pdb
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\ePermitBLL.xml
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\ePermitDAL.pdb
 C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\obj\Debug\DEQMYCOAL.web.csprojResolveAssemblyReference.cache
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\log4net.dll
+C:\Users\cb0290\Documents\GitHub\ProtoDev\DEQMYCOAL.web\bin\log4net.xml

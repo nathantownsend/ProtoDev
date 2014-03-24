@@ -51,6 +51,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ePermitBLL\bin\Debug\ePermitDAL.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -196,8 +200,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\myCoalPrincipal.cs" />
     <Compile Include="Models\myCoalUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ManageAccountVM.cs" />
     <Compile Include="ViewModels\RegistrationVM.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -258,7 +264,6 @@
     <Content Include="default.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="ApplicationForm.cshtml" />
     <None Include="Properties\PublishProfiles\mycoal.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Images\calendar.gif" />
@@ -313,8 +318,7 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\ManageXXX.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -338,7 +342,6 @@
     <Content Include="Views\BondEstimates\GetBondEstimatesTab.cshtml" />
     <Content Include="Views\Inspections\GetInspectionsTab.cshtml" />
     <Content Include="Views\CoalPC\GetCoalPCTab.cshtml" />
-    <Content Include="Views\Account\ePassRegister.cshtml" />
     <Content Include="Views\ePermitAdmin\ApplicantDescriptionofInterests.cshtml" />
     <Content Include="Views\ePermitAdmin\ApplicationForm.cshtml" />
     <Content Include="Views\ePermitAdmin\Bonding.cshtml" />
@@ -449,6 +452,15 @@
     <Content Include="Views\Account\Inactive.cshtml" />
     <Content Include="Views\Account\Pending.cshtml" />
     <Content Include="Views\Account\Unknown.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\UserTable.cshtml" />
+    <Content Include="Views\Account\myPermitsOwner.cshtml" />
+    <Content Include="Views\Account\myPermitsCoordinator.cshtml" />
+    <Content Include="Views\Account\myPermitsUser.cshtml" />
+    <Content Include="Views\Account\Permissions.cshtml" />
+    <Content Include="Views\Account\MyInfo.cshtml" />
+    <Content Include="Views\Account\MyNotifications.cshtml" />
+    <Content Include="Views\Account\myPermitsCoordinatorPermitPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

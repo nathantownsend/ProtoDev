@@ -6,10 +6,10 @@
         <link href="~/favicon.ico?v=1" rel="shortcut icon" type="image/x-icon" />
         <link rel="icon" href="~/favicon.ico?v=1" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <link rel="stylesheet" href="Content/site.css" />
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script src="Scripts/template.js"></script>
     </head>
     <body>
@@ -37,15 +37,10 @@
                     <aside id="login">    
                         <h4>New User?</h4>
                         <p>Register to access myCOAL</p>
-                        <button value="REGISTER" title="myCOAL / Registration Form" class="modal1 primary">REGISTER</button>
-                        <div class="dialogbox1" style="display: none;" title="Registration Form">
-                            @Html.Partial("Register")
-                        </div>
+                        <button onclick="javascript:location.href='account/register';" value="REGISTER" title="myCOAL / Registration Form" class="primary">REGISTER</button>
+                        
                         <hr />
-                        <button value="LOGIN" title="myCOAL / ePass User Registration" class="modal2 secondary">LOGIN</button>
-                        <div class="dialogbox2" style="display: none;" title="ePass User Registration">
-                            @Html.Partial("ePassRegister")
-                        </div>
+                        <button onclick="javascript:location.href='home/index';" value="LOGIN" title="myCOAL / ePass User Registration" class="secondary">LOGIN</button>
                         <p>with ePass Montana</p>
                     </aside>
 

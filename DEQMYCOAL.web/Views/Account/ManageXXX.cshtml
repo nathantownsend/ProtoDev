@@ -1,0 +1,137 @@
+﻿@model DEQMYCOAL.web.ViewModels.ManageAccountVM
+@using DEQMYCOAL.web.Models
+@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_LayoutSecurity.cshtml";
+    myCoalUser user = myCoalUser.GetInstance();
+}
+
+<h2>Security / User Management</h2> 
+<article>
+
+
+    <div id="lookup-wrapper" style="top:0;">
+        <input id="lookup" type="text" value="Lookup by Name, Company&hellip;" name="q">
+        <input id="lookup-button" type="button">
+    </div>
+    <h3>&nbsp;</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Role</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@user.FirstName @user.LastName</td>
+                <td>@user.Email</td>
+                <td>@String.Join(", ", user.Roles)</td>
+                <td>@user.Status</td>
+            </tr>
+        </tbody>
+    </table>
+    
+<div id="accordion">
+    <h3>My Information</h3>
+    <div>
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { novalidate="" }))
+        {
+            <fieldset class="setapart" style="float:left; width:45%;">
+                <legend>Personal</legend>
+
+                @Html.LabelFor(m => m.UserDetails.Registration.FirstName)
+                @Html.TextBoxFor(m => m.UserDetails.Registration.FirstName)
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.FirstName)
+        
+                @Html.LabelFor(m => m.UserDetails.Registration.LastName)
+                @Html.TextBoxFor(m => m.UserDetails.Registration.LastName)
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.LastName)
+        
+                @Html.LabelFor(m => m.UserDetails.Registration.Title)
+                @Html.TextBoxFor(m => m.UserDetails.Registration.Title)
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.Title)
+
+                @Html.LabelFor(m => m.UserDetails.Registration.CompanyName)
+                @Html.TextBoxFor(m => m.UserDetails.Registration.CompanyName, new { size = "30" })
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.CompanyName)
+            </fieldset>
+        
+            <fieldset class="setapart" style="float:right; width:45%;">
+                <legend>Contact</legend>
+
+                @Html.LabelFor(m => m.UserDetails.Registration.Address1)
+                @Html.TextBoxFor(m => m.UserDetails.Registration.Address1)
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.Address1)
+            
+                @Html.LabelFor(m => m.UserDetails.Registration.City)
+                @Html.TextBoxFor(m => m.UserDetails.Registration.City)
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.City)
+
+                @Html.LabelFor(m => m.UserDetails.States)
+                @Html.DropDownListFor(m => m.UserDetails.Registration.StateID, Model.UserDetails.States)
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.StateID)
+
+                @Html.LabelFor(m => m.UserDetails.Registration.Zipcode)
+                @Html.TextBoxFor(m => m.UserDetails.Registration.Zipcode)
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.Zipcode)
+
+                <div class="PhoneEntry">
+                    <div>
+                        @Html.LabelFor(m => m.UserDetails.Registration.CountryCode, new { @class = "tiny-text" })
+                        @Html.TextBoxFor(m => m.UserDetails.Registration.CountryCode, new { size = "1", maxlength="3" })
+                        @Html.ValidationMessageFor(m => m.UserDetails.Registration.CountryCode)
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(m => m.UserDetails.Registration.Phone, new { @class = "tiny-text" })
+                        @Html.TextBoxFor(m => m.UserDetails.Registration.Phone, new { size = "14", maxlength="14" })
+                        @Html.ValidationMessageFor(m => m.UserDetails.Registration.Phone)
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(m => m.UserDetails.Registration.PhoneExtension, new { @class = "tiny-text" })
+                        @Html.TextBoxFor(m => m.UserDetails.Registration.PhoneExtension, new { size = "5", maxlength=5 })
+                        @Html.ValidationMessageFor(m => m.UserDetails.Registration.PhoneExtension)
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+
+                @Html.LabelFor(m => m.UserDetails.Registration.Email)
+                @Html.TextBoxFor(m => m.UserDetails.Registration.Email)
+                @Html.ValidationMessageFor(m => m.UserDetails.Registration.Email)
+
+            </fieldset>
+        }
+    </div>  
+
+    <h3>myPERMITS</h3>
+    <div>
+        the permit grid
+    </div>
+     
+    <h3>Notifications</h3>
+    <div>
+        <label><input type="checkbox" name="" value="" class="parent" />Receive Email All Notifications</label>
+        <label><input type="checkbox" name="" value="" class="child" />Permitting Actions</label>
+        <label><input type="checkbox" name="" value="" class="child" />Bond Estimates Actions</label>
+        <label><input type="checkbox" name="" value="" class="child" />Inspection Reports</label>
+        <label><input type="checkbox" name="" value="" class="child" />User Tasks</label>
+        <label><input type="checkbox" name="" value="" class="child" />Account Changes</label>
+    </div>
+    <h3>Permissions and Access</h3>
+    <div>
+        <label><input type="checkbox" name="" value="" />Owner</label>
+        <label><input type="checkbox" name="" value="" />Management</label>
+        <label><input type="checkbox" name="" value="" />Permit Editor</label>
+        <label><input type="checkbox" name="" value="" />Permit Read Only</label>
+        <label><input type="checkbox" name="" value="" />Permit Coordinator</label>
+    </div>
+    </div>      
+    <br />
+    <button class="primary" value="Submit" title="Save">SAVE</button><button class="secondary" value="Reset" title="Reset">Reset</button>
+</article>
+
+

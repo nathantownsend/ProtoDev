@@ -35,6 +35,7 @@ namespace DEQMYCOAL.web.Models
             FirstName = Profile.Registration.FirstName;
             LastName = Profile.Registration.LastName;
             RegistrationId = Profile.Registration.RegistrationID;
+            Email = Profile.Registration.Email;
             IsRegistered = true;
             Status = (myCoalUserStatus)Enum.Parse(typeof(myCoalUserStatus), Profile.Registration.RegistrationStatusID);
 
@@ -51,6 +52,8 @@ namespace DEQMYCOAL.web.Models
             IsRegistered = true;
             FirstName = userCookie.Values["FirstName"];
             LastName = userCookie.Values["LastName"];
+            LastName = userCookie.Values["LastName"];
+            Email = userCookie.Values["Email"];
             Roles = userCookie.Values["Roles"].Split(' ');
             RegistrationId = Convert.ToInt64(userCookie.Values["RegistrationId"]);
             Status = (myCoalUserStatus)Enum.Parse(typeof(myCoalUserStatus), userCookie.Values["RegistrationStatus"]);
@@ -128,6 +131,7 @@ namespace DEQMYCOAL.web.Models
             HttpCookie cookie = new HttpCookie("myCoalMontana");
             cookie.Values.Add("FirstName", FirstName);
             cookie.Values.Add("LastName", LastName);
+            cookie.Values.Add("Email", Email);
             cookie.Values.Add("Roles", string.Join(" ", Roles));
             cookie.Values.Add("RegistrationId", RegistrationId.ToString());
             cookie.Values.Add("RegistrationStatus", Status.ToString());
@@ -174,6 +178,8 @@ namespace DEQMYCOAL.web.Models
         /// The user's first and last name
         /// </summary>
         public string FullName { get { return string.Concat(FirstName, " ", LastName); } }
+
+        public string Email { get; set; }
 
         /// <summary>
         /// The registration status of the user

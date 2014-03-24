@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -55,6 +56,33 @@ namespace DEQMYCOAL.web.ViewModels
             }
         }
 
+
+        /// <summary>
+        /// The user's employment
+        /// </summary>
+        [Required]
+        [Display(Name="Company Type")]
+        public string EmploymentType { get; set; }
+
+
+        /// <summary>
+        /// Droppdown list items for the user's employement
+        /// </summary>
+        public IEnumerable<SelectListItem> EmploymentTypeItmes
+        {
+            get
+            {
+                List<SelectListItem> items = new List<SelectListItem>();
+                items.Add(new SelectListItem() { Value = "", Text = "" });
+                items.Add(new SelectListItem() { Value = "Mining", Text = "A Mining Company" });
+                items.Add(new SelectListItem() { Value = "Consultant", Text = "A Consultant" });
+                items.Add(new SelectListItem() { Value = "Federal", Text = "Federal Government" });
+                items.Add(new SelectListItem() { Value = "State", Text = "State Government" });
+                items.Add(new SelectListItem() { Value = "Other", Text = "Other" });
+
+                return items;
+            }
+        }
 
     }
 }
