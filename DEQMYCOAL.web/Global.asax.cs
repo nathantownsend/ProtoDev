@@ -45,6 +45,8 @@ namespace DEQMYCOAL.web
         protected void Application_AuthorizeRequest()
         {
 
+
+
             // if the path is a freely available path then allow anybody to see the page
             if (IsReqestToPublicResource())
                 return;

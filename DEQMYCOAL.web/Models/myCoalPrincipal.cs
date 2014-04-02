@@ -46,5 +46,7 @@ namespace DEQMYCOAL.web.Models
             // is the role specified contained in the roles provided
             return _profile.Roles.Contains(role);
         }
+
+        public string FullName { get { return _profile.FullName; } }
     }
 }
