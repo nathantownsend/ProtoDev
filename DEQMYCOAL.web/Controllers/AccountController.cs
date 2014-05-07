@@ -37,7 +37,6 @@ namespace DEQMYCOAL.web.Controllers
         public ActionResult Register(RegistrationVM model)
         {
             model.Registration.StateID = model.States.Where(s => s.Selected).FirstOrDefault().Value;
-            model.Registration.AccessRoleID = model.AccessRoles.Where(s => s.Selected).First().Value;
             model.Registration.UserToken = myCoalUser.UserToken;
             
 
@@ -62,6 +61,13 @@ namespace DEQMYCOAL.web.Controllers
                 return View(model);
             }
         }
+
+        public ActionResult Logout()
+        {
+            myCoalUser.RemoveCookie();
+            return Redirect("https://dev.adfs.mt.gov/adfs/ls/?wa=wsignout1.0&wreply=https://dev.adfs.mt.gov/stsclient35/logon.aspx");
+        }
+
 
         #region Registration Information Views
 
@@ -97,21 +103,93 @@ namespace DEQMYCOAL.web.Controllers
 
         public ActionResult Manage()
         {
-            return View();
+            UserProfileBO profile = RegistrationBLL.GetUserProfile(myCoalUser.UserToken);
+
+            SecurityVM model = new SecurityVM(profile);
+            
+
+            return View(model);
         }
+
+        [Authorize(Roles="owner")]
+        public ActionResult SecurityPanel(string userToken)
+        {
+            UserProfileBO profile = RegistrationBLL.GetUserProfile(userToken);
+            SecurityVM model = new SecurityVM(profile);
+            return PartialView(model);
+        }
+
 
 
         [ChildActionOnly]
         [Authorize(Roles="owner")]
         public ActionResult UserTable()
         {
-            return PartialView();
+            RegistrationDO[] model = RegistrationBLL.GetRegistrations();
+            return PartialView(model);
         }
 
-        public ActionResult MyInfo()
+        public ActionResult MyInfo(int RegistrationId)
         {
-            return PartialView();
+            RegistrationDO reg = RegistrationBLL.GetRegistration(RegistrationId);
+            RegistrationVM model = new RegistrationVM() { Registration = reg };
+            return PartialView(model);
         }
+
+        [HttpPost]
+        public ActionResult MyInfo(RegistrationVM model)
+        {
+            model.Registration.StateID = model.States.Where(s => s.Selected).FirstOrDefault().Value;
+            model.Registration.UserToken = myCoalUser.UserToken;
+
+            if (!ModelState.IsValid)
+                return PartialView("MyInfo", model);
+
+            try
+            {
+
+                // the system owner can update anybody's registration, but anyone else can only update their own
+                // therefore only lookup a user by id when the owner is performing the task to prevent a user from maliciously 
+                // chaning their RegistrationId before posting the form thereby updating someone else's data
+                RegistrationDO data;
+                if (myCoalUser.GetInstance().IsInRole("owner"))
+                    data = RegistrationBLL.GetRegistration(model.Registration.RegistrationID);
+                else
+                    data = RegistrationBLL.GetRegistrationByUserToken(myCoalUser.UserToken);
+
+                // restrict the update to the visible elements on the form
+                data.Address1 = model.Registration.Address1;
+                data.City = model.Registration.City;
+                data.CompanyName = model.Registration.CompanyName;
+                data.CountryCode = model.Registration.CountryCode;
+                data.Email = model.Registration.Email;
+                data.FirstName = model.Registration.FirstName;
+                data.LastName = model.Registration.LastName;
+                data.Phone = model.Registration.Phone;
+                data.PhoneExtension = model.Registration.PhoneExtension;
+                data.RegistrationDescription = model.Registration.RegistrationDescription;
+                data.StateID = model.Registration.StateID;
+                data.Title = model.Registration.Title;
+                data.Zipcode = model.Registration.Zipcode;
+
+                RegistrationBLL.Save(data);
+
+                // refresh the cookie values 
+                myCoalUser.ResetProfileCookie();
+
+                // return ok to let the javascript clien tknow the update went well
+                AjaxResult result = new AjaxResult(AjaxResult.AjaxStatus.OK, "User profile information was saved");
+                return Json(result);
+            }
+            catch (Exception ex)
+            {
+                AjaxResult result = new AjaxResult(AjaxResult.AjaxStatus.ERROR, ex.Message);
+                return Json(result);
+            }
+
+        }
+
+
 
         public ActionResult MyNotifications()
         {
@@ -133,10 +211,12 @@ namespace DEQMYCOAL.web.Controllers
             return PartialView();
         }
 
+
         [Authorize(Roles="permitcoordinator")]
-        public ActionResult myPermitsCoordinatorPermitPanel()
+        public ActionResult myPermitsCoordinatorPermitPanel(int PermitKey)
         {
-            return PartialView();
+            PermitAccessBO model = PermitRegistrationBLL.GetPermitAccess(PermitKey);
+            return PartialView(model);
         }
 
         public ActionResult myPermitsUser()
@@ -150,6 +230,24 @@ namespace DEQMYCOAL.web.Controllers
         {
             return PartialView();
         }
+
+        [Authorize(Roles = "owner")]
+        [HttpPost]
+        public ActionResult Permissions(SecurityVM model) 
+        {
+            try
+            {
+                RegistrationBLL.Save(model.Registration.Registration.RegistrationID, model.Registration.Registration.RegistrationStatusID, model.Roles);
+                AjaxResult result = new AjaxResult(AjaxResult.AjaxStatus.OK, "The user's permissions were set");
+                return Json(result);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return PartialView(model);
+            }
+        }
+
 
         #endregion
 

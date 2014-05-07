@@ -1,0 +1,10 @@
+﻿@model DEQMYCOAL.web.ViewModels.NewPermitVM
+
+@using (Html.BeginForm("NewPermit", "ePermit", FormMethod.Post))
+{
+    <p>To create a new permit enter the site name below. You will automatically be made Permit Coordinator for the new permit. </p>
+    
+    @Html.LabelFor(m => m.SiteName)
+    @Html.TextBoxFor(m => m.SiteName)
+    @Html.ValidationMessageFor(m => m.SiteName)
+}

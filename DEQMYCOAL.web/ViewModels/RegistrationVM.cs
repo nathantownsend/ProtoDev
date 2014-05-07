@@ -37,32 +37,30 @@ namespace DEQMYCOAL.web.ViewModels
         }
 
 
-        /// <summary>
-        /// Dropdown list items with the current registration value selected
-        /// </summary>
-        public IEnumerable<SelectListItem> AccessRoles
-        {
-            get
-            {
-                List<SelectListItem> items = new List<SelectListItem>();
-
-                // add the default value
-                items.Add(new SelectListItem() { Text = "", Value = "", Selected = String.IsNullOrEmpty(Registration.AccessRoleID) });
-
-                foreach (AccessRoleDO role in AccessRole.GetAll())
-                    items.Add(new SelectListItem() { Text = role.AccessRoleID, Value = role.AccessRoleID, Selected = (role.AccessRoleID == Registration.AccessRoleID) });
-
-                return items;
-            }
-        }
-
 
         /// <summary>
         /// The user's employment
         /// </summary>
         [Required]
-        [Display(Name="Company Type")]
-        public string EmploymentType { get; set; }
+        [Display(Name = "Company Type")]
+        public string EmploymentType
+        {
+            get
+            {
+                _employmentType = Registration.RegistrationDescription;
+
+                string[] items = new string[] { "Mining", "Consultant", "Federal", "State" };
+                if (items.Contains(_employmentType))
+                    return _employmentType;
+                else
+                    return "Other";
+            }
+            set
+            {
+                _employmentType = value;
+            }
+        }
+        string _employmentType;
 
 
         /// <summary>
@@ -73,7 +71,6 @@ namespace DEQMYCOAL.web.ViewModels
             get
             {
                 List<SelectListItem> items = new List<SelectListItem>();
-                items.Add(new SelectListItem() { Value = "", Text = "" });
                 items.Add(new SelectListItem() { Value = "Mining", Text = "A Mining Company" });
                 items.Add(new SelectListItem() { Value = "Consultant", Text = "A Consultant" });
                 items.Add(new SelectListItem() { Value = "Federal", Text = "Federal Government" });

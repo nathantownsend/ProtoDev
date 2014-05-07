@@ -85,6 +85,8 @@ tr.ParentRule {font-weight: bold;}
 .Collapsed {display:none;}
 .hide{ display: none; }
 
+
+
 /*FORM FIELDS*/
 fieldset{background-color: #FFFFFF;color: #555555;border: 0px;padding: 1em;margin-top: 1em;width: 95%;padding-bottom: 1em;}
 legend{margin-top: -2em;padding-left: 0em;position: absolute;text-transform: uppercase;letter-spacing: 1px;color: #666666;font-weight:bold;font-size:1.1em;border: solid #eee 0px;border-top: 0;border-bottom: 0;/*padding: 0em .5em;*/}/*background-color: #FFFFFF*/
@@ -129,6 +131,7 @@ footer {clear:both; background: url('../Images/footercoalcart.png') transparent 
 #lookup {height: 100%;border: 0;background-color: transparent;border-color: transparent;margin: 0;padding: 0 2.5em 0 .5em;width: 86%;-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none; color: #999;}
 #lookup-button {height: 32px;width: 30px;z-index: 1006;position: absolute;top: -1px;right: -29px;background:url('../Images/iconsprite.png') #565656 no-repeat 98% 23%;border:0;margin:0;}
 
+
 /*LOGIN*/
 article#preview { width: 70%; float: left; background-color: #FFFFFF; height: 16em; border-radius: 0; border-top-left-radius: 1.2em; border-bottom-left-radius: 1.2em; padding: 0;margin-left:0;}
 #preview h3 {padding:.25em 0em 0em 1.5em;}
@@ -139,7 +142,7 @@ aside#login  {width: 30%;float: right;background-color: #EEEEEE;color: #555555;h
 aside button.primary {margin-left: 1em;padding: .5em 3em;background-color: #F26522;color: #FFFFFF;font-weight: bold;letter-spacing: 1px;border:solid 1px #999;border-radius: 6px;cursor:pointer;}
 aside button.secondary {margin-left: 1em;background-color: #555555;color: #FFFFFF;padding: .5em 3em;font-weight: bold;letter-spacing: 1px;border:solid 1px #999;border-radius: 6px;cursor:pointer;}
 #login hr {border: solid #FFFFFF .15em;}
-html > body .ui-dialog {width:60%!important;}
+/*html > body .ui-dialog {width:60%!important;}*/
 
 /*Custom class for Accordion*/
 .comply {margin-left: -2em;margin-right: .5em;background-image: url('../Images/icons-validation.png');background-color: transparent;background-position: 0px 1px;width: 35px;height: 30px;padding: 4px 13px;}
@@ -170,6 +173,7 @@ html, body {height: 100%;}
 .err_tab {width: 26px;float: left;height: 26px;display:block;background-image: url(/als/images/e.png);background-repeat: no-repeat;background-position: right;}
 .aligned input.medium {width: 150px;}
 .identLabel {width:250px;text-align:right;float:left;display:inline-block;}
+.inline { display: inline; }
 
 /*RULES*/
 #Rules {background-color: #FFFF33; padding: 1em; color: #333;}
@@ -276,3 +280,141 @@ html, body {height: 100%;}
 
 /*Validation*/
 .field-validation-error { color: red; }
+
+
+
+/* JQUERY PLUGIN DEFAULT STYLES */
+
+/* selectable table jQuery plugin */
+.rowHover { background-color: #FFE4B7; cursor:pointer; }
+.rowSelected { background-color: #FFBD77; color: #fff; }
+
+/* NOTIFICATIONS
+----------------------------------------------------------------*/
+#NotificationContainer {
+    position: fixed;
+    bottom:0%;
+    width:100%;
+    text-align:center;
+}
+
+    #NotificationContainer div.notification {
+        padding:20px;
+        border-bottom:1px solid #fff;
+        display:none;
+    }
+
+    #NotificationContainer div.notification.success {
+        background-color: green;
+    }
+
+    #NotificationContainer div.notification.error {
+        background-color: red;
+    }
+
+    #NotificationContainer div.notification.confirm {
+        background-color: #F26522;
+    }
+
+        #NotificationContainer div.notification div.main {
+
+        }
+
+            #NotificationContainer div.notification div.main .title {
+                font-size:2.5em;
+                margin: 5px auto 10px auto;
+                color:#fff;
+            }
+
+            #NotificationContainer div.notification div.main div.content {
+                font-size:1.5em;
+            }
+
+        #NotificationContainer div.notification div.actions {
+            margin-top:5px;
+        }
+
+            #NotificationContainer div.notification div.actions button {
+                
+            }
+/* END NOTIFICATIONS */
+    
+
+/* Table Sorter Plugin
+----------------------------------------------------------------*/
+
+table.tablesorter {
+	
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	
+}
+table.tablesorter thead tr .header {
+	background-image: url(images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	
+}
+table.tablesorter tbody tr.odd td {
+	
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    
+}
+
+/* END Table Sorter Plugin
+----------------------------------------------------------------*/
+
+#ePermitRules 
+{
+
+}
+
+    #ePermitRules strong {
+        color: #555;
+    }
+
+#ePermitRules div.section {
+    
+}
+
+
+
+#ePermitRules p.parent
+{
+    margin-top:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#ePermitRules strong.caption
+{
+    color:#555;
+    font-size:1.4em;
+    padding-right:20px;
+    
+}
+
+#ePermitRules div.section div.subsections {
+    display: none;
+    background-color:#eee;
+    padding:10px 25px;
+    border-radius: 1.2em;
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+﻿@model DEQMYCOAL.web.ViewModels.SecurityVM
+
+
+<div id="SecurityPanel">
+
+    <div id="AccountAccordion">
+        
+        <h3>My Information</h3>
+        <div id="myInfoPanel">
+            @Html.Partial("MyInfo", Model.Registration)
+        </div>
+
+
+        @if(User.IsInRole("owner")){
+            Html.RenderPartial("myPermitsOwner");
+        }
+
+
+        @if (User.IsInRole("permitcoordinator")){
+            Html.RenderPartial("myPermitsCoordinator", Model);
+        }
+
+
+        @if (!User.IsInRole("permitcoordinator") && !User.IsInRole("owner") && !User.IsInRole("management") && !User.IsInRole("reader") && !User.IsInRole("staff") && !User.IsInRole("completeness")){
+            Html.RenderPartial("myPermitsUser", Model);
+        }
+        
+
+        @if (User.IsInRole("owner")){
+            <h3>Permissions and Access</h3>
+            <div id="PermissionPanel">
+                @Html.Partial("Permissions", Model)
+            </div>
+        }
+
+    </div>
+</div>
+    

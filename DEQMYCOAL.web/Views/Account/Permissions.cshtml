@@ -1,28 +1,39 @@
-﻿<h3>Permissions and Access</h3>
+﻿@model DEQMYCOAL.web.ViewModels.SecurityVM
 
 
-<div>
+
+
+@using (Html.BeginForm("Permissions", "Account", FormMethod.Post, new { id = "PermissionForm" }))
+{
+    
+    @Html.HiddenFor(m => m.Registration.Registration.RegistrationID)
+
     <div class="float-left" style="width:45%;">
         <h4>Account Status</h4>
-        <select>
-            <option>Active</option>
-            <option>Denied</option>
-            <option>Inactive</option>
-            <option>Pending</option>
-        </select>
+        @Html.DropDownListFor(m => m.Registration.Registration.RegistrationStatusID, Model.RegistrationStatuses)
     </div>
 
     <div class="float-left" style="width:45%;">
         <h4>System Roles</h4>
-        <label><input type="checkbox" name="" value="" />Owner</label>
-        <label><input type="checkbox" name="" value="" />Management</label>
-        <label><input type="checkbox" name="" value="" />Permit Editor</label>
-        <label><input type="checkbox" name="" value="" />Permit Read Only</label>
-        <label><input type="checkbox" name="" value="" />Permit Coordinator</label>
+        <p>
+            @Html.CheckBoxFor(m => m.IsOwner) @Html.LabelFor(m => m.IsOwner, new { @class = "inline" })
+        </p>
+        <p>
+            @Html.CheckBoxFor(m => m.IsManagement)  @Html.LabelFor(m => m.IsManagement, new { @class = "inline" })
+        </p>
+        <p>
+            @Html.CheckBoxFor(m => m.IsReviewStaff)  @Html.LabelFor(m => m.IsReviewStaff, new { @class = "inline" })
+        </p>
+        <p>
+            @Html.CheckBoxFor(m => m.IsReadOnly)  @Html.LabelFor(m => m.IsReadOnly, new { @class = "inline" })
+        </p>
+        <p>
+            @Html.CheckBoxFor(m => m.IsPermitCoordinator) @Html.LabelFor(m => m.IsPermitCoordinator, new { @class = "inline" })
+        </p>
     </div>
 
     <p>
         <input type="submit" class="primary" value="Save" />
         <input type="reset" class="secondary" value="Reset" />
     </p>
-</div>
+}

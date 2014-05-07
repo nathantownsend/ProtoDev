@@ -1,0 +1,27 @@
+﻿@model ePermitBLL.PermitRegistrationBO
+
+@using (Html.BeginForm("EditPermitRegistration", "ePermit", FormMethod.Post))
+{
+    
+    @Html.HiddenFor(m => m.PermitRegistration.PermitKey)
+    @Html.HiddenFor(m => m.PermitRegistration.PermitRegistrationID)
+    @Html.HiddenFor(m => m.PermitRegistration.RegistrationID)
+
+    <p>Edit permissions for site name: <strong>@Model.SiteName</strong></p>
+    
+    <p>
+    @Html.CheckBoxFor(m=>m.PermitRegistration.Read) @Html.LabelFor(m => m.PermitRegistration.Read, new { @class = "inline" })
+    </p>
+    
+    <p>
+    @Html.CheckBoxFor(m=>m.PermitRegistration.Edit) @Html.LabelFor(m => m.PermitRegistration.Edit, new { @class = "inline" })
+    </p>
+    
+    if(User.IsInRole(DEQMYCOAL.web.Models.CoalRoles.Owner)){
+    <p>
+    @Html.CheckBoxFor(m=>m.PermitRegistration.Coordinator) @Html.LabelFor(m => m.PermitRegistration.Coordinator, new { @class = "inline" })
+    </p>        
+    } else {
+           
+    }
+}

@@ -10,8 +10,51 @@
         <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>       
         <script src="~/Scripts/template.js"></script>
+        <script src="@Url.Content("~/Scripts/CustomPlugins.js")" type="text/javascript"></script>
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+        <script type="text/javascript" src="@Url.Content("~/Scripts/ajaxForms.js")" ></script>
+
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Cookies.js")" ></script>
+        <script type="text/javascript">
+
+            // encapsulate data for the main window
+            var HelpData = {
+                Url: "@Url.Action("help", "ePermit")",
+                Window: null
+            }
+
+            // if the help window is already open
+            function isHelpOpen() {
+                var state = getCookie("HelpWindowState");
+                return state == "Open";
+            }
+
+            // opens the help window
+            function LoadHelpWindow() {
+                var mainUrl = location.pathname;
+                var url = HelpData.Url + "?page=" + mainUrl;
+                window.open(url, "HelpWindow", "height=800,width=900,location=no,menubar=no,resizable=yes,status=no,titlebar=no,toolbar=no,scrollbars=yes");
+            }
+
+            // when the main page has loaded and is ready
+            $(document).ready(function () {
+                
+                // if help is open then refresh content for the main window
+                if (isHelpOpen())
+                    LoadHelpWindow();
+
+                // when the help icon is clicked
+                $("#HelpWindowOpener").click(function () {
+                    LoadHelpWindow();
+                });
+            });
+            
+
+        </script>
+        
+        <script type="text/javascript" src="@Url.Content("~/Scripts/tablesorter.min.js")" ></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/tablesorter.staticrow.min.js")" ></script>
     </head>
     <body>
         <div id="wrap">
@@ -30,9 +73,6 @@
                 <span id="breadcrumbs"></span>
             </header>            
             <div id="main">
-		           @* @{
-                        Html.RenderPartial("_filterbutton");
-                    }*@
 		            @{
                         Html.RenderPartial("_filters");
                     }
@@ -40,14 +80,8 @@
                         Html.RenderPartial("_subnav");
                     }
                 <section>
-                    <a class="opener" title="Help"></a> 
-                    <div class="dialog" style="display:none;" title="Help">
-                        @Html.Partial("_helpwindow")
-                    </div> 
-@*		            @{ this doesn't work as is because the RenderBody throws an error when living in a partial view
-                        Html.RenderPartial("_primarycontent");
-                    }*@
-                        @RenderBody()
+                    <a class="opener" id="HelpWindowOpener" title="Help"></a> 
+                    @RenderBody()
                 </section>
             </div>
         </div>

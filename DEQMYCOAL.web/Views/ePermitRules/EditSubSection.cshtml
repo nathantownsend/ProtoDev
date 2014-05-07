@@ -1,0 +1,10 @@
+﻿@model ePermitDAL.DO.dbo.RuleSubSectionDO
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.SubSection)
+    @Html.HiddenFor(m => m.Section)
+
+    <label>SubSection Description</label>
+    @Html.TextAreaFor(m => m.Description)
+}

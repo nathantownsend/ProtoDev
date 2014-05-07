@@ -1,0 +1,139 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>myCOAL Help</title>
+        <link href="~/favicon.ico?v=1" rel="shortcut icon" type="image/x-icon" />
+        <link rel="icon" href="~/favicon.ico?v=1" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1>DEQ ePermitting Help System</h1>
+                <img src="~/Images/mycoallogo.png" height="64" width="150" alt="myCOAL Logo" title="myCOAL Logo" />
+                <nav id="headernav">
+                    
+                </nav>
+            </header>            
+            <div id="main">
+                <section>
+                    <article>
+
+                        <h2>Help Topic Not Found</h2>
+                        <h3 id="caption"></h3>
+
+                        <p>
+                            We're sorry, the help topic you've requested could not be found
+                        </p>
+
+                    </article>
+                </section>
+                
+            </div>
+        </div>
+        <footer id="footer">
+            <nav id="footernav">
+		            @{
+                        Html.RenderPartial("_footernav");
+                    }
+                <div id="egovfooter">
+                    <div id="footfloat">
+                        <a href="http://montana.gov/">
+                            <img src="//template.mt.gov/resources/template/montanalogo.png" alt="montana.gov" title="montana.gov" width="248" height="48"></a>
+                    </div>
+                    <ul>
+                        <li><a style="color:#6E9699;" title="Online Services" href="http://mt.gov/services">ONLINE SERVICES</a></li>
+                        <li><a style="color:#6E9699;" class="text-color" title="Agency Name" href="http://montana.gov/">AGENCY NAME</a></li>
+                        <li><a style="color:#6E9699;" title="Privacy &amp; Security Policy" href="http://itsd.mt.gov/policy/policies/ENTINT030.asp">PRIVACY &amp; SECURITY</a></li>
+                        <li><a style="color:#6E9699;" title="Accessibility" href="http://mt.gov/discover/disclaimer.asp#accessibility">ACCESSIBILITY</a></li>
+                        <li><a style="color:#6E9699;" href="https://app.mt.gov/contactus/" title="Contact Us">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </footer>
+
+        
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Cookies.js")" ></script>
+        <script type="text/javascript">
+
+            var caption = $(window.opener.document.body).find("h2[data-submenu]").text();
+
+            window.onload = function () {
+                setCookie("HelpWindowState", "Open", 1);
+            }
+
+            window.onunload = function () {
+                setCookie("HelpWindowState", "Closed", 1);
+            }
+
+            $(document).ready(function () {
+                var tab = getCookie("HelpWindowTab");
+                if (!tab)
+                    tab = 0;
+
+                $("#tabs").tabs({
+                    activate: function (event, ui) {
+                        var tab = $(this).tabs("option", "active");
+                        setCookie("HelpWindowTab", tab, 1);
+                    },
+                    active: tab
+                });
+                $("#caption").text(caption);
+            });
+
+        </script>
+
+
+        @if (User.IsInRole(DEQMYCOAL.web.Models.CoalRoles.Owner))
+        {
+            
+            <script type="text/javascript" src="@Url.Content("~/scripts/customPlugins.js")" ></script>
+            <script type="text/javascript" src="@Url.Content("~/ckeditor/ckeditor.js")" ></script>
+            <script type="text/javascript" src="@Url.Content("~/Scripts/ajaxForms.js")" ></script>
+            <script>
+
+                $(document).ready(function () {
+                    var _originalInstructions = $('#Instructions').html();
+
+                    $("#Reset").click(function () {
+                        Message.Confirm("Your changes will be lost, are you sure you want to reset the Instructions?",
+                            function (data) {
+                                CKEDITOR.instances["Instructions"].setData(_originalInstructions);
+                            }
+                        );
+                    });
+
+                    $("#Save").click(function () {
+                        Message.Confirm("Are you sure you want to save your changes?",
+                            function () {
+
+                                var url = "@Url.Action("UpdateInstructions", "ePermit")";
+                                var data = {
+                                    Html: $("#Instructions").html(),
+                                    TocID: $("#Instructions").attr("data-tocid")
+                                };
+
+                                AjaxRequest({
+                                    url: url,
+                                    data: data
+                                });
+
+                            }
+                        );
+                    });
+
+                    CKEDITOR.disableAutoInline = true;
+                    var editor = CKEDITOR.inline(document.getElementById("Instructions"));
+                });
+            </script>
+        }
+    </body>
+</html>

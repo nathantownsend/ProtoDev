@@ -1,0 +1,74 @@
+﻿@model List<ePermitBLL.RuleBO>
+@{
+    ViewBag.Title = "Rules";
+    Layout = "~/Views/Shared/_LayoutSecurity.cshtml";
+}
+
+
+<h1>ePermit Rules</h1>
+<article id="ePermitRules">
+    <p>
+        Click on a rule section below to show the subsections. 
+    </p>
+
+@foreach (ePermitBLL.RuleBO rule in Model)
+{
+    <div class="section">
+        <p class="parent">
+            <strong class="caption">@rule.RuleSection.Section</strong>
+            <span data-section="@rule.RuleSection.Section">
+                @rule.RuleSection.Description
+            </span>
+            
+        </p>
+
+        <div class="subsections" id="@rule.RuleSection">
+            @if (User.IsInRole(DEQMYCOAL.web.Models.CoalRoles.Owner))
+            {
+                @Html.AjaxDialogFormLink("Edit Section", "Rule Section Editor", "", Url.Action("EditSection", "ePermitRules", new { Section = rule.RuleSection.Section }), "SectionUpdated")
+            }
+
+            <h3>Subsections</h3>
+            
+            @foreach (ePermitDAL.DO.dbo.RuleSubSectionDO subsection in rule.RuleSubSection)
+            {
+                <div class="subsection">
+                    <p class="child">
+                        <strong>@subsection.SubSection</strong>
+                        <span data-subsection="@subsection.SubSection">
+                            @subsection.Description
+                        </span>
+                        @if (User.IsInRole(DEQMYCOAL.web.Models.CoalRoles.Owner))
+                        {
+                            @Html.AjaxDialogFormLink("Edit", "Rule SubSection Editor", "", Url.Action("EditSubSection", "ePermitRules", new { SubSection = subsection.SubSection }), "SubSectionUpdated")
+                        }
+                    </p>
+                </div>
+            }
+        </div>
+    </div>
+    
+    
+}
+</article>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".parent").click(function () {
+            $(this).next(".subsections").toggle(500);
+        });
+    });
+
+    function SectionUpdated(result) {
+        var section = result.Data.Section.Section;
+        var description = result.Data.Section.Description;
+        $("span[data-section='" + section + "']").text(description);
+    }
+
+    function SubSectionUpdated(result) {
+        var subsection = result.Data.SubSection.SubSection;
+        var description = result.Data.SubSection.Description
+        $("span[data-subsection='" + subsection + "']").text(description);
+        
+    }
+</script>

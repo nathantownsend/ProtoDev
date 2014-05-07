@@ -1,47 +1,31 @@
-﻿<p>
-    Permit Access Code: <input type="text" placeholder="Permit Access Code" value="A7CB2" /> <input type="submit" value="Update" />
+﻿@model ePermitBLL.PermitAccessBO
+
+<p>
+    Permit Access Code: <input id="PermitAccessCode" name="PermitAccessCode" size="40" data-permit-access-code="@Model.PermitAccessCode" type="text" placeholder="Permit Access Code" value="@Model.PermitAccessCode" /> <button id="UpdatePermitAccessCode" class="primary" value="Update">Update</button>
 </p>
 <br />
-<table>
+<table id="PermitRegistrationTable">
     <thead>
         <tr>
             <th>User</th>
             <th>Read</th>
             <th>Edit</th>
-            <th>Coordinator</th>
-            <th>Delete</th>
+            <th>Edit / Delete</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Al Ford</td>
-            <td><input type="checkbox" checked="checked" /></td>
-            <td><input type="checkbox" checked="checked" /></td>
-            <td><input type="checkbox" /></td>
-            <td><button class="delete" title="Delete">Delete</button></td>
-        </tr>
-        <tr>
-            <td>Betty Lou</td>
-            <td><input type="checkbox" checked="checked" /></td>
-            <td><input type="checkbox" /></td>
-            <td><input type="checkbox" /></td>
-            <td><button class="delete" title="Delete">Delete</button></td>
-        </tr>
-        <tr>
-            <td>John Smith</td>
-            <td><input type="checkbox" checked="checked" /></td>
-            <td><input type="checkbox" checked="checked" /></td>
-            <td><input type="checkbox" checked="checked" /></td>
-            <td><button class="delete" title="Delete">Delete</button></td>
-        </tr>
-        <tr>
-            <td>New Guy</td>
-            <td><input type="checkbox" /></td>
-            <td><input type="checkbox" /></td>
-            <td><input type="checkbox" /></td>
-            <td><button class="delete" title="Delete">Delete</button></td>
-        </tr>
+        @foreach (var user in Model.PermitRegistration)
+        {
+            <tr data-permit-registration-id="@user.PermitRegistration.PermitRegistrationID">
+                <td>@user.UserName</td>
+                <td><input disabled="disabled" type="checkbox" name="read" @if(user.PermitRegistration.Read){<text>checked="checked"</text>} /></td>
+                <td><input disabled="disabled" type="checkbox" name="edit" @if(user.PermitRegistration.Edit){<text>checked="checked"</text>} /></td>
+                <td>
+                    @Html.AjaxDialogFormButton("Edit", "Edit Permit Permissions", "edit", Url.Action("EditPermitRegistration", "ePermit", new { PermitRegistrationId = user.PermitRegistration.PermitRegistrationID }), "PermissionsUpdated")
+                    <button data-delete-permission="@user.PermitRegistration.PermitRegistrationID" class="delete coordinator" title="Delete">Delete</button>
+                </td>
+            </tr>
+        }
+        
     </tbody>
 </table>
-<input type="submit" class="primary" value="Save" />
-<input type="reset" class="secondary" value="Reset" />

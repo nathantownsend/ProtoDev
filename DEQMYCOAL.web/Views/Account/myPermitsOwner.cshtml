@@ -1,4 +1,5 @@
-﻿<h3>my PERMITS</h3>
+﻿@model DEQMYCOAL.web.ViewModels.SecurityVM
+<h3>myPERMITS</h3>
 <div>
     <table>
         <thead>
@@ -7,47 +8,42 @@
                 <th>Read</th>
                 <th>Edit</th>
                 <th>Coordinator</th>
-                <th>Delete</th>
+                <th>Edit / Delete</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>C72185</td>
-                <td><input type="checkbox" checked="checked" /></td>
-                <td><input type="checkbox" checked="checked" /></td>
-                <td><input type="checkbox" /></td>
-                <td><button class="delete" title="Delete">Delete</button></td>
+            @foreach(var permit in Model.myPermitRegistrations){
+            <tr data-permit-registration-id="@permit.PermitRegistration.PermitRegistrationID">
+                <td>@permit.SiteName</td>
+                <td><input name="read" disabled="disabled" type="checkbox" @if(permit.PermitRegistration.Read){<text>checked="checked"</text>} /></td>
+                <td><input name="edit" disabled="disabled" type="checkbox"  @if(permit.PermitRegistration.Edit){<text>checked="checked"</text>} /></td>
+                <td><input name="coordinator" disabled="disabled" type="checkbox"  @if(permit.PermitRegistration.Coordinator){<text>checked="checked"</text>} /></td>
+                <td>
+                    @Html.AjaxDialogFormButton("Edit", "Edit Permit Permissions", "edit", Url.Action("EditPermitRegistration", "ePermit", new { PermitRegistrationId = permit.PermitRegistration.PermitRegistrationID }), "PermissionsUpdated")
+                    <button data-delete-permission="@permit.PermitRegistration.PermitRegistrationID" class="delete" title="Delete">Delete</button>
+                </td>
             </tr>
-            <tr>
-                <td>C81185</td>
-                <td><input type="checkbox" checked="checked" /></td>
-                <td><input type="checkbox" /></td>
-                <td><input type="checkbox" /></td>
-                <td><button class="delete" title="Delete">Delete</button></td>
-            </tr>
-            <tr>
-                <td>C28754</td>
-                <td><input type="checkbox" checked="checked" /></td>
-                <td><input type="checkbox" checked="checked" /></td>
-                <td><input type="checkbox" checked="checked" /></td>
-                <td><button class="delete" title="Delete">Delete</button></td>
-            </tr>
-            <tr>
-                <td>C37658</td>
-                <td><input type="checkbox" /></td>
-                <td><input type="checkbox" /></td>
-                <td><input type="checkbox" /></td>
-                <td><button class="delete" title="Delete">Delete</button></td>
-            </tr>
-            <tr>
-                <td><select><option>C98338</option><option>C38375</option><option>C385783</option><option>C38975</option><option>C38674</option><option>C398753</option></select></td>
-                <td><input type="checkbox" /></td>
-                <td><input type="checkbox" /></td>
-                <td><input type="checkbox" /></td>
-                <td><button class="tertiary"><span class="plussymbol">+</span>Add To Permit</button></td>
+            }
+            
+            <tr id="NewPermitRegistrationForm">
+                <td>
+                    <input type="hidden" id="RegistrationID" name="RegistrationID" value="@Model.Registration.Registration.RegistrationID" />
+                    <select id="PermitKey" name="PermitKey">
+                        <option value="">Site Name</option>
+                        @foreach (var p in Model.AllPermits)
+                        {
+                            <option value="@p.PermitKey">@p.SiteName</option>
+                        }
+                    </select>
+                </td>
+                <td><input id="Read" name="Read" type="checkbox" /></td>
+                <td><input id="Edit" name="Edit" type="checkbox" /></td>
+                <td><input id="Coordinator" name="Coordinator" type="checkbox" /></td>
+                <td>
+                    <button id="AddNewPermitRegistration" class="tertiary"><span class="plussymbol">+</span>Add To Permit</button>
+                </td>
             </tr>
         </tbody>
     </table>
-    <input type="submit" class="primary" value="Save" />
-    <input type="reset" class="secondary" value="Reset" />
+    
 </div>

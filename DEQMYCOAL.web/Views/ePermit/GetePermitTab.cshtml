@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<ePermitDAL.DO.dbo.PermitDO>
+@{
     ViewBag.Title = "ePermit";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
@@ -8,9 +9,10 @@
 <article>
 
 <h2>Current Permits</h2>
-<table>
+<table class="tablesorter">
     <thead>
         <tr>
+            <th>Site Name</th>
             <th>Permit ID</th>
             <th>Application Type</th>
             <th>App #</th>
@@ -19,34 +21,28 @@
             <th>Status Date</th>
         </tr>
     </thead>
-    <tr>
-        <td><a href="@Url.Content("~/ePermitAdmin/ApplicationForm")">C1979012</a></td>
-        <td>Amendment</td>
-        <td>AM2</td>
-        <td>DEQ</td>
-        <td>Technical Review</td>
-        <td>11/25/2012</td>
-    </tr>
-    <tr>
-        <td><a href="@Url.Content("~/ePermitAdmin/ApplicationForm")">C1979012</a></td>
-        <td>Renewal</td>
-        <td>SL9</td>
-        <td>Company</td>
-        <td>Approved</td>
-        <td>6/18/2011</td>
-    </tr>
-    <tr>
-        <td><a href="@Url.Content("~/ePermitAdmin/ApplicationForm")">C1979012</a></td>
-        <td>Minor Revision</td>
-        <td>MR153</td>
-        <td>Company</td>
-        <td>Draft</td>
-        <td>11/15/2012</td>
-    </tr>
-</table>
+    @foreach (var permit in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(permit.SiteName, "ApplicationForm", "ePermitAdmin", new { PermitKey = permit.PermitKey }, null)</td>
+            <td>@Html.ActionLink( String.IsNullOrEmpty(permit.PermitID) ? "n/a" : permit.PermitID, "ApplicationForm", "ePermitAdmin", new { PermitKey = permit.PermitKey }, null)</td>
+            <td>@permit.ApplicationTypeID</td>
+            <td>@permit.ApplicationNumber</td>
+            <td>@permit.Location</td>
+            <td>@permit.PermitStatusID</td>
+            <td>@if(permit.StatusDate.HasValue){<text>@permit.StatusDate.Value.ToShortDateString()</text>} </td>
+        </tr>
+    }
 
-        <button value="Add" class="modal2 primary">Add</button>
-                <div class="dialogbox2" style="display: none;" title="Enter New Application">
+</table>
+    @if (User.IsInRole(DEQMYCOAL.web.Models.CoalRoles.PermitCoordinator))
+    {
+        @Html.AjaxDialogFormButton("New Permit", "Add New Permit", "primary", Url.Action("NewPermit", "ePermit"), "NewPermitCreated")
+        <button value="Add Application" class="primary">Add Application</button>
+        <button class="secondary">Delete Draft</button>
+        <button class="secondary">Withdraw</button>                
+    }
+    <div class="dialogbox2" style="display: none;" title="Enter New Application">
 
                     <select id="PermitId" name="PermitId" style="padding-right: 0em;">
                         <option>Permit ID</option>
@@ -103,9 +99,15 @@
                     </div>
 
                 </div>
-        <button class="secondary">Delete Draft</button>
-        <button class="secondary">Withdraw</button>
+        
+    <script type="text/javascript">
 
+        function NewPermitCreated(result) {
+
+            alert("Will redirect to the new permit with permit Key = " + result.Data.PermitKey);
+        }
+
+    </script>
 
 
 

@@ -1,6 +1,7 @@
-﻿<h3>my PERMITS</h3>
+﻿@model DEQMYCOAL.web.ViewModels.SecurityVM
+<h3>myPERMITS</h3>
 <div>
-    <table>
+    <table id="myPermitsUser">
         <thead>
             <tr>
                 <th>Permit</th>
@@ -9,16 +10,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>C1895</td>
-                <td><input type="checkbox" disabled="disabled" checked="checked" /></td>
-                <td><input type="checkbox" disabled="disabled" /></td>
-            </tr>
-            <tr>
-                <td>C2983</td>
-                <td><input type="checkbox" disabled="disabled" checked="checked" /></td>
-                <td><input type="checkbox" disabled="disabled" checked="checked" /></td>
-            </tr>
+            @foreach (var permit in Model.myPermitRegistrations)
+            {
+                <tr>
+                    <td>@permit.SiteName</td>
+                    <td><input type="checkbox" disabled="disabled" @if(permit.PermitRegistration.Read){<text>checked="checked"</text>} /></td>
+                    <td><input type="checkbox" disabled="disabled" @if(permit.PermitRegistration.Edit){<text>checked="checked"</text>} /></td>
+                </tr>
+            }
         </tbody>
     </table>
 
@@ -27,6 +26,6 @@
             To request access to a permit please enter the Permit Access Code in the box below and click the Request Access button. The Permit Access Code
             must be obtained from the permit coordinator who manages the permit you wish to access. 
         </p>
-        <input type="text" id="PermitCode" name="PermitCode" placeholder="Permit Access Code" /> <input type="submit" value="Request Access" />
+        <input type="text" id="PermitCode" name="PermitCode" placeholder="Permit Access Code" /> <button id="RequestPermitAccess" class="primary" value="Request Access">Request Access</button>
     </div>
 </div>

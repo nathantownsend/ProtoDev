@@ -1,4 +1,4 @@
-﻿
+﻿@model DEQMYCOAL.web.ViewModels.SecurityVM
 @{
     ViewBag.Title = "Manage";
     Layout = "~/Views/Shared/_LayoutSecurity.cshtml";
@@ -10,38 +10,26 @@
     
     @if (User.IsInRole("owner"))
     {
-        Html.RenderPartial("UserTable");
+        Html.RenderAction("UserTable");
     }
 
-    <div id="AccountAccordion">
-        @Html.Partial("MyInfo")
+    @Html.Partial("SecurityPanel", Model)
 
-        @Html.Partial("MyNotifications")
-
-        @if(User.IsInRole("owner")){
-            Html.RenderPartial("myPermitsOwner");
-        }
-
-        @if(User.IsInRole("permitcoordinator")){
-            Html.RenderPartial("myPermitsCoordinator");
-        }
-
-        @if (!User.IsInRole("permitcoordinator") && !User.IsInRole("owner")  && !User.IsInRole("management") && !User.IsInRole("reader") && !User.IsInRole("staff"))
-        {
-            Html.RenderPartial("myPermitsUser");
-        }
-        
-        @if (User.IsInRole("owner"))
-        {
-            Html.RenderPartial("Permissions");
-        }
-    </div>
 </article>
 
+
 <script type="text/javascript">
-    $(document).ready(function () {
-        $("#AccountAccordion").accordion({ heightStyle: "content" });
-        $("#PermitAccordion").accordion({ heightStyle: "content", collapsible: true, active: false });
-    });
+
+    var SecuritySettings = {
+        SecurityPanelUrl: "@Url.Action("SecurityPanel", "Account")",
+        NewPermitRegistrationUrl: "@Url.Action("NewPermitRegistration", "ePermit")",
+        DeletePermitRegistration: "@Url.Action("DeletePermitRegistration", "ePermit")",
+        MyPermitsCoordinatorPermitPanel: "@Url.Action("myPermitsCoordinatorPermitPanel", "Account")",
+        UpdatePermitAccessCode: "@Url.Action("UpdatePermitAccessCode", "ePermit")",
+        RequestPermitAccess: "@Url.Action("RequestPermitAccess", "ePermit")",
+        MyInfoPanel: "@Url.Action("MyInfo", "Account")"
+    };
+
 </script>
 
+<script type="text/javascript" src="@Url.Content("~/Scripts/SecurityManagement.js")"></script>

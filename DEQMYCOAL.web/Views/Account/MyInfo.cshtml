@@ -1,66 +1,91 @@
-﻿<h3>My Information</h3>
-<div>
-    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { novalidate="" }))
+﻿@model DEQMYCOAL.web.ViewModels.RegistrationVM
+
+
+@using (Html.BeginForm("MyInfo", "Account", FormMethod.Post, new { novalidate = "", id = "MyInfoForm" })) 
     {
-        <div class="float-left" style="width:45%;">
-                
-            <h4>Personal</h4>
+        @Html.HiddenFor(m => m.Registration.RegistrationID)
+    
+        <fieldset class="setapart"  style="float:left; width:45%;">
+            <legend>Personal</legend>
 
-            <label>First Name</label>
-            <input type="text" />
-                
-            <label>Last Name</label>
-            <input type="text" />
-                
+            @Html.LabelFor(m => m.Registration.FirstName)
+            @Html.TextBoxFor(m => m.Registration.FirstName)
+            @Html.ValidationMessageFor(m => m.Registration.FirstName)
         
-            <label>Title</label>
-            <input type="text" />
-
-            <label>Company Name</label>
-            <input type="text" />
-        </div>
+            @Html.LabelFor(m => m.Registration.LastName)
+            @Html.TextBoxFor(m => m.Registration.LastName)
+            @Html.ValidationMessageFor(m => m.Registration.LastName)
         
-        <div class="float-left" style="width:45%;">
-            <h4>Contact</h4>
+            @Html.LabelFor(m => m.Registration.Title)
+            @Html.TextBoxFor(m => m.Registration.Title)
+            @Html.ValidationMessageFor(m => m.Registration.Title)
 
-            <label>Address</label>
-            <input type="text" />
+            @Html.LabelFor(m => m.Registration.CompanyName)
+            @Html.TextBoxFor(m => m.Registration.CompanyName, new { size = "30" })
+            @Html.ValidationMessageFor(m => m.Registration.CompanyName)
+
+            @Html.LabelFor(m => m.EmploymentType)
+            @Html.DropDownListFor(m => m.EmploymentType, Model.EmploymentTypeItmes)
+            @Html.ValidationMessageFor(m => m.EmploymentType)
+
+            @Html.TextAreaFor(m => m.Registration.RegistrationDescription, new { @class = "hide", placeholder="Company Type Description" })
+            @Html.ValidationMessageFor(m => m.Registration.RegistrationDescription)
+        </fieldset>
+        
+        <fieldset class="setapart" style="float:right; width:45%;">
+            <legend>Contact</legend>
+
+            @Html.LabelFor(m => m.Registration.Address1)
+            @Html.TextBoxFor(m => m.Registration.Address1)
+            @Html.ValidationMessageFor(m => m.Registration.Address1)
             
-            <label>City</label>
-            <input type="text" />
+            @Html.LabelFor(m => m.Registration.City)
+            @Html.TextBoxFor(m => m.Registration.City)
+            @Html.ValidationMessageFor(m => m.Registration.City)
 
-            <label>State</label>
-            <select><option>Montana</option></select>
+            @Html.LabelFor(m => m.States)
+            @Html.DropDownListFor(m => m.Registration.StateID, Model.States)
+            @Html.ValidationMessageFor(m => m.Registration.StateID)
 
-            <label>Zip Code</label>
-            <input type="text" />
+            @Html.LabelFor(m => m.Registration.Zipcode)
+            @Html.TextBoxFor(m => m.Registration.Zipcode)
+            @Html.ValidationMessageFor(m => m.Registration.Zipcode)
 
             <div class="PhoneEntry">
                 <div>
-                    <label class="tiny-text">Country</label>
-                    <input type="text" size="1" />
+                    @Html.LabelFor(m => m.Registration.CountryCode, new { @class = "tiny-text" })
+                    @Html.TextBoxFor(m => m.Registration.CountryCode, new { size = "1", maxlength="3" })
+                    @Html.ValidationMessageFor(m => m.Registration.CountryCode)
                 </div>
 
                 <div>
-                    <label class="tiny-text">Phone</label>
-                    <input type="text" size="14"/>
+                    @Html.LabelFor(m => m.Registration.Phone, new { @class = "tiny-text" })
+                    @Html.TextBoxFor(m => m.Registration.Phone, new { size = "14", maxlength="14" })
+                    @Html.ValidationMessageFor(m => m.Registration.Phone)
                 </div>
 
                 <div>
-                    <label class="tiny-text">Ext</label>
-                    <input type="text" size="5"/>
+                    @Html.LabelFor(m => m.Registration.PhoneExtension, new { @class = "tiny-text" })
+                    @Html.TextBoxFor(m => m.Registration.PhoneExtension, new { size = "5", maxlength=5 })
+                    @Html.ValidationMessageFor(m => m.Registration.PhoneExtension)
                 </div>
             </div>
             <div style="clear:both;"></div>
 
-            <label>Email</label>
-            <input type="text" />
+            @Html.LabelFor(m => m.Registration.Email)
+            @Html.TextBoxFor(m => m.Registration.Email)
+            @Html.ValidationMessageFor(m => m.Registration.Email)
 
+        </fieldset>
+
+        <div style="clear:both;"></div>
+
+        <input id="MyInfoSubmit" type="submit" value="Submit" class="primary" />
+        <input type="reset" value="Cancel" class="secondary" />
+
+        <div class="ValidationMessages">
+            @Html.ValidationSummary()
         </div>
-                
-        <div>
-            <input type="submit" class="primary" value="Save" />
-            <input type="reset" class="secondary" value="Reset" />
-        </div>
+            
     }
-</div>
+

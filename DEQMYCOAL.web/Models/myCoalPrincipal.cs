@@ -9,12 +9,12 @@ namespace DEQMYCOAL.web.Models
     public class myCoalPrincipal: IPrincipal
     {
         IIdentity _identity;
-        myCoalUser _profile;
+        myCoalUser _coalUser;
 
-        public myCoalPrincipal(myCoalUser profile, IIdentity federatedIdentity)
+        public myCoalPrincipal(myCoalUser coalUser, IIdentity federatedIdentity)
         {
             _identity = federatedIdentity;
-            _profile = profile;
+            _coalUser = coalUser;
         }
 
         public IIdentity Identity
@@ -38,15 +38,17 @@ namespace DEQMYCOAL.web.Models
 
                 foreach (string r in roles)
                 {
-                    if (_profile.Roles.Contains(r))
+                    if (_coalUser.Roles.Contains(r))
                         return true;
                 }
             }
 
             // is the role specified contained in the roles provided
-            return _profile.Roles.Contains(role);
+            return _coalUser.Roles.Contains(role);
         }
 
-        public string FullName { get { return _profile.FullName; } }
+        public string FullName { get { return _coalUser.FullName; } }
+
+        public myCoalUser CoalUser { get { return _coalUser; } }
     }
 }

@@ -1,20 +1,14 @@
-﻿<h3>my PERMITS</h3>
+﻿@model DEQMYCOAL.web.ViewModels.SecurityVM
+<h3>myPERMITS</h3>
 <div>
-
     <div id="PermitAccordion">
-        <h3>C1857</h3>
-        <div>
-            @Html.Partial("myPermitsCoordinatorPermitPanel")
-        </div>
-        <h3>C2687</h3>
-        <div>
-            @Html.Partial("myPermitsCoordinatorPermitPanel")
-        </div>
-        <h3>C8777</h3>
-        <div>
-            @Html.Partial("myPermitsCoordinatorPermitPanel")
-        </div>
+        @foreach (var myPermits in Model.myPermitRegistrations.Where(p => p.PermitRegistration.Coordinator))
+        {
+            <h3>@myPermits.SiteName</h3>
+            <div data-permit-key="@myPermits.PermitRegistration.PermitKey">
+                
+            </div>
+        }
     </div>
-
 </div>
 

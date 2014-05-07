@@ -22,7 +22,7 @@ namespace DEQMYCOAL.web.Models
 
     public class myCoalUser
     {
-
+        const string COOKIE_NAME = "myCoalMontana";
 
         /// <summary>
         /// Creates a new instance of myCoalUser and tracks the values using a cookie
@@ -31,7 +31,7 @@ namespace DEQMYCOAL.web.Models
         /// <param name="Profile"></param>
         private myCoalUser(UserProfileBO Profile)
         {
-            Roles = Profile.UserRoles.Split(' ');
+            Roles = Profile.Roles.Split(' ');
             FirstName = Profile.Registration.FirstName;
             LastName = Profile.Registration.LastName;
             RegistrationId = Profile.Registration.RegistrationID;
@@ -55,8 +55,9 @@ namespace DEQMYCOAL.web.Models
             LastName = userCookie.Values["LastName"];
             Email = userCookie.Values["Email"];
             Roles = userCookie.Values["Roles"].Split(' ');
-            RegistrationId = Convert.ToInt64(userCookie.Values["RegistrationId"]);
+            RegistrationId = Convert.ToInt32(userCookie.Values["RegistrationId"]);
             Status = (myCoalUserStatus)Enum.Parse(typeof(myCoalUserStatus), userCookie.Values["RegistrationStatus"]);
+            
         }
 
 
@@ -74,8 +75,6 @@ namespace DEQMYCOAL.web.Models
             Status = myCoalUserStatus.Unknown;
         }
 
-        
-
 
         /// <summary>
         /// Loads a myCoalUser from cookie or returns a default instance if no cookie exists
@@ -84,7 +83,7 @@ namespace DEQMYCOAL.web.Models
         public static myCoalUser GetInstance()
         {
             
-            HttpCookie userCookie = HttpContext.Current.Request.Cookies["myCoalMontana"];
+            HttpCookie userCookie = HttpContext.Current.Request.Cookies[COOKIE_NAME];
 
             // if no cookie try getting the user from database
             if (userCookie == null)
@@ -123,21 +122,47 @@ namespace DEQMYCOAL.web.Models
 
 
         /// <summary>
+        /// Logs the current user out of the system
+        /// </summary>
+        public static void RemoveCookie()
+        {
+            HttpCookie cookie = HttpContext.Current.Request.Cookies[COOKIE_NAME];
+            
+            if (cookie != null)
+            {
+                cookie = new HttpCookie(COOKIE_NAME);
+                cookie.Expires = DateTime.Now.AddDays(-1d);
+                HttpContext.Current.Response.Cookies.Add(cookie);
+            }
+        }
+
+        /// <summary>
         /// A cookie storing the user profile values
         /// </summary>
         /// <returns></returns>
         void AddProfileCookie()
         {
-            HttpCookie cookie = new HttpCookie("myCoalMontana");
+            HttpCookie cookie = new HttpCookie(COOKIE_NAME);
             cookie.Values.Add("FirstName", FirstName);
             cookie.Values.Add("LastName", LastName);
             cookie.Values.Add("Email", Email);
             cookie.Values.Add("Roles", string.Join(" ", Roles));
             cookie.Values.Add("RegistrationId", RegistrationId.ToString());
             cookie.Values.Add("RegistrationStatus", Status.ToString());
+            cookie.Values.Add("Token", UserToken);
+            cookie.Expires = DateTime.Now.AddMinutes(5d);
+            cookie.Secure = true;
             HttpContext.Current.Response.Cookies.Add(cookie);
         }
 
+        /// <summary>
+        /// Resets the values in the profile cookie
+        /// </summary>
+        public static void ResetProfileCookie()
+        {
+            HttpContext.Current.Request.Cookies.Remove(COOKIE_NAME);
+            GetInstance();
+        }
 
         /// <summary>
         /// If the user is registered with the system
@@ -157,7 +182,7 @@ namespace DEQMYCOAL.web.Models
         /// <summary>
         /// The registration id of the user
         /// </summary>
-        public long RegistrationId { get; set; }
+        public int RegistrationId { get; set; }
 
         /// <summary>
         /// The space delimited list of user roles

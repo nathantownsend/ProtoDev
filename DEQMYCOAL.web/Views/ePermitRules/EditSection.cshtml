@@ -1,0 +1,12 @@
+﻿@model ePermitDAL.DO.dbo.RuleSectionDO
+@{
+    ViewBag.Title = "EditSection";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.Section)
+
+    <label>Section Description</label>
+    @Html.TextAreaFor(m => m.Description)
+}

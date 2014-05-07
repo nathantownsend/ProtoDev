@@ -45,8 +45,6 @@ namespace DEQMYCOAL.web
         protected void Application_AuthorizeRequest()
         {
 
-
-
             // if the path is a freely available path then allow anybody to see the page
             if (IsReqestToPublicResource())
                 return;
@@ -139,7 +137,7 @@ namespace DEQMYCOAL.web
 
 
         // store a static instance of the commonly accessible paths
-        private static string[] allowedPaths = new string[] { "/account/register", "/account/registrationreceived", "/account/denied", "/account/inactive", "/account/pending", "/account/unknown" };
+        private static string[] allowedPaths = new string[] { "/account/register", "/account/registrationreceived", "/account/denied", "/account/inactive", "/account/pending", "/account/unknown", "/account/logout" };
 
 
         /// <summary>
